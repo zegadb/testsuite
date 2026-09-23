@@ -1,0 +1,9 @@
+{
+  "title": "Threshold",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Threshold filters compose with OR; scores use full float32 vectors."
+}

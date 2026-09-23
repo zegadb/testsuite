@@ -1,0 +1,2 @@
+schema { type Ticket { embedding: Vector<3> } }
+mutation { Ticket(embedding: vector[1,"bad",3]) { embedding } }

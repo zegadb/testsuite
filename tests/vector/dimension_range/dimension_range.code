@@ -1,0 +1,1 @@
+schema { type Ticket { embedding: Vector<4097> } }

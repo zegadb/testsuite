@@ -1,0 +1,4 @@
+execution error: error: Vector<3> query needs exactly 3 numbers, got 2
+  schema:5:21
+  query { Ticket near(embedding, vector[1,0], 2) { n score } }
+                      ^^^^^^^^^

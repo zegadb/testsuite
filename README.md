@@ -78,3 +78,14 @@ CI on push and pull request uses `environment: public-ci`, public dependencies, 
 ## Add or update a case
 
 Author a self-contained source and an independent expected result. Include positive boundary controls as well as rejected inputs. Do not generate success expectations from the engine under test. For diagnostics, review the intended rejection and pin its complete rendered text. Run the case, full native corpus, reverse order, runner checks, and the site build. Run both hosts when changing shared serialization or host adapters. Never regenerate all expectations to make a failure disappear.
+
+## Vector coverage
+
+`tests/vector/` covers fixed dimensions, numeric components, metric validation,
+explicit JSON/CSV loading, automatic nearest ordering, exact filtered search,
+similarity thresholds, updates, relationship-scoped nearest selection and both
+explicit vector view declarations. Success expectations are independently
+specified; rejecting cases pin the complete reviewed diagnostic and source span.
+The engine pin in this branch is `zegadb/zega`'s `codex/vector` revision recorded
+in `engine.json`. Engine recall/PCA and headless explorer checks live with that
+implementation; this corpus exercises the shared ZQL contract on both hosts.

@@ -1,0 +1,5 @@
+schema { type Ticket { n: Int embedding: Vector<3> } }
+mutation { Ticket(n: 0 && embedding: vector[1, 0, 0]) { n } }
+mutation { Ticket(n: 1 && embedding: vector[0, 1, 0]) { n } }
+mutation { Ticket(n: 2 && embedding: vector[-1, 0, 0]) { n } }
+query { Ticket(similarity(embedding, vector[1, 0, 0]) >= 0 || n = 2) { n similarity(embedding, vector[1, 0, 0]) } }

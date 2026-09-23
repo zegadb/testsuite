@@ -1,0 +1,9 @@
+{
+  "title": "Metric",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Unsupported metric is a schema error at angular."
+}

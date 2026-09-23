@@ -1,0 +1,4 @@
+error: Vector dimension must be in 1..=4096
+  schema:1:42
+  schema { type Ticket { embedding: Vector<4097> } }
+                                           ^^^^
