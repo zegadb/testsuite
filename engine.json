@@ -1,5 +1,5 @@
 {
   "repository": "https://github.com/zegadb/zega",
-  "revision": "718349d94673552f848d1abd7046a98496a5747a",
-  "language": "zega-lang/src/lib.rs"
+  "revision": "849f7ab2c81df6489a89784a52a95803b6f6e679",
+  "language": "zega/src/lang/mod.rs"
 }

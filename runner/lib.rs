@@ -1,5 +1,5 @@
 use serde::{Deserialize, Serialize};
-use zega_core::Zega;
+use zega::{check_zql, Zega, ZqlEntryPoint};
 
 #[derive(Deserialize)]
 pub struct Request {
@@ -15,12 +15,12 @@ pub struct Outcome {
     pub stderr: String,
 }
 
-fn parse_error(source: &str, error: zega_lang::Error) -> Outcome {
+fn parse_error(rendered: String) -> Outcome {
     Outcome {
         ok: false,
         stage: "parse",
         stdout: String::new(),
-        stderr: format!("{}\n", zega_lang::render_error("schema", source, &error)),
+        stderr: format!("{rendered}\n"),
     }
 }
 
@@ -28,14 +28,14 @@ fn parse_error(source: &str, error: zega_lang::Error) -> Outcome {
 /// order; serde_json's default map sorts object keys, without dropping any fields.
 pub fn evaluate(request: Request) -> Result<Outcome, String> {
     let source = &request.source;
-    let parsed = match request.api.as_str() {
-        "file" => zega_lang::parse_zql(source).map(|_| ()),
-        "query" => zega_lang::parse_query(source).map(|_| ()),
-        "statement" => zega_lang::parse_statement(source).map(|_| ()),
+    let entry_point = match request.api.as_str() {
+        "file" => ZqlEntryPoint::File,
+        "query" => ZqlEntryPoint::Query,
+        "statement" => ZqlEntryPoint::Statement,
         _ => return Err(format!("unknown parser API: {}", request.api)),
     };
-    if let Err(error) = parsed {
-        return Ok(parse_error(source, error));
+    if let Err(rendered) = check_zql(entry_point, source) {
+        return Ok(parse_error(rendered));
     }
     if request.api != "file" {
         return Err("parser API cases must exercise a rejected input".into());
