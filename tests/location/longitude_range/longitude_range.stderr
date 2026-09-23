@@ -1,0 +1,4 @@
+error: Point longitude must be a number in [-180, 180]
+  schema:2:39
+  mutation { Place(n: 0 && at: point(0, -181)) { at } }
+                                        ^^^^

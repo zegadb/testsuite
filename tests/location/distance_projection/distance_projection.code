@@ -1,0 +1,3 @@
+schema { type Place { n: Int at: Point } }
+mutation { Place(n: 0 && at: point(12, 34)) { n } }
+query { Place { n distance(at, point(12, 34)) metres: distance(at, point(12, 34)) } }

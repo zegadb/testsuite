@@ -1,0 +1,3 @@
+schema { type Place { n: Int at: Point } }
+mutation { Place(n: 0 && at: point(90, -180)) { n } }
+query { Place { n at } }

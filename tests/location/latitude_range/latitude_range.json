@@ -1,0 +1,9 @@
+{
+  "title": "Latitude range",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Out-of-range latitude is rejected at the literal value span."
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Antimeridian box",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "West greater than east wraps across the antimeridian and excludes Greenwich."
+}
