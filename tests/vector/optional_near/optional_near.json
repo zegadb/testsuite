@@ -1,0 +1,6 @@
+{
+  "title": "Optional vector near selection",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "A node with no optional vector remains valid but is excluded from nearest results; populated vectors are returned in similarity order."
+}

@@ -1,0 +1,4 @@
+error: Vector metric must be cosine, dot, or l2
+  schema:1:45
+  schema { type Ticket { embedding: Vector<3, angular> } }
+                                              ^^^^^^^

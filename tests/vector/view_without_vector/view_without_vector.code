@@ -1,0 +1,1 @@
+schema { type Ticket { title: String } display { vector2d { Ticket } } }

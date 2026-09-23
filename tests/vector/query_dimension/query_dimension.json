@@ -1,0 +1,9 @@
+{
+  "title": "Query dimension",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Query vectors must have the indexed field dimension."
+}

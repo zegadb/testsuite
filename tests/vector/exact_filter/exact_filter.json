@@ -1,0 +1,9 @@
+{
+  "title": "Exact filter",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Exact scan applies the ordinary predicate before choosing k and exposes aliased scores."
+}

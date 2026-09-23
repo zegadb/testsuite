@@ -1,0 +1,5 @@
+error: display `vector2d` needs a Vector field on type Ticket
+  schema:1:61
+  schema { type Ticket { title: String } display { vector2d { Ticket } } }
+                                                              ^^^^^^
+  help: add `embedding: Vector<384>` to Ticket, or remove Ticket from this view

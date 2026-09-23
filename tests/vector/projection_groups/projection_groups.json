@@ -1,0 +1,6 @@
+{
+  "title": "Mixed vector result selection",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "One nested result contains vectors from cosine-2D, dot-3D, and dot-2D types, the three incompatible projection groups used by the vector view."
+}
