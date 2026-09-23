@@ -5,7 +5,7 @@ import { root, loadCorpus, engine, corpusDigest } from './corpus.mjs';
 const cases = loadCorpus();
 const digest = corpusDigest(cases);
 const manifest = fs.readFileSync(path.join(root, 'Cargo.toml'), 'utf8');
-if ((manifest.match(new RegExp(`rev = "${engine.revision}"`, 'g')) ?? []).length !== 2) throw Error('Cargo dependencies and engine.json must pin the same revision');
+if ((manifest.match(new RegExp(`rev = "${engine.revision}"`, 'g')) ?? []).length !== 1) throw Error('Cargo dependency and engine.json must pin the same revision');
 const reports = {};
 for (const host of ['native', 'browser']) {
   const file = path.join(root, `.cache/${host}.json`);
