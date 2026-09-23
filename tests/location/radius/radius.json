@@ -1,0 +1,9 @@
+{
+  "title": "Radius",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "At the equator one degree is about 111195 metres; a 150 km radius includes zero and one degree, excluding two."
+}

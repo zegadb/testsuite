@@ -1,0 +1,2 @@
+schema { type Place { n: Int at: Point from (lat, lon) } }
+mutation csv ["points.csv"] { Place(n: $n) { at } }

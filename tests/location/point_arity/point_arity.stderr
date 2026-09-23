@@ -1,0 +1,4 @@
+error: point() needs exactly two numbers: latitude, longitude
+  schema:2:30
+  mutation { Place(n: 0 && at: point(0)) { at } }
+                               ^^^^^^^

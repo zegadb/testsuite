@@ -1,0 +1,9 @@
+{
+  "title": "Csv mapping",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Only the explicitly named source columns populate the Point; they do not need to be stored schema fields."
+}

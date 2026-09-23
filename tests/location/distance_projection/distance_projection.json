@@ -1,0 +1,9 @@
+{
+  "title": "Distance projection",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Distance to the identical point is zero metres, both with the default result key and an explicit alias."
+}

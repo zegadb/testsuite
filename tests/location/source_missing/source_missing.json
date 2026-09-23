@@ -1,0 +1,9 @@
+{
+  "title": "Source missing",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "An explicit Point source mapping rejects a missing longitude column."
+}
