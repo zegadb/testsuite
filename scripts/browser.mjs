@@ -22,10 +22,18 @@ export async function createBrowserHost() {
         const caseDir = path.join(staging, test.id);
         fs.mkdirSync(caseDir, { recursive: true });
         for (const [name, content] of Object.entries(test.files)) fs.writeFileSync(path.join(caseDir, name), content);
-        fs.writeFileSync(path.join(caseDir, 'host.js'), `import init, { evaluate_json } from '/wasm/zql_conformance_host.js';
+        fs.writeFileSync(path.join(caseDir, 'host.js'), `import init, { evaluate_json, import_locations } from '/wasm/zql_conformance_host.js';
 await init();
-self.onmessage = ({ data }) => {
-  try { self.postMessage({ result: JSON.parse(evaluate_json(JSON.stringify(data))) }); }
+self.onmessage = async ({ data }) => {
+  try {
+    data.sources = {};
+    for (const location of JSON.parse(import_locations(data.source))) {
+      const response = await fetch(location);
+      if (!response.ok) throw Error('Cannot fetch ' + location + ': ' + response.status);
+      data.sources[location] = await response.text();
+    }
+    self.postMessage({ result: JSON.parse(evaluate_json(JSON.stringify(data))) });
+  }
   catch (error) { self.postMessage({ error: String(error) }); }
 };
 self.postMessage({ ready: true });`);
