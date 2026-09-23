@@ -1,0 +1,9 @@
+{
+  "title": "Zero hop range",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A hop range must start at one or later."
+}

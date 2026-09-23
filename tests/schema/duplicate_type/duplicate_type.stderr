@@ -1,0 +1,5 @@
+error: duplicate type Person
+  schema:1:31
+  schema { type Person { } type Person { } }
+                                ^^^^^^
+  help: a schema names each type once

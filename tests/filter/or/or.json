@@ -1,0 +1,9 @@
+{
+  "title": "Or",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Disjunction combines both matching branches and returns a list."
+}

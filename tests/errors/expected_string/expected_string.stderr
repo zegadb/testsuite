@@ -1,0 +1,4 @@
+error: expected a string
+  schema:2:30
+  query { Person(name CONTAINS 3) }
+                               ^

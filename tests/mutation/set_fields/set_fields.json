@@ -1,0 +1,9 @@
+{
+  "title": "Set fields",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Comma-separated set writes update the existing row and retain its name."
+}

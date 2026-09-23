@@ -1,0 +1,5 @@
+error: friends has a range but no arrow
+  schema:2:18
+  query { Person { friends *1..2 } }
+                   ^^^^^^^^^^^^^
+  help: write `friends *1..3 -> Type`

@@ -1,0 +1,9 @@
+{
+  "title": "Expected type keyword",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Schema entries require the type keyword."
+}

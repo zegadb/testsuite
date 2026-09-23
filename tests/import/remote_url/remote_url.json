@@ -1,0 +1,10 @@
+{
+  "title": "Remote url",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "The engine fetches an immutable public HTTPS object. Offline runs explicitly skip; HTTP errors while online fail.",
+  "network": "https://raw.githubusercontent.com/zegadb/zega/718349d94673552f848d1abd7046a98496a5747a/browser/wasm-source.json"
+}

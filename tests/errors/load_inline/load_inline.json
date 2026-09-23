@@ -1,0 +1,9 @@
+{
+  "title": "Load inline",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Triple-quoted inline data is rejected in favor of paths."
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Csv no header",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "An empty CSV file cannot define column bindings."
+}

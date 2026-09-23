@@ -1,0 +1,9 @@
+{
+  "title": "Union selection",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Union scans include both types; fields absent from one type project as null."
+}

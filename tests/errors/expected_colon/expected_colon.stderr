@@ -1,0 +1,4 @@
+error: expected :
+  schema:2:40
+  mutation { Person(name: "Ada") set age 31 }
+                                         ^^

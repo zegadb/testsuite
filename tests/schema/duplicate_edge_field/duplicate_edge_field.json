@@ -1,0 +1,9 @@
+{
+  "title": "Duplicate edge field",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Relationship property names cannot be declared twice."
+}

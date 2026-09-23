@@ -1,0 +1,7 @@
+* text=auto eol=lf
+# Golden bytes include diagnostic blank-line indentation and source EOFs.
+*.code -text
+*.stdout -text -whitespace
+*.stderr -text -whitespace
+# Keep captured terminal output, including carriage-return progress updates.
+evidence/*.txt -text -whitespace

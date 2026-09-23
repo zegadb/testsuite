@@ -1,0 +1,4 @@
+schema { type Person { name: String email: String } }
+unique { Person { name email } }
+mutation { Person(name: "Ada" && email: "ada@example.test") }
+mutation { Person(name: "Ada" && email: "other@example.test") }

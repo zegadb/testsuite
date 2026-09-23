@@ -1,0 +1,27 @@
+{
+  "name": "zega-testsuite",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/run.mjs",
+    "test:runner": "node --test scripts/runner.test.mjs",
+    "corpus": "node scripts/export.mjs",
+    "dev": "npm run corpus && next dev",
+    "build": "npm run corpus && next build",
+    "preview": "node scripts/serve.mjs out",
+    "check:site": "node scripts/check-site.mjs"
+  },
+  "dependencies": {
+    "next": "16.3.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "playwright": "1.63.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,5 @@
+error: expected schema
+  schema:1:1
+  query { }
+  ^^^^^
+  help: a file starts with `schema { }`

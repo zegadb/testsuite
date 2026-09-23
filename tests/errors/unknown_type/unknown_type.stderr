@@ -1,0 +1,5 @@
+execution error: error: unknown type Ghost
+  schema:2:9
+  query { Ghost { name } }
+          ^^^^^
+  help: types are Person

@@ -1,0 +1,5 @@
+execution error: error: `set age` writes a row
+  schema:2:33
+  query { Person(name: "Ada") set age: 31 }
+                                  ^^^
+  help: wrap the query in `mutation { }`

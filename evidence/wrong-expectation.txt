@@ -1,0 +1,15 @@
+$ node scripts/run.mjs --host native --case tests/query/selected_fields
+ZQL conformance | host=native | engine=718349d94673 | offline
+FAIL  query/selected_fields
+  stdout expected: "{\"name\":\"WRONG\"}\n"
+  stdout actual:   "{\"name\":\"Ada\"}\n"
+
+native: 0 passed, 1 failed, 0 known failures, 0 unexpected passes, 0 skipped; 1 total
+exit=1
+
+Restored selected_fields.stdout:
+ZQL conformance | host=native | engine=718349d94673 | offline
+PASS  query/selected_fields
+
+native: 1 passed, 0 failed, 0 known failures, 0 unexpected passes, 0 skipped; 1 total
+exit=0

@@ -1,0 +1,9 @@
+{
+  "title": "Edge field mismatch",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Two declarations of the same relationship must agree on edge property types."
+}

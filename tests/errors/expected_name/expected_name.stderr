@@ -1,0 +1,4 @@
+error: expected a name
+  schema:1:15
+  schema { type 7 { } }
+                ^

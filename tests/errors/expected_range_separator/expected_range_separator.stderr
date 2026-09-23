@@ -1,0 +1,4 @@
+error: expected ..
+  schema:2:29
+  query { Person { friends *1 -> Person { name } } }
+                              ^^

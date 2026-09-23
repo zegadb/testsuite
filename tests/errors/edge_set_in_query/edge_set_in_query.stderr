@@ -1,0 +1,5 @@
+execution error: error: &since: value is stored by a mutation
+  schema:4:36
+  query { Person { knows -> Person { &since: 2020 } } }
+                                     ^^^^^^
+  help: drop the value to read `&since`, or wrap the query in `mutation`

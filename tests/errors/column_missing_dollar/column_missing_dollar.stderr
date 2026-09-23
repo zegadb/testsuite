@@ -1,0 +1,5 @@
+error: a column needs `$`
+  schema:2:46
+  mutation csv ["./people.csv"] { Person(name: Name) }
+                                               ^^^^
+  help: write `$Team`, or `$"Type 1"` when the name has a space

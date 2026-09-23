@@ -1,0 +1,9 @@
+{
+  "title": "Unique second field",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "The second unique field is enforced independently of the first."
+}

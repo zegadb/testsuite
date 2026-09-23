@@ -1,0 +1,9 @@
+{
+  "title": "Edge field at root",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Edge fields require an arriving relationship."
+}

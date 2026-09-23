@@ -1,0 +1,9 @@
+{
+  "title": "Csv quoted",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Quoted CSV commas and doubled quotes survive; a spaced header uses a quoted column reference."
+}

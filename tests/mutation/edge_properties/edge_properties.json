@@ -1,0 +1,9 @@
+{
+  "title": "Edge properties",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Edge properties persist on the relationship and are projected at its target."
+}

@@ -1,0 +1,2 @@
+schema { type Person { name: String age: Int active?: Bool score?: Float } }
+mutation json ["http://127.0.0.1/data.json"] { Person(name: $name) }

@@ -1,0 +1,5 @@
+error: or is `||`
+  schema:2:25
+  query { Person(age = 20 | age = 30) }
+                          ^
+  help: one `|` joins types, as in `(Book | Movie)`

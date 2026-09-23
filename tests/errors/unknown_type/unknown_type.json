@@ -1,0 +1,9 @@
+{
+  "title": "Unknown type",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Selections must name a declared type."
+}

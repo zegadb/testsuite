@@ -1,0 +1,9 @@
+{
+  "title": "Less equal",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Less-or-equal includes the boundary."
+}

@@ -1,0 +1,2 @@
+schema { type Person { name: String age: Int active?: Bool score?: Float friends -> Person[] } }
+mutation { Person { friends *1..2 -> Person } }

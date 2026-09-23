@@ -1,0 +1,9 @@
+{
+  "title": "Less",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Strict less-than excludes the equal boundary."
+}

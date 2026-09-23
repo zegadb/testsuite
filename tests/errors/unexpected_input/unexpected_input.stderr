@@ -1,0 +1,4 @@
+error: unexpected input
+  schema:1:11
+  query { } trailing
+            ^^^^^^^^

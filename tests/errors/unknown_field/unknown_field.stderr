@@ -1,0 +1,5 @@
+execution error: error: Person has no field nmae
+  schema:2:18
+  query { Person { nmae } }
+                   ^^^^
+  help: did you mean `name`?

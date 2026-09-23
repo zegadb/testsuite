@@ -1,0 +1,4 @@
+error: bad string
+  schema:2:22
+  query { Person(name: "broken\
+                       ^^^^^^^^

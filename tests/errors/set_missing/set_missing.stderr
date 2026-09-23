@@ -1,0 +1,5 @@
+execution error: error: no Person matched
+  schema:2:12
+  mutation { Person(name: "Nobody") set age: 31 }
+             ^^^^^^
+  help: `link` and `set` need exactly one matching row

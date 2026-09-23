@@ -1,0 +1,9 @@
+{
+  "title": "Starts with",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "STARTS WITH matches the prefix."
+}

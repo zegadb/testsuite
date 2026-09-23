@@ -1,0 +1,9 @@
+{
+  "title": "Column outside load",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Column references are only legal inside import templates."
+}

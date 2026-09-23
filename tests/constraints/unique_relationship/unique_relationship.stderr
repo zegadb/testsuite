@@ -1,0 +1,5 @@
+error: Person.friends is a relationship
+  schema:2:19
+  unique { Person { friends } }
+                    ^^^^^^^
+  help: unique applies to a field, such as `name`

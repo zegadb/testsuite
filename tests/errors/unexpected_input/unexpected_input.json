@@ -1,0 +1,10 @@
+{
+  "title": "Unexpected input",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "The single-statement API must consume its entire input; no graph is created.",
+  "api": "statement"
+}

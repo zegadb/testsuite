@@ -1,0 +1,9 @@
+{
+  "title": "Private url",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "The remote import guard rejects private network addresses without a request."
+}

@@ -1,0 +1,5 @@
+schema { type Person { name: String age: Int active?: Bool score?: Float friends -> Person[] } }
+mutation { Person(name: "Ada" && age: 30 && active: true && score: 1.5) }
+mutation { Person(name: "Ben" && age: 20 && active: false && score: -2.5) }
+mutation { Person(name: "Cy" && age: 40 && active: true && score: 3.5) }
+query { Person(name: "Ada") { &hops } }

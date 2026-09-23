@@ -1,0 +1,9 @@
+{
+  "title": "Load empty path",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A file list cannot contain an empty path."
+}

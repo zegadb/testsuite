@@ -1,0 +1,5 @@
+error: expected a comparison after age
+  schema:2:19
+  query { Person(age) }
+                    ^
+  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `CONTAINS`, `STARTS WITH`, or `ENDS WITH`

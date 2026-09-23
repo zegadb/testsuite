@@ -1,0 +1,3 @@
+schema { type Person { name: String age: Int active?: Bool score?: Float friends -> Person[] } }
+mutation { Person(name: "Ada") }
+mutation { Person(name: "Ada") { friends -> link Person(name: "Nobody") } }

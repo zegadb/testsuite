@@ -1,0 +1,5 @@
+error: not-equal is `!=`
+  schema:2:20
+  query { Person(age ! 30) }
+                     ^
+  help: a condition uses `=`, `!=`, `&&`, and `||`

@@ -1,0 +1,5 @@
+error: duplicate edge field year
+  schema:1:56
+  schema { type Person { friends -> Person[] { year: Int year: Int } } }
+                                                         ^^^^
+  help: each field of a relationship is named once

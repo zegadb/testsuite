@@ -1,0 +1,9 @@
+{
+  "title": "Mutation or",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A new row cannot obtain its assignments from alternative branches."
+}

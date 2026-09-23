@@ -1,0 +1,5 @@
+error: schema has no types
+  schema:1:11
+  schema { }
+            ^
+  help: start with `type Name { }`

@@ -1,0 +1,5 @@
+error: and is `&&`
+  schema:2:30
+  mutation { Person(name: "Ada", age: 30) }
+                               ^
+  help: a comma separates writes in `set`

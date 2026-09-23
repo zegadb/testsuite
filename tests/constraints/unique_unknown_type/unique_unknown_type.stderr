@@ -1,0 +1,5 @@
+error: unknown type Ghost
+  schema:2:10
+  unique { Ghost { name } }
+           ^^^^^
+  help: types are Person

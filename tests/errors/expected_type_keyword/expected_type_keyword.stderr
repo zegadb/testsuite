@@ -1,0 +1,4 @@
+error: expected type
+  schema:1:10
+  schema { Person { } }
+           ^^^^^^

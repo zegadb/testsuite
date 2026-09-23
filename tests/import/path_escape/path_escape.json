@@ -1,0 +1,9 @@
+{
+  "title": "Path escape",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "The import path guard rejects traversal before touching the filesystem."
+}

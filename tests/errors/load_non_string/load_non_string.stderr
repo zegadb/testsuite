@@ -1,0 +1,5 @@
+error: a load reads a file
+  schema:2:18
+  mutation json [1] { Person }
+                   ^
+  help: write `["./data.csv"]` or `["https://..."]`

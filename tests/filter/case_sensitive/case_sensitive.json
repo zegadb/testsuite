@@ -1,0 +1,9 @@
+{
+  "title": "Case sensitive",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "String containment is case-sensitive."
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Optional field",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Absent optional fields project as JSON null."
+}

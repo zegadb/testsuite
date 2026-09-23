@@ -1,0 +1,2 @@
+    Checking zql-conformance-host v0.1.0 (/Volumes/Projects/codex/zega-testsuite)
+    Finished `dev` profile [unoptimized] target(s) in 0.59s

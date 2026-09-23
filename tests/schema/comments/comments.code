@@ -1,0 +1,6 @@
+// schema comment
+schema { // declaration
+ type Item { name: String }
+}
+mutation { Item(name: "hello") } // data
+query { Item { name } }

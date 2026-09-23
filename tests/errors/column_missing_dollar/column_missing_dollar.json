@@ -1,0 +1,9 @@
+{
+  "title": "Column missing dollar",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Bare identifiers in a load template must carry the dollar prefix."
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Expected range separator",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A hop range requires the double-dot separator."
+}

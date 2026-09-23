@@ -1,0 +1,1 @@
+schema { type A { next: R -> B { value: Int } } type B { prev: R <- A { value: String } } }

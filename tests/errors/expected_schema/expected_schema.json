@@ -1,0 +1,9 @@
+{
+  "title": "Expected schema",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A document must start with a schema block."
+}

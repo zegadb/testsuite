@@ -1,0 +1,5 @@
+
+> zega-testsuite@0.1.0 check:site
+> node scripts/check-site.mjs
+
+Static site: 133 case routes + corpus JSON served; search, navigation, category filter, mobile layout and browser console passed

@@ -1,0 +1,2 @@
+schema { type Person { friends -> Person[] } type Book { title: String } }
+query { Person { friends -> Book { title } } }

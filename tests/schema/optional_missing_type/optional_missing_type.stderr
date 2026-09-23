@@ -1,0 +1,5 @@
+error: name? needs a type
+  schema:1:24
+  schema { type Person { name? } }
+                         ^^^^
+  help: write `name?: String`

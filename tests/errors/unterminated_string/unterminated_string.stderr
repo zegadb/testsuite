@@ -1,0 +1,4 @@
+error: unterminated string
+  schema:2:22
+  query { Person(name: "broken
+                       ^^^^^^^

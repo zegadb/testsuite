@@ -1,0 +1,4 @@
+schema {
+ type Person { name: String knows: KNOWS -> Person[] { since: Int close?: Bool } known: KNOWS <- Person[] }
+}
+query { Person { &since } }

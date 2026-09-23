@@ -1,0 +1,9 @@
+{
+  "title": "Hop range",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Bounded traversal reaches one-hop and two-hop neighbors and reports their distance."
+}

@@ -1,0 +1,11 @@
+/.target/
+/.tmp/
+/.cache/
+/node_modules/
+/.next/
+/out/
+/.wrangler/
+/public/corpus.json
+/public/results.json
+/public/wasm/
+*.tsbuildinfo

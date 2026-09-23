@@ -1,0 +1,5 @@
+execution error: error: Person matched 3 rows
+  schema:5:12
+  mutation { Person(age > 10) set active: true }
+             ^^^^^^
+  help: `link` and `set` need exactly one matching row

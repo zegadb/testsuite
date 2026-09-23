@@ -1,0 +1,3 @@
+schema { type Person { name: String parent -> Person } }
+mutation { Person(name: "Ada") }
+query { Person(name: "Ada") { parent -> Person { name } } }

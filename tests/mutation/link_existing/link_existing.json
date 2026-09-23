@@ -1,0 +1,9 @@
+{
+  "title": "Link existing",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "link connects exactly the two existing nodes without duplicating either one."
+}

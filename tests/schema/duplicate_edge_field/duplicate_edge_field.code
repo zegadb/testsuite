@@ -1,0 +1,1 @@
+schema { type Person { friends -> Person[] { year: Int year: Int } } }

@@ -1,0 +1,9 @@
+{
+  "title": "Wrong direction",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Traversal direction must agree with the schema."
+}

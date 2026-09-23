@@ -1,0 +1,9 @@
+{
+  "title": "Unique distinct",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Distinct unique values are accepted, so a blanket mutation rejection cannot satisfy violation tests."
+}

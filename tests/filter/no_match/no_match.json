@@ -1,0 +1,9 @@
+{
+  "title": "No match",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A non-equality filter with zero matches returns an array."
+}

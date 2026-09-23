@@ -1,0 +1,5 @@
+execution error: error: &since is an edge field, and this value was not reached by an edge
+  schema:4:18
+  query { Person { &since } }
+                   ^^^^^^
+  help: read `&since` inside the type the edge lands on

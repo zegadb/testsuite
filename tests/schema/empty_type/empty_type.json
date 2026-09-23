@@ -1,0 +1,9 @@
+{
+  "title": "Empty type",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "An empty declared type is queryable and contains zero rows."
+}

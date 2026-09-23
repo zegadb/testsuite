@@ -1,0 +1,3 @@
+schema { type Person { name: String age: Int active?: Bool score?: Float } }
+mutation json ["./one.json", "./two.json"] { Person(name: $name && age: $age) }
+query { Person { name age } }

@@ -1,0 +1,9 @@
+{
+  "title": "Expected open brace",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "The schema keyword must be followed by its opening brace."
+}

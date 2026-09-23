@@ -1,0 +1,9 @@
+{
+  "title": "Root hops",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "The root selection starts at hop zero."
+}

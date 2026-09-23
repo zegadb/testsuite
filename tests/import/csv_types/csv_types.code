@@ -1,0 +1,3 @@
+schema { type Person { name: String age: Int active?: Bool score?: Float } }
+mutation csv ["./people.csv"] { Person(name: $Name && age: $Age && active: $Active && score: $Score) }
+query { Person { name age active score } }

@@ -1,0 +1,4 @@
+error: bad json: trailing comma at line 1 column 6
+  schema:2:15
+  mutation json ["x",] { Person }
+                ^

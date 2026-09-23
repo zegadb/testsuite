@@ -1,0 +1,9 @@
+{
+  "title": "Optional relationship",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "An alias relationship cannot use the scalar optional modifier."
+}

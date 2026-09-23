@@ -1,0 +1,9 @@
+{
+  "title": "Required edge field",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Required edge fields must be provided by mutations."
+}

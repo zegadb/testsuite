@@ -1,0 +1,9 @@
+{
+  "title": "Mutation comparison",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Creation requires assigned values, not comparison predicates."
+}

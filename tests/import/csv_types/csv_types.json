@@ -1,0 +1,9 @@
+{
+  "title": "Csv types",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "CSV cells coerce integers, booleans and floats while retaining row order."
+}

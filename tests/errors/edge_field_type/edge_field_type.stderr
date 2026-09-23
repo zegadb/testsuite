@@ -1,0 +1,5 @@
+execution error: error: &since is not Int
+  schema:4:65
+  mutation { Person(name: "Ada") { knows -> Person(name: "Ben") { &since: "yesterday" } } }
+                                                                  ^^^^^^
+  help: `since` is Int

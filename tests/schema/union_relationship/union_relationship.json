@@ -1,0 +1,9 @@
+{
+  "title": "Union relationship",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A union-valued relationship traverses each declared target type."
+}

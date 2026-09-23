@@ -1,0 +1,5 @@
+error: `$` names a column or a key
+  schema:2:26
+  mutation { Person(name: $Name) }
+                           ^^^^
+  help: use `$Name` inside `mutation csv` or `mutation json`

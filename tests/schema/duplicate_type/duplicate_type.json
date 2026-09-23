@@ -1,0 +1,9 @@
+{
+  "title": "Duplicate type",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Declaring the same type twice is rejected."
+}

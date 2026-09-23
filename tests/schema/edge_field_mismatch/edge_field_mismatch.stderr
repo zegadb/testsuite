@@ -1,0 +1,5 @@
+error: R fields do not match
+  schema:1:71
+  schema { type A { next: R -> B { value: Int } } type B { prev: R <- A { value: String } } }
+                                                                        ^^^^^^^^^^^^^^^^^
+  help: A.next already declares `prev`. Declare the fields once

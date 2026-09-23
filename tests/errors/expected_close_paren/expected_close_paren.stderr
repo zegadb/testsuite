@@ -1,0 +1,4 @@
+error: expected )
+  schema:2:25
+  query { Person(age = 30 { name } }
+                          ^

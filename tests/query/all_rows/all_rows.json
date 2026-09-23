@@ -1,0 +1,9 @@
+{
+  "title": "All rows",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A type scan returns every inserted row in engine order; names and ages stay paired."
+}

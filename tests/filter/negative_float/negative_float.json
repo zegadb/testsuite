@@ -1,0 +1,9 @@
+{
+  "title": "Negative float",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Numeric predicates compare a negative Float against zero."
+}

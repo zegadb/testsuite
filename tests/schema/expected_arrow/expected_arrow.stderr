@@ -1,0 +1,5 @@
+error: expected -> or <-
+  schema:1:31
+  schema { type Person { friend Person } }
+                                ^^^^^^
+  help: a relationship names its direction, `->` or `<-`

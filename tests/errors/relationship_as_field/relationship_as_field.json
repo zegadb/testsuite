@@ -1,0 +1,9 @@
+{
+  "title": "Relationship as field",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Relationships require traversal syntax; the diagnostic supplies it."
+}

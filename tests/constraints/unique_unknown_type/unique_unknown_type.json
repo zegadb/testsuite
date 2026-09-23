@@ -1,0 +1,9 @@
+{
+  "title": "Unique unknown type",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Unique declarations must name a declared type."
+}

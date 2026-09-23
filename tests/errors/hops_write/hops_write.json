@@ -1,0 +1,9 @@
+{
+  "title": "Hops write",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "The computed hop count is read-only."
+}

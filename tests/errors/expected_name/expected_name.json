@@ -1,0 +1,9 @@
+{
+  "title": "Expected name",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Identifiers cannot begin with a digit."
+}

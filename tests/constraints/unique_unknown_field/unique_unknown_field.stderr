@@ -1,0 +1,5 @@
+error: Person has no field email
+  schema:2:19
+  unique { Person { email } }
+                    ^^^^^
+  help: Person has name, age, active, score

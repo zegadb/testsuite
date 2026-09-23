@@ -1,0 +1,9 @@
+{
+  "title": "Missing column",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Unknown import columns fail with a stable list of available columns."
+}

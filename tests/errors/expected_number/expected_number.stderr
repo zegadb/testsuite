@@ -1,0 +1,4 @@
+error: expected a number
+  schema:2:21
+  query { Person(age: nope) }
+                      ^^^^

@@ -1,0 +1,9 @@
+{
+  "title": "Json array",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A local JSON array binds every object into a persisted row."
+}

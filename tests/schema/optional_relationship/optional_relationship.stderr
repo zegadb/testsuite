@@ -1,0 +1,5 @@
+error: friend cannot be optional and a relationship
+  schema:1:24
+  schema { type Person { friend?: FRIEND -> Person } }
+                         ^^^^^^
+  help: drop the `?`; a relationship is one record or a list

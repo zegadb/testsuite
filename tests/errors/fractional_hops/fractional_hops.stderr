@@ -1,0 +1,4 @@
+error: expected an integer
+  schema:2:27
+  query { Person { friends *1.5..2 -> Person } }
+                            ^^^

@@ -1,0 +1,5 @@
+execution error: error: Person.friends does not point <-
+  schema:2:18
+  query { Person { friends <- Person } }
+                   ^^^^^^^
+  help: `friends` points -> Person[]

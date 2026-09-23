@@ -1,0 +1,9 @@
+{
+  "title": "Reversed hop range",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "The maximum hop count must be at least the minimum."
+}

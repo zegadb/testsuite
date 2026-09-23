@@ -1,0 +1,9 @@
+{
+  "title": "Empty",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "An empty mutation creates no rows."
+}

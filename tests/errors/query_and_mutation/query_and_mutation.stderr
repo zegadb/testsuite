@@ -1,0 +1,5 @@
+error: a statement is a query or a mutation
+  schema:2:15
+  mutation query { Person }
+                ^
+  help: drop one of the words

@@ -1,0 +1,9 @@
+{
+  "title": "Set ambiguous",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "set refuses ambiguous multirow updates."
+}

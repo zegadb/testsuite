@@ -1,0 +1,1 @@
+mutation json ["./people.json"] { Person(name: $name) }

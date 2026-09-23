@@ -1,0 +1,5 @@
+execution error: error: knows has no field sinc
+  schema:4:36
+  query { Person { knows -> Person { &sinc } } }
+                                     ^^^^^
+  help: did you mean `&since`?

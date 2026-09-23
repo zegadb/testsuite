@@ -1,0 +1,9 @@
+{
+  "title": "Edge field type",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "An edge property enforces its declared scalar type."
+}

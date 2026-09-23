@@ -1,0 +1,9 @@
+{
+  "title": "Precedence",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "AND binds more tightly than OR."
+}

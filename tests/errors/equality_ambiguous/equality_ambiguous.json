@@ -1,0 +1,9 @@
+{
+  "title": "Equality ambiguous",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "An equality lookup cannot silently select one of multiple matches."
+}

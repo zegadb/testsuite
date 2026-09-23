@@ -1,0 +1,9 @@
+{
+  "title": "Unique relationship",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Uniqueness applies to scalar fields, not relationships."
+}

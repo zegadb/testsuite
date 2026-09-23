@@ -1,0 +1,9 @@
+{
+  "title": "Load non string",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Every file location must be a string."
+}

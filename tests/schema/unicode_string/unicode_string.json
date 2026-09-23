@@ -1,0 +1,9 @@
+{
+  "title": "Unicode string",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Unicode values survive parsing, storage and UTF-8 serialization."
+}

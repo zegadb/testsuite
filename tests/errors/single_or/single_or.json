@@ -1,0 +1,9 @@
+{
+  "title": "Single or",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A single pipe is a type union operator, not boolean OR."
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Missing comparison",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A predicate field needs an operator and value."
+}

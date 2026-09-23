@@ -1,0 +1,5 @@
+error: bad range *3..1
+  schema:2:18
+  query { Person { friends *3..1 -> Person } }
+                   ^^^^^^^^^^^^^
+  help: write `*min..max`, with min at least 1 and max at least min

@@ -1,0 +1,63 @@
+name: ZQL conformance
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  conformance:
+    runs-on: ubuntu-latest
+    environment: public-ci
+    env:
+      RUSTC_WRAPPER: sccache
+      SCCACHE_GHA_ENABLED: "true"
+      CARGO_TARGET_DIR: ${{ github.workspace }}/.target
+      TMPDIR: ${{ github.workspace }}/.tmp
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create isolated scratch directory
+        run: mkdir -p .tmp && chmod 700 .tmp
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+          targets: wasm32-unknown-unknown
+      - uses: mozilla-actions/sccache-action@v0.0.9
+      - name: Require compiler cache
+        run: sccache --version
+      - run: npm ci --no-audit --no-fund
+      - run: cargo fmt --all -- --check
+      - run: cargo check --locked --workspace --all-targets
+      - run: cargo clippy --locked --workspace --all-targets --all-features -- -D warnings
+      - run: cargo build --locked --bin zql-native
+      - name: Execute native corpus (offline, deterministic)
+        run: npm test -- --host native
+      - name: Verify runner detects false expectations and infrastructure failures
+        run: npm run test:runner
+      - name: Re-run in reverse order
+        run: npm test -- --host native --reverse --report .cache/native-reverse.json
+      - name: Build the same engine for browser
+        run: |
+          cargo install wasm-bindgen-cli --version 0.2.128 --locked --root "$PWD/.tmp/tools"
+          node scripts/build-browser.mjs --bindgen "$PWD/.tmp/tools/bin/wasm-bindgen"
+      - run: npx playwright install --with-deps chromium
+      - run: npm test -- --host browser
+      - run: node scripts/compare-hosts.mjs
+      - run: npm run build
+      - run: npm run check:site
+      - uses: actions/upload-artifact@v4
+        with:
+          name: corpus-site-and-host-results
+          path: |
+            out/
+            .cache/native.json
+            .cache/native-reverse.json
+            .cache/browser.json
+          include-hidden-files: true

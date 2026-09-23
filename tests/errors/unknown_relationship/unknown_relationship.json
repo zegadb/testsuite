@@ -1,0 +1,9 @@
+{
+  "title": "Unknown relationship",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "An undeclared relationship is rejected before traversal."
+}
