@@ -1,0 +1,6 @@
+{
+  "title": "Near and order conflict",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "Combining explicit order with near is rejected with the near-already-orders diagnostic at the selection type span."
+}

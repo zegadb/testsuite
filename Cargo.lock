@@ -1061,7 +1061,7 @@ dependencies = [
 [[package]]
 name = "zega"
 version = "0.1.1"
-source = "git+https://github.com/zegadb/zega.git?rev=44e4e95ebf468c46a458fed814097d97e878c636#44e4e95ebf468c46a458fed814097d97e878c636"
+source = "git+https://github.com/zegadb/zega.git?rev=fe0a73bfaf54f7298452b3591ed2fe7f6370b120#fe0a73bfaf54f7298452b3591ed2fe7f6370b120"
 dependencies = [
  "base64 0.22.1",
  "bincode",

@@ -1,0 +1,6 @@
+{
+  "title": "Limit truncates nearest vectors",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "Limit selects exactly the top three nearest rows from the larger near result set, preserving similarity order."
+}

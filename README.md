@@ -84,8 +84,11 @@ Author a self-contained source and an independent expected result. Include posit
 `tests/vector/` covers fixed dimensions, numeric components, metric validation,
 explicit JSON/CSV loading, automatic nearest ordering, exact filtered search,
 similarity thresholds, updates, relationship-scoped nearest selection and both
-explicit vector view declarations. Success expectations are independently
-specified; rejecting cases pin the complete reviewed diagnostic and source span.
+explicit vector view declarations. It also covers optional vectors in nearest
+selection, the `near`/`order` diagnostic, `near` with `limit`, and nested
+results containing incompatible vector dimensions and metrics. Success
+expectations are independently specified; rejecting cases pin the complete
+reviewed diagnostic and source span.
 The engine pin in this branch is `zegadb/zega`'s `codex/vector` revision recorded
 in `engine.json`. Engine recall/PCA and headless explorer checks live with that
 implementation; this corpus exercises the shared ZQL contract on both hosts.
