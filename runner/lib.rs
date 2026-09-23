@@ -5,6 +5,8 @@ use zega::{check_zql, Zega, ZqlEntryPoint};
 pub struct Request {
     pub source: String,
     pub api: String,
+    #[serde(default)]
+    pub sources: Option<std::collections::HashMap<String, String>>,
 }
 
 #[derive(Serialize)]
@@ -41,7 +43,11 @@ pub fn evaluate(request: Request) -> Result<Outcome, String> {
         return Err("parser API cases must exercise a rejected input".into());
     }
     let db = Zega::in_memory().build().map_err(|e| e.to_string())?;
-    Ok(match db.apply_zql(source) {
+    let result = match request.sources {
+        Some(sources) => db.apply_zql_with_sources(source, &sources),
+        None => db.apply_zql(source),
+    };
+    Ok(match result {
         Ok(value) => Outcome {
             ok: true,
             stage: "run",
@@ -67,4 +73,13 @@ pub fn evaluate_json(request: &str) -> Result<String, wasm_bindgen::JsValue> {
         .map_err(|e| wasm_bindgen::JsValue::from_str(&e.to_string()))?;
     let outcome = evaluate(request).map_err(|e| wasm_bindgen::JsValue::from_str(&e))?;
     serde_json::to_string(&outcome).map_err(|e| wasm_bindgen::JsValue::from_str(&e.to_string()))
+}
+
+#[cfg(target_arch = "wasm32")]
+#[wasm_bindgen::prelude::wasm_bindgen]
+pub fn import_locations(source: &str) -> String {
+    // Parsing or policy errors are rendered by evaluate_json, with the same
+    // stage and diagnostic as native. Never fetch on those paths.
+    let locations = zega::zql_load_locations(ZqlEntryPoint::File, source).unwrap_or_default();
+    serde_json::to_string(&locations).expect("locations serialize")
 }

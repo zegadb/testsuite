@@ -46,7 +46,7 @@ A known engine bug may carry `knownFailure: { reason, observed: { ok, stage, std
 
 ## Browser host
 
-The same adapter compiles to WASM against the same locked engine dependency. It runs in a real Chromium Web Worker, not Node WASM. Each case gets a new worker and database. Case-local fixtures are served beside the worker so relative paths resolve without changing source. Imports use the engine's own browser XHR path.
+The same adapter compiles to WASM against the same locked engine dependency. It runs in a real Chromium Web Worker, not Node WASM. Each case gets a new worker and database. Case-local fixtures are served beside the worker so relative paths resolve without changing source. The worker fetches raw text asynchronously and supplies it to the engine's `apply_zql_with_sources` API; Rust parses and inserts all JSON/CSV rows. Locations and import policy are checked by the engine before fetching.
 
 ```sh
 rustup target add wasm32-unknown-unknown
