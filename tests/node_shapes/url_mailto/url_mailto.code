@@ -1,2 +1,7 @@
-schema { type Link { url: String<url> } }
-mutation { Link(url: "mailto:user@example.org") { url } }
+schema {
+  type Link { url: String<url> }
+}
+
+mutation {
+  Link(url: "mailto:user@example.org") { url }
+}

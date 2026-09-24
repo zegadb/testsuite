@@ -29,8 +29,5 @@ display {
 }
 
 then {
-  common {
-    Player { country }
-    Team { country }
-  }
+  common { Player { country } Team { country } }
 }

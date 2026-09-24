@@ -38,7 +38,5 @@ display {
 }
 
 then {
-  common {
-    T { value }
-  }
+  common { T { value } }
 }

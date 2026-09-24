@@ -40,8 +40,5 @@ query {
 }
 
 then {
-  similar { &v > 0.9 } || near { &at < 1 km } ||
-  common {
-    Person { country }
-  }
+  similar { &v > 0.9 } || near { &at < 1 km } || common { Person { country } }
 }

@@ -16,7 +16,7 @@ path = "runner/main.rs"
 [dependencies]
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
-zega = { git = "https://github.com/zegadb/zega.git", rev = "a992df2cfe19ccb86b87f2f99c8346f280d499ab" }
+zega = { git = "https://github.com/zegadb/zega.git", rev = "deb962131432a12906fbc41ecc05c88cdb725d69" }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
 wasm-bindgen = "0.2"

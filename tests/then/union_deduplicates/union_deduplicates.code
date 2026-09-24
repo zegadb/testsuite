@@ -40,10 +40,5 @@ query {
 }
 
 then {
-  common {
-    Person { country }
-  } ||
-  common {
-    Person { country }
-  }
+  common { Person { country } } || common { Person { country } }
 }

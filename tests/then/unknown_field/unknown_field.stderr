@@ -1,4 +1,4 @@
 execution error: error: no field absent in the query result types
-  schema:17:14
-      "a" in { absent }
-               ^^^^^^
+  schema:16:23
+    endsWith { "a" in { absent } }
+                        ^^^^^^

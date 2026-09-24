@@ -40,7 +40,5 @@ query {
 }
 
 then {
-  regex {
-    "^(Alice|Bob)$" in { name }
-  }
+  regex { "^(Alice|Bob)$" in { name } }
 }

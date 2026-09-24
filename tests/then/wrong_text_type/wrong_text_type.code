@@ -13,7 +13,5 @@ query {
 }
 
 then {
-  findWith {
-    "a" in { v }
-  }
+  findWith { "a" in { v } }
 }

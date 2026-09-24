@@ -1,9 +1,6 @@
 {
   "title": "Node shapes: all attributes",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Every attribute and size accepts its decided spelling; display never changes stored values."
 }

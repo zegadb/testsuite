@@ -13,7 +13,5 @@ query {
 }
 
 then {
-  common {
-    Ghost { name }
-  }
+  common { Ghost { name } }
 }

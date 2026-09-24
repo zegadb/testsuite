@@ -1,4 +1,4 @@
 execution error: error: unknown type Ghost
-  schema:17:5
-      Ghost { name }
-      ^^^^^
+  schema:16:12
+    common { Ghost { name } }
+             ^^^^^

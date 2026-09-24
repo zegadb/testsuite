@@ -1,9 +1,6 @@
 {
   "title": "Node shapes: url import",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Bound JSON import accepts two valid absolute URL strings."
 }

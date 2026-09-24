@@ -1,4 +1,4 @@
 execution error: error: Person.v must be String, found Vector<2,cosine>
-  schema:17:14
-      "a" in { v }
-               ^
+  schema:16:23
+    findWith { "a" in { v } }
+                        ^
