@@ -1,0 +1,9 @@
+{
+  "title": "Path start needs point",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A* checks the roads leaving the start against the straight line, so the start type needs the toward Point too; a Depot without one is refused rather than skipping that check."
+}

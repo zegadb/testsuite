@@ -115,7 +115,7 @@ matching several nodes, a start that is its own target, and a tie broken by
 node id with an Int weight. Success expectations were written by hand from the
 road lengths, not taken from the engine. Rejecting cases pin the diagnostics
 for a missing weight, a negative weight, a weight in the wrong unit for A*,
-`toward` without a weight, a weight that is not a number, a hop bound on a
+`toward` without a weight, a start type without the `toward` Point, a weight that is not a number, a hop bound on a
 weighted path and an unknown unit. The engine's own tests compare all three
 searches with brute force on random graphs and show A* expands fewer nodes
 (`Zega::nodes_expanded`).
