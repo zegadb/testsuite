@@ -1,0 +1,10 @@
+schema {
+  type Team {
+    name: String
+    founded: Int
+  }
+}
+
+mutation {
+  Team(name: "Flames") { name }
+}

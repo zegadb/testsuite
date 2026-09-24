@@ -1,0 +1,13 @@
+schema {
+  type Team {
+    name: String
+    founded: Int
+    rivals -> Team[]
+  }
+}
+
+mutation {
+  Team(name: "Flames" && founded: 1980) {
+    rivals -> Team(name: "Oilers") { name }
+  }
+}
