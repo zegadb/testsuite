@@ -1,0 +1,15 @@
+{
+  "title": "Required field on a nested create",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "A node created inside another create must have its required fields too; the diagnostic points at the nested type (zega#72).",
+  "knownFailure": {
+    "reason": "zegadb/zega#72: the pinned engine does not enforce required node fields",
+    "observed": {
+      "ok": true,
+      "stage": "run",
+      "stdout": "{\"rivals\":[{\"name\":\"Oilers\"}]}\n",
+      "stderr": ""
+    }
+  }
+}

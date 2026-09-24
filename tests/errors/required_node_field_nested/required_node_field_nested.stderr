@@ -1,0 +1,5 @@
+execution error: error: Team requires founded
+  schema:11:15
+      rivals -> Team(name: "Oilers") { name }
+                ^^^^
+  help: write `founded: …` when creating a Team, or declare it `founded?: Int`

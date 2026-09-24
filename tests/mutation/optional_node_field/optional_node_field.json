@@ -1,0 +1,6 @@
+{
+  "title": "Optional node field left out",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "A field declared with `?` may be left out of a create, and reads back as null. Required fields are all written."
+}

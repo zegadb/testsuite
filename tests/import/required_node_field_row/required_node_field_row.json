@@ -1,0 +1,15 @@
+{
+  "title": "Load row without a required field",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "A CSV row whose required column is empty is refused, naming the field (zega#72).",
+  "knownFailure": {
+    "reason": "zegadb/zega#72: the pinned engine does not enforce required node fields",
+    "observed": {
+      "ok": true,
+      "stage": "run",
+      "stdout": "[{\"name\":\"Flames\"},{\"name\":\"Oilers\"}]\n",
+      "stderr": ""
+    }
+  }
+}

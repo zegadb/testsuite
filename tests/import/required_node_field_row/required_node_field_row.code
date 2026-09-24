@@ -1,0 +1,10 @@
+schema {
+  type Team {
+    name: String
+    founded: Int
+  }
+}
+
+mutation csv ["./teams.csv"] {
+  Team(name: $name && founded: $founded) { name }
+}

@@ -1,0 +1,5 @@
+execution error: error: Team requires founded
+  schema:9:3
+    Team(name: "Flames" && founded: null) { name }
+    ^^^^
+  help: `founded` is required, so it cannot be null; declare it `founded?: Int` to allow null
