@@ -1,0 +1,4 @@
+error: `hops` is a path bound: write `@hops`
+  schema:2:29
+  query { Sample { road *path(hops <= 2) -> Sample } }
+                              ^^^^

@@ -1,0 +1,4 @@
+execution error: error: `&hops` is built in: write `@hops`
+  schema:2:18
+  query { Sample { &hops } }
+                   ^^^^^

@@ -1,0 +1,4 @@
+error: `cost` is a path bound: write `@cost`
+  schema:2:29
+  query { Sample { road *path(cost <= 2) -> Sample } }
+                              ^^^^

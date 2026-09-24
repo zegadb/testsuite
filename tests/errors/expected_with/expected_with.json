@@ -1,9 +1,0 @@
-{
-  "title": "Expected with",
-  "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
-  "notes": "A string prefix predicate requires the complete STARTS WITH operator."
-}

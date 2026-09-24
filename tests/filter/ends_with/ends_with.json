@@ -5,5 +5,5 @@
     "native",
     "browser"
   ],
-  "notes": "ENDS WITH matches the suffix."
+  "notes": "endsWith matches the suffix."
 }

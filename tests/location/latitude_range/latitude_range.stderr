@@ -1,4 +1,4 @@
 error: Point latitude must be a number in [-90, 90]
-  schema:2:36
-  mutation { Place(n: 0 && at: point(91, 0)) { at } }
-                                     ^^
+  schema:2:37
+  mutation { Place(n: 0 && at: @point(91, 0)) { at } }
+                                      ^^

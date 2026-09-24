@@ -1,4 +1,4 @@
 execution error: error: near already orders by similarity
   schema:2:9
-  query { Ticket near(embedding, vector[1,0], 2) order by distance(at, point(0,0)) { n } }
+  query { Ticket @near(embedding, @vector[1,0], 2) order by @distance(at, @point(0,0)) { n } }
           ^^^^^^

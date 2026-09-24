@@ -2,4 +2,4 @@ error: text index needs a String field; Player.salary is Int
   schema:2:23
   index { text Player { salary } }
                         ^^^^^^
-  help: `text` speeds CONTAINS, STARTS WITH and ENDS WITH on a String
+  help: `text` speeds findWith, startsWith and endsWith on a String

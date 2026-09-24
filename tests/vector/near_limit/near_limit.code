@@ -1,8 +1,8 @@
 schema { type Ticket { n: Int embedding: Vector<2> } }
-mutation { Ticket(n: 0 && embedding: vector[1,0]) { n } }
-mutation { Ticket(n: 1 && embedding: vector[0.9,0.1]) { n } }
-mutation { Ticket(n: 2 && embedding: vector[0.8,0.2]) { n } }
-mutation { Ticket(n: 3 && embedding: vector[0.7,0.3]) { n } }
-mutation { Ticket(n: 4 && embedding: vector[0,1]) { n } }
-mutation { Ticket(n: 5 && embedding: vector[-1,0]) { n } }
-query { Ticket near(embedding, vector[1,0], 6) limit 3 { n score } }
+mutation { Ticket(n: 0 && embedding: @vector[1,0]) { n } }
+mutation { Ticket(n: 1 && embedding: @vector[0.9,0.1]) { n } }
+mutation { Ticket(n: 2 && embedding: @vector[0.8,0.2]) { n } }
+mutation { Ticket(n: 3 && embedding: @vector[0.7,0.3]) { n } }
+mutation { Ticket(n: 4 && embedding: @vector[0,1]) { n } }
+mutation { Ticket(n: 5 && embedding: @vector[-1,0]) { n } }
+query { Ticket @near(embedding, @vector[1,0], 6) limit 3 { n @score } }

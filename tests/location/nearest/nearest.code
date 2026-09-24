@@ -1,5 +1,5 @@
 schema { type Place { n: Int at: Point } }
-mutation { Place(n: 0 && at: point(0, 1)) { n } }
-mutation { Place(n: 1 && at: point(0, 0)) { n } }
-mutation { Place(n: 2 && at: point(0, -1)) { n } }
-query { Place order by distance(at, point(0, 0)) limit 2 { n } }
+mutation { Place(n: 0 && at: @point(0, 1)) { n } }
+mutation { Place(n: 1 && at: @point(0, 0)) { n } }
+mutation { Place(n: 2 && at: @point(0, -1)) { n } }
+query { Place order by @distance(at, @point(0, 0)) limit 2 { n } }

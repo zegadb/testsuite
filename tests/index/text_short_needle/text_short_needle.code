@@ -8,4 +8,4 @@ mutation { Player(name: "Ben" && salary: 2 && rating: 0.5) }
 mutation { Player(name: "Cora" && salary: 3 && rating: 1.5) }
 mutation { Player(name: "Dan" && salary: 4) }
 mutation { Player(name: "Eve" && salary: 5 && rating: 2.5) }
-query { Player(name CONTAINS "a") { name } }
+query { Player(name findWith "a") { name } }

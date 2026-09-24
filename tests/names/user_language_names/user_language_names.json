@@ -1,0 +1,9 @@
+{
+  "title": "No reserved property names",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Every existing helper, block, positional keyword, enum, literal, filter and future display parameter name can be stored, filtered and projected as a user property."
+}

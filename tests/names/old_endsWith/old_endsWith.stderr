@@ -1,0 +1,4 @@
+error: `ENDS WITH` was renamed: write `endsWith`
+  schema:2:21
+  query { Sample(name ENDS WITH "A") }
+                      ^^^^^^^^^

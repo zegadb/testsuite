@@ -1,0 +1,4 @@
+error: `distance` is built in: write `@distance`
+  schema:2:16
+  query { Sample(distance(at, @point(0,0)) < 1) }
+                 ^^^^^^^^

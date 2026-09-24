@@ -1,0 +1,4 @@
+error: `near` is built in: write `@near`
+  schema:2:16
+  query { Sample near(embedding, @vector[1,0], 1) }
+                 ^^^^

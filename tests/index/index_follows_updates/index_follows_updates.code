@@ -10,4 +10,4 @@ mutation { Player(name: "Dan" && salary: 4) }
 mutation { Player(name: "Eve" && salary: 5 && rating: 2.5) }
 mutation { Player(name: "Ada") set salary: 9 }
 mutation { Player(name: "Eve") set name: "Zed" }
-query { Player(salary > 4 || name ENDS WITH "ed") { name salary } }
+query { Player(salary > 4 || name endsWith "ed") { name salary } }

@@ -1,0 +1,9 @@
+{
+  "title": "Old similarity",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Rejects the removed similarity spelling with an exact source span and directs the user to @similarity."
+}

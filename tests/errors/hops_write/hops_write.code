@@ -1,2 +1,2 @@
 schema { type Person { name: String age: Int active?: Bool score?: Float friends -> Person[] } }
-mutation { Person { &hops: 2 } }
+mutation { Person { @hops: 2 } }

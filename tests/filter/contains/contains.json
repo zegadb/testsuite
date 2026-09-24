@@ -5,5 +5,5 @@
     "native",
     "browser"
   ],
-  "notes": "CONTAINS selects a substring, excluding nonmatching names."
+  "notes": "findWith selects a substring, excluding nonmatching names."
 }

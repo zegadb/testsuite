@@ -1,3 +1,3 @@
 schema { type Person { name: String age: Int active?: Bool score?: Float friends -> Person[] } }
 mutation { Person(name: "Ada") { friends -> Person(name: "Ben") { friends -> Person(name: "Cy") } } }
-query { Person(name: "Ada") { friends *2..2 -> Person { name &hops } } }
+query { Person(name: "Ada") { friends *2..2 -> Person { name @hops } } }

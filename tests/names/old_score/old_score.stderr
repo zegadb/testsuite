@@ -1,0 +1,4 @@
+execution error: error: `score` is built in: write `@score`
+  schema:2:18
+  query { Sample { score } }
+                   ^^^^^

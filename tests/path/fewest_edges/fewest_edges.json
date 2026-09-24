@@ -5,5 +5,5 @@
     "native",
     "browser"
   ],
-  "notes": "Fewest edges takes the direct 2.5 km road over two 0.8 km roads; cost counts edges, the start's &km is null, &hops is the position."
+  "notes": "Fewest edges takes the direct 2.5 km road over two 0.8 km roads; cost counts edges, the start's &km is null, @hops is the position."
 }

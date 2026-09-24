@@ -1,0 +1,4 @@
+error: `STARTS WITH` was renamed: write `startsWith`
+  schema:2:21
+  query { Sample(name STARTS WITH "A") }
+                      ^^^^^^^^^^^
