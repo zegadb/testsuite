@@ -1,0 +1,1 @@
+[{"url":"http://example.org/image.png"},{"url":"https://example.org/image.png"},{"url":"HTTP://example.org/image.png"},{"url":"HtTpS://example.org/image.png"},{"url":"https://example.org/@image.png?email=user@example.org"},{"url":"http://[::1]:8080/image.png"}]

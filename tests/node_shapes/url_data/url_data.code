@@ -1,0 +1,2 @@
+schema { type Link { url: String<url> } }
+mutation { Link(url: "data:image/png;base64,AAAA") { url } }

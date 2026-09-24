@@ -1,0 +1,3 @@
+schema { type Log { name: String scan: String photo: Int related -> Log }
+display { graph { Log(@image: &photo) } } }
+query { Log { name } }
