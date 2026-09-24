@@ -1,9 +1,6 @@
 {
   "title": "Wrong target",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Traversal targets must belong to the relationship\u2019s declared targets."
 }

@@ -10,15 +10,14 @@ schema {
 
 mutation {
   Person(name: "Ada") {
-    friends -> Person(name: "Ben") { friends -> Person(name: "Cy") }
+    friends -> Person(name: "Ben") {
+      friends -> Person(name: "Cy")
+    }
   }
 }
 
 query {
   Person(name: "Ada") {
-    friends *1..2 -> Person {
-      name
-      @hops
-    }
+    friends *1..2 -> Person { name @hops }
   }
 }

@@ -1,9 +1,6 @@
 {
   "title": "Dimension",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Wrong-length Vector literal is rejected before a write, with its field span."
 }

@@ -13,5 +13,7 @@ mutation {
 }
 
 mutation {
-  Person(name: "Ada") { friends -> link Person(name: "Nobody") }
+  Person(name: "Ada") {
+    friends -> link Person(name: "Nobody")
+  }
 }

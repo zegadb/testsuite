@@ -6,15 +6,9 @@ schema {
 }
 
 mutation json ["points.json"] {
-  Place(n: $n && at: $at) {
-    n
-    at
-  }
+  Place(n: $n && at: $at) { n at }
 }
 
 query {
-  Place {
-    n
-    at
-  }
+  Place { n at }
 }

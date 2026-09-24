@@ -1,9 +1,6 @@
 {
   "title": "Optional missing type",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "An optional scalar declaration must supply a type."
 }

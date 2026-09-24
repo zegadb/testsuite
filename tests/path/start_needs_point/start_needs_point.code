@@ -3,6 +3,7 @@ schema {
     name: String
     road -> Junction[] { km: Float<km> }
   }
+
   type Junction {
     name: String
     at: Point
@@ -12,10 +13,7 @@ schema {
 
 mutation {
   Depot(name: "D") {
-    road -> Junction(name: "J" && at: @point(51.0, -114.0)) {
-      name
-      &km: 0.001
-    }
+    road -> Junction(name: "J" && at: @point(51.0, -114.0)) { name &km: 0.001 }
   }
 }
 

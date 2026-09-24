@@ -1,9 +1,6 @@
 {
   "title": "Index index follows updates",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "set keeps both indexes current: the new salary and the new name are found, the old ones are not."
 }

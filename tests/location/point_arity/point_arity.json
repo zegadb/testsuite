@@ -1,9 +1,6 @@
 {
   "title": "Point arity",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Point constructors require exactly latitude and longitude."
 }

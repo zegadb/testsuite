@@ -1,5 +1,5 @@
 execution error: error: no Person matched
-  schema:3:50
-  mutation { Person(name: "Ada") { friends -> link Person(name: "Nobody") } }
-                                                   ^^^^^^
+  schema:17:21
+      friends -> link Person(name: "Nobody")
+                      ^^^^^^
   help: `link` and `set` need exactly one matching row

@@ -3,6 +3,7 @@ schema {
     name: String
     wrote: WROTE -> Book[]
   }
+
   type Book {
     title: String
     year: Int
@@ -18,7 +19,9 @@ mutation {
 }
 
 mutation {
-  Author(name: "Octavia") { wrote -> Book(title: "Kindred" && year: 1979) }
+  Author(name: "Octavia") {
+    wrote -> Book(title: "Kindred" && year: 1979)
+  }
 }
 
 query {

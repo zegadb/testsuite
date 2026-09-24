@@ -1,9 +1,6 @@
 {
   "title": "Bad string",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "An escape at end of input has a distinct diagnostic."
 }

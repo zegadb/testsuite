@@ -1,9 +1,6 @@
 {
   "title": "Index range float zero",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A Float range index treats -0.0 as equal to 0; a missing optional value never matches."
 }

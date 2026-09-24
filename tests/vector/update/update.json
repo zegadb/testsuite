@@ -1,9 +1,6 @@
 {
   "title": "Update",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Updating a vector removes its old indexed position; tied scores break by node ID."
 }

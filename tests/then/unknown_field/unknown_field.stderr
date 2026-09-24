@@ -1,4 +1,4 @@
 execution error: error: no field absent in the query result types
-  schema:2:45
-  query { Person } then { endsWith { "a" in { absent } } }
-                                              ^^^^^^
+  schema:17:14
+      "a" in { absent }
+               ^^^^^^

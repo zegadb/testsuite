@@ -1,9 +1,6 @@
 {
   "title": "Index unknown kind",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "An index kind is range or text."
 }

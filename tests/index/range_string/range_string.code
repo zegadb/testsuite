@@ -6,6 +6,7 @@ schema {
     active?: Bool
     team -> Team
   }
+
   type Team { name: String }
 }
 

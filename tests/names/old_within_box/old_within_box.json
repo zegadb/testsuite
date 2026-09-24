@@ -1,9 +1,6 @@
 {
   "title": "Old within box",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Rejects the removed within_box spelling with an exact source span and directs the user to @within_box."
 }

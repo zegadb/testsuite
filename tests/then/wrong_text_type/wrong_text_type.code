@@ -1,2 +1,19 @@
-schema { type Person { name: String bio?: String country?: String v?: Vector<2> at?: Point } }
-query { Person } then { findWith { "a" in { v } } }
+schema {
+  type Person {
+    name: String
+    bio?: String
+    country?: String
+    v?: Vector<2>
+    at?: Point
+  }
+}
+
+query {
+  Person
+}
+
+then {
+  findWith {
+    "a" in { v }
+  }
+}

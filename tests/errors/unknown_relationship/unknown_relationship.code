@@ -9,5 +9,7 @@ schema {
 }
 
 query {
-  Person { parent -> Person }
+  Person {
+    parent -> Person
+  }
 }

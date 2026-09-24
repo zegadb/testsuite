@@ -1,9 +1,6 @@
 {
   "title": "Then indexed text",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Indexed and unindexed eligible String fields combine safely."
 }

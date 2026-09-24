@@ -1,9 +1,6 @@
 {
   "title": "Path start is target",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A start that the target selects is a route of no edges costing 0."
 }

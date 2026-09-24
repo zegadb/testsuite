@@ -1,9 +1,6 @@
 {
   "title": "Index text not string",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A text index needs a String field."
 }

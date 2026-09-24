@@ -1,9 +1,6 @@
 {
   "title": "Unterminated string",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "An unclosed string without a dangling escape is diagnosed separately."
 }

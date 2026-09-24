@@ -10,8 +10,5 @@ mutation {
 }
 
 query {
-  Place {
-    n
-    at
-  }
+  Place { n at }
 }

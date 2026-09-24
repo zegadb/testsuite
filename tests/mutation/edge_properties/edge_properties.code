@@ -11,10 +11,7 @@ schema {
 
 mutation {
   Person(name: "Ada") {
-    knows -> Person(name: "Ben") {
-      &since: 2020
-      &close: true
-    }
+    knows -> Person(name: "Ben") { &since: 2020 &close: true }
   }
 }
 

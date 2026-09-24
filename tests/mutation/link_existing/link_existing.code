@@ -17,7 +17,9 @@ mutation {
 }
 
 mutation {
-  Person(name: "Ada") { friends -> link Person(name: "Ben") }
+  Person(name: "Ada") {
+    friends -> link Person(name: "Ben")
+  }
 }
 
 query {

@@ -1,1 +1,4 @@
-[{"n":0,"embedding":[1,0,0]},{"n":1,"embedding":[0,1,0]}]
+[
+  { "n": 0, "embedding": [1, 0, 0] },
+  { "n": 1, "embedding": [0, 1, 0] }
+]

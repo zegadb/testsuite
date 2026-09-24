@@ -1,9 +1,6 @@
 {
   "title": "Not equal",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Not-equal excludes only the matched number."
 }

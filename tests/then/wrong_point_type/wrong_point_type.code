@@ -1,2 +1,17 @@
-schema { type Person { name: String bio?: String country?: String v?: Vector<2> at?: Point } }
-query { Person } then { near { &name < 1 km } }
+schema {
+  type Person {
+    name: String
+    bio?: String
+    country?: String
+    v?: Vector<2>
+    at?: Point
+  }
+}
+
+query {
+  Person
+}
+
+then {
+  near { &name < 1 km }
+}

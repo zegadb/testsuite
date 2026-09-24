@@ -1,9 +1,6 @@
 {
   "title": "Path unit in query",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "The unit belongs on the weight type in the schema, not in the query."
 }

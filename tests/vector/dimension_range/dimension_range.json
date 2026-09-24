@@ -1,9 +1,6 @@
 {
   "title": "Dimension range",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Dimensions outside 1..=4096 are rejected by the schema checker."
 }

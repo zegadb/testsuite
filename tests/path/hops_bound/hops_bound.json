@@ -1,9 +1,6 @@
 {
   "title": "Path hops bound",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "E is two edges from A (A-C-E); a one-hop bound finds no route."
 }

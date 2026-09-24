@@ -1,9 +1,6 @@
 {
   "title": "Incoming",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Incoming traversal follows the inverse WROTE declaration and returns a singular author."
 }

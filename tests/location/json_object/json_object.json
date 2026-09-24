@@ -1,9 +1,6 @@
 {
   "title": "Json object",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "JSON loads accept a typed lat/lon object without interpreting unrelated numeric columns."
 }

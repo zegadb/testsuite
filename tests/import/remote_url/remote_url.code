@@ -12,8 +12,5 @@ mutation json [
 }
 
 query {
-  Artifact {
-    repository
-    commit
-  }
+  Artifact { repository commit }
 }

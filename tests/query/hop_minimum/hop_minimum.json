@@ -1,9 +1,6 @@
 {
   "title": "Hop minimum",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "The minimum hop count excludes direct neighbors."
 }

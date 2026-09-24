@@ -1,5 +1,6 @@
 schema {
   type Person { friends -> Person[] }
+
   type Book { title: String }
 }
 

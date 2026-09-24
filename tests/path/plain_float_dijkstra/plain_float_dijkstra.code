@@ -68,9 +68,6 @@ mutation {
 
 query {
   Junction(name: "A") {
-    road *path by &km -> Junction(name: "C") {
-      name
-      &km
-    }
+    road *path by &km -> Junction(name: "C") { name &km }
   }
 }

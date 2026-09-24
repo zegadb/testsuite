@@ -1,9 +1,6 @@
 {
   "title": "Equality and",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "An AND of equalities is a single-row lookup, preserving object result shape."
 }

@@ -1,5 +1,5 @@
 execution error: error: creating a Person only accepts field: value
-  schema:2:19
-  mutation { Person(age > 30) }
-                    ^^^
+  schema:12:10
+    Person(age > 30)
+           ^^^
   help: write `name: "value"`, and join fields with `&&`

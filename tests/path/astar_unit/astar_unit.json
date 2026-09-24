@@ -1,9 +1,6 @@
 {
   "title": "Path astar unit",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Kilometre values in a field declared Float<m>: a 0.8 road read as 0.8 m is shorter than its 700 m straight line, so A* refuses rather than return a wrong route."
 }

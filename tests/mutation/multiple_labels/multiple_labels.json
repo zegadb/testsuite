@@ -1,9 +1,6 @@
 {
   "title": "Multiple labels",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A multi-label node is returned once by a union lookup and stores fields from both types."
 }

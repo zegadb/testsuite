@@ -1,9 +1,6 @@
 {
   "title": "Link missing",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "link rejects a missing target rather than creating it."
 }

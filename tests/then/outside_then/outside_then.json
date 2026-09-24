@@ -1,9 +1,6 @@
 {
   "title": "Then outside then",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Rejects only allowed inside then; complete diagnostic is reviewed and pinned."
 }

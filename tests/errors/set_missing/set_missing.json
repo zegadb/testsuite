@@ -1,9 +1,6 @@
 {
   "title": "Set missing",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "set requires exactly one existing row."
 }

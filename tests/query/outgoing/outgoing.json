@@ -1,9 +1,6 @@
 {
   "title": "Outgoing",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Outgoing traversal uses the named WROTE relationship and excludes another author\u2019s book."
 }

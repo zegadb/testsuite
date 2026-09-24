@@ -9,5 +9,7 @@ schema {
 }
 
 mutation {
-  Person { friends *1..2 -> Person }
+  Person {
+    friends *1..2 -> Person
+  }
 }

@@ -1,9 +1,6 @@
 {
   "title": "Then bad unit",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Rejects unit must be m, km, or mi; complete diagnostic is reviewed and pinned."
 }

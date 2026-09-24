@@ -12,8 +12,5 @@ mutation csv ["./people.csv"] {
 }
 
 query {
-  Person {
-    name
-    age
-  }
+  Person { name age }
 }

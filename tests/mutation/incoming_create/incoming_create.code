@@ -3,6 +3,7 @@ schema {
     name: String
     books: WROTE -> Book[]
   }
+
   type Book {
     title: String
     author: WROTE <- Author
@@ -10,7 +11,9 @@ schema {
 }
 
 mutation {
-  Book(title: "Earthsea") { author <- Author(name: "Ursula") }
+  Book(title: "Earthsea") {
+    author <- Author(name: "Ursula")
+  }
 }
 
 query {

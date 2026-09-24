@@ -1,9 +1,6 @@
 {
   "title": "Expected colon",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A set assignment requires a colon."
 }

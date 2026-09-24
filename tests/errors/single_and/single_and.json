@@ -1,9 +1,6 @@
 {
   "title": "Single and",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A single ampersand cannot join conditions."
 }

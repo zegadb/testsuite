@@ -12,8 +12,5 @@ mutation json "./person.json" {
 }
 
 query {
-  Person {
-    name
-    age
-  }
+  Person { name age }
 }

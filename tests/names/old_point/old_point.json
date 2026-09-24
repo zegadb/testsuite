@@ -1,9 +1,6 @@
 {
   "title": "Old point",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Rejects the removed point spelling with an exact source span and directs the user to @point."
 }

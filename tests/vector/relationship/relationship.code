@@ -3,6 +3,7 @@ schema {
     name: String
     tickets -> Ticket[]
   }
+
   type Ticket {
     n: Int
     embedding: Vector<3>
@@ -19,9 +20,6 @@ mutation {
 
 query {
   Queue(name: "inbox") {
-    tickets -> Ticket(n > 0) @near(embedding, @vector[1, 0, 0], 1) {
-      n
-      @score
-    }
+    tickets -> Ticket(n > 0) @near(embedding, @vector[1, 0, 0], 1) { n @score }
   }
 }

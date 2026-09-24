@@ -1,9 +1,6 @@
 {
   "title": "Missing one",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A singular relationship with no edge produces null."
 }

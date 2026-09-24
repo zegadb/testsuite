@@ -24,9 +24,6 @@ mutation {
 
 query {
   Stop(name: "A") {
-    road *path(@cost <= 8) by &cost -> Stop(name: "B") {
-      &hops
-      &cost
-    }
+    road *path(@cost <= 8) by &cost -> Stop(name: "B") { &hops &cost }
   }
 }

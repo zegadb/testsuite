@@ -10,8 +10,5 @@ mutation json ["rows.json"] {
 }
 
 query {
-  Ticket @near(embedding, @vector[1, 0, 0], 1) {
-    n
-    @score
-  }
+  Ticket @near(embedding, @vector[1, 0, 0], 1) { n @score }
 }

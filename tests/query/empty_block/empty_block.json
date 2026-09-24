@@ -1,9 +1,6 @@
 {
   "title": "Empty block",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "An empty query block evaluates to null."
 }

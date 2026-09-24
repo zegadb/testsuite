@@ -1,4 +1,4 @@
 execution error: error: no column lon for Point field at
-  schema:2:31
-  mutation csv ["points.csv"] { Place(n: $n) { at } }
-                                ^^^^^
+  schema:9:3
+    Place(n: $n) { at }
+    ^^^^^

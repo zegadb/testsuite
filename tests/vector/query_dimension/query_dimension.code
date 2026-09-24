@@ -18,8 +18,5 @@ mutation {
 }
 
 query {
-  Ticket @near(embedding, @vector[1, 0], 2) {
-    n
-    @score
-  }
+  Ticket @near(embedding, @vector[1, 0], 2) { n @score }
 }

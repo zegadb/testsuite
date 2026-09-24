@@ -1,9 +1,6 @@
 {
   "title": "And",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Conjunction requires both independent bounds."
 }

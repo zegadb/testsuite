@@ -6,14 +6,12 @@ schema {
     active?: Bool
     team -> Team
   }
+
   type Team { name: String }
 }
 
 index {
-  range Player {
-    salary
-    rating
-  }
+  range Player { salary rating }
   text Player { name }
 }
 
@@ -46,8 +44,5 @@ mutation {
 }
 
 query {
-  Player(salary > 4 || name endsWith "ed") {
-    name
-    salary
-  }
+  Player(salary > 4 || name endsWith "ed") { name salary }
 }

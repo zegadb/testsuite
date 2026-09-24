@@ -1,5 +1,5 @@
 execution error: error: no column missing
-  schema:2:42
-  mutation json ["./person.json"] { Person(name: $missing) }
-                                           ^^^^
+  schema:11:10
+    Person(name: $missing)
+           ^^^^
   help: columns are age, name

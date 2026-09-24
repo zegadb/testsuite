@@ -20,9 +20,12 @@ npm run test:runner
 
 The corpus uses the canonical [APS 12 formatter](https://github.com/zegadb/aps/issues/12).
 With the pinned engine's CLI available, run `node scripts/format.mjs /path/to/zega`
-to format cases or append `--check` to check them without writing. This invokes
+to format cases and JSON fixtures or append `--check` to check them without writing. This invokes
 `zega fmt` on the empty `.zql` markers **and the executable `.code` files**.
-Parse-error fixtures remain byte-for-byte unchanged.
+Parse-error fixtures remain byte-for-byte unchanged. After formatting inputs,
+`node scripts/check-diagnostic-locations.mjs <base-revision>` proves expected
+stdout, outcome markers, diagnostic messages and highlighted tokens are unchanged;
+only source locations and their surrounding excerpts may move.
 
 The default run is offline and explicitly skips the remote import. `--online` enables that case. A failed network preflight skips an unreachable remote fixture; an HTTP error or engine failure after successful preflight fails the run. Local imports run offline. Filtering to no cases, or only skipped cases, exits 2.
 

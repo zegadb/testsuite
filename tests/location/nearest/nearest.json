@@ -1,9 +1,6 @@
 {
   "title": "Nearest",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Nearest-k sorts by metres, resolves the equal +/-1 degree distance by node ID, and limits after sorting."
 }

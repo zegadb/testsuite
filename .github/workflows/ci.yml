@@ -40,7 +40,7 @@ jobs:
         run: |
           revision=$(node -p 'JSON.parse(require("fs").readFileSync("engine.json")).revision')
           cargo install --locked --git https://github.com/zegadb/zega.git --rev "$revision" zega-cli --bin zega --root "$PWD/.tmp/tools"
-      - name: Check every ZQL marker and executable corpus source
+      - name: Check every ZQL marker, executable source and JSON fixture
         run: node scripts/format.mjs .tmp/tools/bin/zega --check
       - run: cargo build --locked --bin zql-native
       - name: Execute native corpus (offline, deterministic)

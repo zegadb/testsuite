@@ -1,5 +1,5 @@
 execution error: error: unique Person { email } is already used
-  schema:4:12
-  mutation { Person(name: "Ben" && email: "ada@example.test") }
-             ^^^^^^
+  schema:17:3
+    Person(name: "Ben" && email: "ada@example.test")
+    ^^^^^^
   help: another Person already has this email

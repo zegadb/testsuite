@@ -6,15 +6,9 @@ schema {
 }
 
 mutation csv ["points.csv"] {
-  Place(n: $n) {
-    n
-    at
-  }
+  Place(n: $n) { n at }
 }
 
 query {
-  Place {
-    n
-    at
-  }
+  Place { n at }
 }

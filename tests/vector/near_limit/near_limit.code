@@ -30,8 +30,5 @@ mutation {
 }
 
 query {
-  Ticket @near(embedding, @vector[1, 0], 6) limit 3 {
-    n
-    @score
-  }
+  Ticket @near(embedding, @vector[1, 0], 6) limit 3 { n @score }
 }

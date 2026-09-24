@@ -10,8 +10,5 @@ mutation csv ["rows.csv"] {
 }
 
 query {
-  Ticket @near(embedding, @vector[1, 0, 0], 1, exact) {
-    n
-    embedding
-  }
+  Ticket @near(embedding, @vector[1, 0, 0], 1, exact) { n embedding }
 }

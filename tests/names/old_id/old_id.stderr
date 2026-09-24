@@ -1,4 +1,4 @@
 execution error: error: `id` is built in: write `@id`
-  schema:2:18
-  query { Sample { id } }
-                   ^^
+  schema:11:12
+    Sample { id }
+             ^^

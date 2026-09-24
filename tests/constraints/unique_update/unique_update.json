@@ -1,9 +1,6 @@
 {
   "title": "Unique update",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Updates cannot acquire another row\u2019s unique value."
 }

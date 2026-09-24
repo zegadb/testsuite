@@ -1,9 +1,6 @@
 {
   "title": "Then unicode text",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Unicode substring and regex operate on the same text without ASCII folding."
 }

@@ -1,9 +1,6 @@
 {
   "title": "Multiple files",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A file list appends rows from both local files in order."
 }

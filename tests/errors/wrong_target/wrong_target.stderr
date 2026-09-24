@@ -1,5 +1,5 @@
 execution error: error: Person.friends does not reach Book
-  schema:2:29
-  query { Person { friends -> Book { title } } }
-                              ^^^^
+  schema:9:16
+      friends -> Book { title }
+                 ^^^^
   help: `friends` reaches Person

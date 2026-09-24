@@ -1,9 +1,6 @@
 {
   "title": "Nearest",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "HNSW nearest selection orders full-vector cosine scores, with selectable score."
 }

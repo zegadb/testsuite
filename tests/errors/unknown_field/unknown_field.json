@@ -1,9 +1,6 @@
 {
   "title": "Unknown field",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Unknown properties are rejected and spelling suggestions are pinned."
 }

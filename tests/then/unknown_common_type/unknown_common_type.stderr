@@ -1,4 +1,4 @@
 execution error: error: unknown type Ghost
-  schema:2:34
-  query { Person } then { common { Ghost { name } } }
-                                   ^^^^^
+  schema:17:5
+      Ghost { name }
+      ^^^^^

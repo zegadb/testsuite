@@ -13,8 +13,5 @@ mutation {
 }
 
 query {
-  Person(name: "Ada") {
-    active
-    score
-  }
+  Person(name: "Ada") { active score }
 }

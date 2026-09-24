@@ -1,9 +1,6 @@
 {
   "title": "User id score",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "User id and score are stored data even during nearest selection; aliases expose the built-in identity and score independently."
 }

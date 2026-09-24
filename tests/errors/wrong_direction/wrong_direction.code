@@ -9,5 +9,7 @@ schema {
 }
 
 query {
-  Person { friends <- Person }
+  Person {
+    friends <- Person
+  }
 }

@@ -1,9 +1,6 @@
 {
   "title": "Index range string",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A String range index orders by string comparison."
 }

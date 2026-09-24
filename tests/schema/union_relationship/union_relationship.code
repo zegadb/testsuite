@@ -3,7 +3,9 @@ schema {
     name: String
     items -> (Book | Movie)[]
   }
+
   type Book { name: String }
+
   type Movie { name: String }
 }
 

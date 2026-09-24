@@ -1,9 +1,6 @@
 {
   "title": "Old path hops",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Rejects the removed hops spelling with an exact source span and directs the user to @hops."
 }

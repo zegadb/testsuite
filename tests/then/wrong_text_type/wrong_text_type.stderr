@@ -1,4 +1,4 @@
 execution error: error: Person.v must be String, found Vector<2,cosine>
-  schema:2:45
-  query { Person } then { findWith { "a" in { v } } }
-                                              ^
+  schema:17:14
+      "a" in { v }
+               ^

@@ -21,8 +21,5 @@ mutation {
 }
 
 query {
-  Person {
-    name
-    age
-  }
+  Person { name age }
 }

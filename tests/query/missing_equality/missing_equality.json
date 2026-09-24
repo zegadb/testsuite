@@ -1,9 +1,6 @@
 {
   "title": "Missing equality",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "An equality lookup with no matching row returns null, not an empty object."
 }

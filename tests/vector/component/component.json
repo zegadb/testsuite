@@ -1,9 +1,6 @@
 {
   "title": "Component",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Non-number vector component is rejected at the component span."
 }

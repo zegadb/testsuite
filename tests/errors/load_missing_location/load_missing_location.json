@@ -1,9 +1,6 @@
 {
   "title": "Load missing location",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A load cannot omit its file location."
 }

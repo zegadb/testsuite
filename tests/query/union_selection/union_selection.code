@@ -3,6 +3,7 @@ schema {
     name: String
     pages: Int
   }
+
   type Movie {
     name: String
     minutes: Int

@@ -1,9 +1,6 @@
 {
   "title": "Unique self update",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Setting a unique field to its own current value does not conflict with itself."
 }

@@ -1,9 +1,6 @@
 {
   "title": "Fractional hops",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Hop counts must be integers."
 }

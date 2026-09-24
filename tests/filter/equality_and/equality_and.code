@@ -21,8 +21,5 @@ mutation {
 }
 
 query {
-  Person(name = "Ada" && age = 30) {
-    name
-    age
-  }
+  Person(name = "Ada" && age = 30) { name age }
 }

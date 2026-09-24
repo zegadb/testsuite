@@ -1,4 +1,4 @@
 execution error: error: Person.name must be Vector, found String
-  schema:2:36
-  query { Person } then { similar { &name > 0.9 } }
-                                     ^^^^
+  schema:16:14
+    similar { &name > 0.9 }
+               ^^^^
