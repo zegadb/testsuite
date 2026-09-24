@@ -1,0 +1,9 @@
+{
+  "title": "Path tie lower id",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Two routes cost 2000; the tie breaks by node id, so the route passes node 2 (Stop n: 2, inserted second) rather than node 3. An Int weight gives an Int cost."
+}

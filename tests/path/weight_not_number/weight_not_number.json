@@ -1,0 +1,9 @@
+{
+  "title": "Path weight not number",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "The weight must be an Int or Float field of the relationship."
+}

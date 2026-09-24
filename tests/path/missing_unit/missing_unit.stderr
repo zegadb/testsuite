@@ -1,0 +1,5 @@
+execution error: error: toward needs a unit on the weight: declare km: Float<km>
+  schema:14:56
+  query { Junction(name: "A") { road *path by &km toward at -> Junction(name: "C") { name &km } } }
+                                                         ^^
+  help: A* compares road.km with straight-line distances; the unit is `m`, `km` or `mi`

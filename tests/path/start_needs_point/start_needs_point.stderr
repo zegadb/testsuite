@@ -1,0 +1,5 @@
+execution error: error: Depot has no at, and `toward at` needs a location on every node it reaches
+  schema:6:42
+  query { Depot { road *path by &km toward at -> Junction { name } } }
+                                           ^^
+  help: declare `at: Point` on Depot, or drop `toward` to search without a guess

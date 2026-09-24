@@ -1,0 +1,5 @@
+error: a unit needs an Int or Float; String has none
+  schema:1:32
+  schema { type Junction { name: String<km> } }
+                                 ^^^^^^
+  help: declare a distance as `km: Float<km>` or `length: Int<m>`

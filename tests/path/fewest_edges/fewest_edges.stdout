@@ -1,0 +1,1 @@
+{"name":"A","road":{"cost":1,"edges":[{"from":1,"id":5,"props":{"km":2.5},"to":3,"type":"road"}],"hops":1,"nodes":[{"hops":0,"km":null,"name":"A"},{"hops":1,"km":2.5,"name":"C"}]}}

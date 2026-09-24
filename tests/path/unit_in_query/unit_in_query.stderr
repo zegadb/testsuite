@@ -1,0 +1,5 @@
+error: the unit is declared on the weight, not here
+  schema:14:59
+  query { Junction(name: "A") { road *path by &km toward at in km -> Junction(name: "C") { name &km } } }
+                                                            ^^
+  help: declare `km: Float<km>` on the relationship and write `toward at`

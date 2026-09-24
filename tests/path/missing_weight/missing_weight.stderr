@@ -1,0 +1,5 @@
+execution error: error: road#2 from Junction#2 to Junction#3 has no km
+  schema:7:31
+  query { Junction(name: "A") { road *path by &km -> Junction(name: "C") { name } } }
+                                ^^^^
+  help: a path does not guess a missing weight; store `&km` on every road

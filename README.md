@@ -104,3 +104,21 @@ the engine's own tests show the index is used (`Zega::rows_examined`).
 Rejecting cases pin the checker's diagnostics: unknown type or field,
 relationship, `text` on a non-String field, `range` on a Bool, a field named
 twice, `range` on a unique field, an unknown kind and a second block.
+
+## Path coverage
+
+`tests/path/` covers `*path` route queries: fewest edges, `by &km` (Dijkstra)
+and `by &km toward at` (A*, with the weight's unit declared in the schema as
+`km: Float<km>`) on one road net, where the cheapest route has more edges than
+the direct one. It also covers Dijkstra on a plain `Float` weight, an
+unreachable target (null), inclusive and exclusive cost bounds, a hop bound, a
+target condition matching several nodes, a start that is its own target, and a
+tie broken by node id with an Int weight. Success expectations were written by
+hand from the road lengths, not taken from the engine. Rejecting cases pin the
+diagnostics for a missing weight, a negative weight, kilometres stored in a
+`Float<m>` field under A*, `toward` without a weight, `toward` on a weight
+with no unit, a start type without the `toward` Point, a weight that is not a
+number, a hop bound on a weighted path, an unknown unit, a unit on a `String`, two sides of one relationship declaring different units,
+and a unit written in the query. The engine's own tests compare all three
+searches with brute force on random graphs and show A* expands fewer nodes
+(`Zega::nodes_expanded`).

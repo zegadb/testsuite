@@ -1,0 +1,5 @@
+error: unknown distance unit feet
+  schema:1:80
+  schema { type Junction { name: String at: Point road -> Junction[] { km: Float<feet> } } }
+                                                                                 ^^^^
+  help: the unit is `m`, `km` or `mi`, as in `Float<km>`

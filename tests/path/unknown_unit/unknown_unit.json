@@ -1,0 +1,9 @@
+{
+  "title": "Path unknown unit",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "The distance unit in a type is m, km or mi."
+}

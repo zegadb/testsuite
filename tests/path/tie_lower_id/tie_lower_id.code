@@ -1,0 +1,11 @@
+schema { type Stop { n: Int at: Point next -> Stop[] { m: Int } } }
+unique { Stop { n } }
+mutation { Stop(n: 0 && at: point(51.0, -114.0)) }
+mutation { Stop(n: 2 && at: point(51.0, -113.998)) }
+mutation { Stop(n: 1 && at: point(51.001, -114.0)) }
+mutation { Stop(n: 3 && at: point(51.001, -113.998)) }
+mutation { Stop(n: 0) { next -> link Stop(n: 2) { &m: 1000 } } }
+mutation { Stop(n: 0) { next -> link Stop(n: 1) { &m: 1000 } } }
+mutation { Stop(n: 2) { next -> link Stop(n: 3) { &m: 1000 } } }
+mutation { Stop(n: 1) { next -> link Stop(n: 3) { &m: 1000 } } }
+query { Stop(n: 0) { next *path by &m -> Stop(n: 3) { n &m } } }

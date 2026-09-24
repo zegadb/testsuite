@@ -1076,7 +1076,7 @@ dependencies = [
 [[package]]
 name = "zega"
 version = "0.1.2"
-source = "git+https://github.com/zegadb/zega.git?rev=20c3a94e369c70f55aeeacdb0b7c809469b80c4f#20c3a94e369c70f55aeeacdb0b7c809469b80c4f"
+source = "git+https://github.com/zegadb/zega.git?rev=ebd1cd8f3439b12e92ef6d2afbaf7b6bff5c8a6f#ebd1cd8f3439b12e92ef6d2afbaf7b6bff5c8a6f"
 dependencies = [
  "base64 0.22.1",
  "bincode",
@@ -1085,6 +1085,7 @@ dependencies = [
  "getrandom",
  "hmac",
  "js-sys",
+ "libm",
  "rsa",
  "serde",
  "serde_json",

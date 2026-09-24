@@ -1,0 +1,4 @@
+schema {
+  type Town { name: String road -> Junction[] { km: Float<km> } }
+  type Junction { name: String road <- Town { km: Float<mi> } }
+}
