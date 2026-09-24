@@ -1,0 +1,2 @@
+schema { type Link { url: String<url> } }
+mutation { Link(url: "https://user:pass@example.org/image.png") { url } }
