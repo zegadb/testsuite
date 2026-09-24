@@ -1,0 +1,2 @@
+schema { type Person { name: String bio?: String country?: String v?: Vector<2> at?: Point } }
+query { Person } then { near { &at < 1 feet } }

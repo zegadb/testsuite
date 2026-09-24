@@ -1,0 +1,9 @@
+{
+  "title": "Then after mutation",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Rejects require a query; complete diagnostic is reviewed and pinned."
+}

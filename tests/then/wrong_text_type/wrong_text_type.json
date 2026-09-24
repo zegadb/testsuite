@@ -1,0 +1,9 @@
+{
+  "title": "Then wrong text type",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Rejects must be String; complete diagnostic is reviewed and pinned."
+}

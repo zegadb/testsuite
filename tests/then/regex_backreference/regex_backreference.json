@@ -1,0 +1,9 @@
+{
+  "title": "Then regex backreference",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Rejects lookaround and backreferences; complete diagnostic is reviewed and pinned."
+}

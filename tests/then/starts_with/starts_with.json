@@ -1,0 +1,9 @@
+{
+  "title": "Then starts with",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Independently specified stage IDs, stored properties and evidence; starts with."
+}

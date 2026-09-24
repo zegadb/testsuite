@@ -135,3 +135,13 @@ searches with brute force on random graphs and show A* expands fewer nodes
 checks an edge field named `cost` as a path weight alongside an `@cost` bound.
 The engine and browser package are pinned to the same engine revision in
 `engine.json`; see [APS 6](https://github.com/zegadb/aps/issues/6).
+
+## Discovery stages (APS 7)
+
+`tests/then/` specifies text discovery (including infix compatibility), regex,
+common-value stars, vector similarity, spatial pairs, boolean precedence,
+intersection edge pruning, union deduplication, stage chaining and skipped
+responses. Full stage and evidence arrays have independent expected values;
+array order is part of the contract. Rejections cover misplaced blocks, missing
+fields, wrong types, unsupported regex and invalid units. Engine behavior and
+implementation choices are documented in `docs/then.md` at the pinned revision.
