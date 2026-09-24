@@ -139,3 +139,13 @@ pin the complete diagnostic, including the attribute/value span and the
 `String<url>` fix for image fields. Both hosts use the same engine and URL
 parser. Renderer geometry, image loading, keyboard preview, focus, zoom and
 screenshots are tested with Playwright in the engine repository.
+
+## Discovery stages (APS 7)
+
+`tests/then/` specifies text discovery (including infix compatibility), regex,
+common-value stars, vector similarity, spatial pairs, boolean precedence,
+intersection edge pruning, union deduplication, stage chaining and skipped
+responses. Full stage and evidence arrays have independent expected values;
+array order is part of the contract. Rejections cover misplaced blocks, missing
+fields, wrong types, unsupported regex and invalid units. Engine behavior and
+implementation choices are documented in `docs/then.md` at the pinned revision.

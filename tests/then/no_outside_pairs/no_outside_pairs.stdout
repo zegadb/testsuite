@@ -1,0 +1,1 @@
+{"stages":[{"edges":[],"index":0,"kind":"query","nodes":[{"id":1,"labels":["Person"],"props":{"at":{"lat":0.0,"lon":0.0},"bio":"Oilers","country":"CA","name":"Alice","v":[1.0,0.0]}}]},{"couldBeEdges":[],"edges":[],"index":1,"kind":"then","nodes":[]}]}

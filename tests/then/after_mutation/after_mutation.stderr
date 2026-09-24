@@ -1,0 +1,4 @@
+error: then and display { skip } require a query, not a mutation
+  schema:2:31
+  mutation { Person(name: "A") } then { findWith { "A" } }
+                                ^

@@ -1,0 +1,9 @@
+{
+  "title": "Then infix without field",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Rejects infix filters need a field; complete diagnostic is reviewed and pinned."
+}

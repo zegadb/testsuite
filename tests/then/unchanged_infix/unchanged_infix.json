@@ -1,0 +1,9 @@
+{
+  "title": "Then unchanged infix",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Infix spellings remain working; no then means the original result shape."
+}

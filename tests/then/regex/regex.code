@@ -1,0 +1,6 @@
+schema { type Person { name: String bio?: String country?: String v?: Vector<2> at?: Point } }
+mutation { Person(name: "Alice" && bio: "Oilers" && country: "CA" && v: @vector[1,0] && at: @point(0,0)) }
+mutation { Person(name: "Bob" && country: "CA" && v: @vector[1,0] && at: @point(0,0)) }
+mutation { Person(name: "Carol" && country: "US" && v: @vector[0,1] && at: @point(10,10)) }
+mutation { Person(name: "Missing") }
+query { Person { name } } then { regex { "^(Alice|Bob)$" in { name } } }

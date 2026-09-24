@@ -1,0 +1,9 @@
+{
+  "title": "Then common across types",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Nested identity tracking includes Team without @id; real and proposed edges remain separate."
+}

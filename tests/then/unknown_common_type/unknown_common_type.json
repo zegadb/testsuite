@@ -1,0 +1,9 @@
+{
+  "title": "Then unknown common type",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Rejects unknown type Ghost; complete diagnostic is reviewed and pinned."
+}

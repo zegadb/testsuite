@@ -1,0 +1,9 @@
+{
+  "title": "Then wrong point type",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Rejects must be Point; complete diagnostic is reviewed and pinned."
+}

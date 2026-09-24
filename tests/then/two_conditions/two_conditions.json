@@ -1,0 +1,9 @@
+{
+  "title": "Then two conditions",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Rejects one condition; complete diagnostic is reviewed and pinned."
+}
