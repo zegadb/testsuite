@@ -1,0 +1,5 @@
+error: road fields do not match
+  schema:3:45
+    type Junction { name: String road <- Town { km: Float<mi> } }
+                                              ^^^^^^^^^^^^^^^^^
+  help: Town.road already declares `road`. Declare the fields once

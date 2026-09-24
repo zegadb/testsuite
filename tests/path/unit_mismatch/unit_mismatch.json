@@ -1,0 +1,9 @@
+{
+  "title": "Path unit mismatch",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A unit is part of the edge field type: two sides of one relationship declaring Float<km> and Float<mi> do not match."
+}

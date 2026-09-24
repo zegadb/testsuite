@@ -118,7 +118,7 @@ hand from the road lengths, not taken from the engine. Rejecting cases pin the
 diagnostics for a missing weight, a negative weight, kilometres stored in a
 `Float<m>` field under A*, `toward` without a weight, `toward` on a weight
 with no unit, a start type without the `toward` Point, a weight that is not a
-number, a hop bound on a weighted path, an unknown unit, a unit on a `String`,
+number, a hop bound on a weighted path, an unknown unit, a unit on a `String`, two sides of one relationship declaring different units,
 and a unit written in the query. The engine's own tests compare all three
 searches with brute force on random graphs and show A* expands fewer nodes
 (`Zega::nodes_expanded`).
