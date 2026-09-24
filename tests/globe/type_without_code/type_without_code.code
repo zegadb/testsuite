@@ -1,0 +1,2 @@
+schema { type Country { name: String iso: String } display { globe { Country } } }
+query { Country { iso } }

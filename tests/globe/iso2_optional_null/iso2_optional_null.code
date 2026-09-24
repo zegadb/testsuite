@@ -1,0 +1,14 @@
+schema {
+  type Country {
+    name: String
+    former?: String<iso2>
+  }
+}
+
+mutation {
+  Country(name: "Czechia" && former: null)
+}
+
+query {
+  Country { name former }
+}

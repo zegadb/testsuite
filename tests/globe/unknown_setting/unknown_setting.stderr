@@ -1,0 +1,5 @@
+error: unknown globe setting @spin
+  schema:1:74
+  schema { type Country { name: String iso: String<iso2> } display { globe(@spin: 2) } }
+                                                                           ^^^^^
+  help: use `@zoom`, `@tilt` or `@center`

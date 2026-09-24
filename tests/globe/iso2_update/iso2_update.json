@@ -1,0 +1,6 @@
+{
+  "title": "Globe: iso2 update",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "Updates are checked like writes; EU is an exceptional reservation, not a country."
+}

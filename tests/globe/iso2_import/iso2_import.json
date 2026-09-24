@@ -1,0 +1,6 @@
+{
+  "title": "Globe: iso2 import",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "Bound CSV import accepts assigned codes."
+}

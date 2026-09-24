@@ -174,6 +174,18 @@ parser. URLs require HTTP(S), a host and no userinfo; scheme matching is
 case-insensitive. Renderer geometry, image loading, keyboard preview, focus, zoom and
 screenshots are tested with Playwright in the engine repository.
 
+## Globe and country codes (APS 9)
+
+`tests/globe/` covers the `globe(@zoom, @tilt, @center)` view on the display
+syntax of this revision: the decided example beside a `map`, the default camera,
+and every settings rejection (range, `@center` shape, bare `point`, unknown,
+repeated or un-`@`-named settings, settings on `map`, a type with neither a
+country code nor coordinates). `String<iso2>` cases write, update, filter,
+null and CSV-import the 249 assigned ISO 3166-1 alpha-2 codes and reject
+lowercase, alpha-3, user-assigned (`XK`) and reserved (`EU`) codes, including
+one bad row failing a whole import. Rendering, highlighting, clicks and the
+globe-to-map transition are tested with Playwright in the engine repository.
+
 ## Discovery stages (APS 7)
 
 `tests/then/` specifies text discovery (including infix compatibility), regex,

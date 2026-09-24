@@ -1,0 +1,6 @@
+{
+  "title": "Globe: decided example",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "The APS 9 example checks: a globe with @zoom, @tilt and @center over a String<iso2> type, beside a map; display never changes stored values."
+}

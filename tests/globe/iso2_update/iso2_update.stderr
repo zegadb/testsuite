@@ -1,0 +1,5 @@
+execution error: error: Country.iso must be String<iso2>
+  schema:13:31
+    Country(name: "Canada") set iso: "EU" { iso }
+                                ^^^
+  help: write an assigned ISO 3166-1 alpha-2 country code in capitals, e.g. `CA`, `GB` or `JP`

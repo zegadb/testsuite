@@ -1,0 +1,5 @@
+error: duplicate globe setting @zoom
+  schema:1:84
+  schema { type Country { name: String iso: String<iso2> } display { globe(@zoom: 2, @zoom: 3) } }
+                                                                                     ^^^^^
+  help: set each globe setting once

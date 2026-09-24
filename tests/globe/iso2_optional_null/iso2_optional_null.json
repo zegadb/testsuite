@@ -1,0 +1,6 @@
+{
+  "title": "Globe: iso2 optional null",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "An optional String<iso2> field accepts null."
+}

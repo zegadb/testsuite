@@ -1,0 +1,4 @@
+error: Point latitude must be a number in [-90, 90]
+  schema:1:90
+  schema { type Country { name: String iso: String<iso2> } display { globe(@center: @point(95, 0)) } }
+                                                                                           ^^

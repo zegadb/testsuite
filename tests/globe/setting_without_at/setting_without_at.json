@@ -1,0 +1,6 @@
+{
+  "title": "Globe: setting without at",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "Language names take @ (APS 6)."
+}

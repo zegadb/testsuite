@@ -1,0 +1,6 @@
+{
+  "title": "Globe: default camera",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "Every globe setting is optional; a Point type alone qualifies a globe without a type list."
+}

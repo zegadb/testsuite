@@ -1,0 +1,6 @@
+{
+  "title": "Globe: iso2 lowercase",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "Codes are capitals; a lowercase code is rejected with the rule."
+}

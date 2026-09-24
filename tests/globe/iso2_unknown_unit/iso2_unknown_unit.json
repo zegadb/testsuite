@@ -1,0 +1,6 @@
+{
+  "title": "Globe: iso2 unknown unit",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "String units are url and iso2."
+}

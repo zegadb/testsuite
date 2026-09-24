@@ -1,0 +1,6 @@
+{
+  "title": "Globe: type without code",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "A listed type needs a String<iso2> field or coordinates; a plain String is not a code."
+}
