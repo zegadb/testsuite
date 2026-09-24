@@ -1,0 +1,9 @@
+{
+  "title": "Then fanout star",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Six members emit five edges from ID 1, never the 15-pair clique; array order is exact."
+}

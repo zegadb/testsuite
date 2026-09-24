@@ -1,0 +1,9 @@
+{
+  "title": "Then negative distance",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Rejects non-negative; complete diagnostic is reviewed and pinned."
+}

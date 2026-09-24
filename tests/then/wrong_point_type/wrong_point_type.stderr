@@ -1,0 +1,4 @@
+execution error: error: Person.name must be Point, found String
+  schema:2:33
+  query { Person } then { near { &name < 1 km } }
+                                  ^^^^

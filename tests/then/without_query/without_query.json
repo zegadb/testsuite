@@ -1,0 +1,9 @@
+{
+  "title": "Then without query",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Rejects then requires a preceding query; complete diagnostic is reviewed and pinned."
+}

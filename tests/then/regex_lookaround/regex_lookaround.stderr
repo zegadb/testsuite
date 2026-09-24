@@ -1,0 +1,8 @@
+error: invalid regex: regex parse error:
+    (?=a)
+    ^^^
+error: look-around, including look-ahead and look-behind, is not supported
+  schema:2:25
+  query { Person } then { regex { "(?=a)" } }
+                          ^^^^^
+  help: Rust regex is linear-time; lookaround and backreferences are unsupported

@@ -1,0 +1,4 @@
+execution error: error: Person.name must be Vector, found String
+  schema:2:36
+  query { Person } then { similar { &name > 0.9 } }
+                                     ^^^^
