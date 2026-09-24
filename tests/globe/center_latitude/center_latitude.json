@@ -1,0 +1,6 @@
+{
+  "title": "Globe: center latitude",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "The center is a checked Point."
+}

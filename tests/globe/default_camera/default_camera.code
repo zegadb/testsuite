@@ -1,0 +1,18 @@
+schema {
+  type Place {
+    name: String
+    at: Point
+  }
+
+  display {
+    globe
+  }
+}
+
+mutation {
+  Place(name: "Lisbon" && at: @point(38.72, -9.14))
+}
+
+query {
+  Place { name at }
+}

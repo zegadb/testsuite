@@ -1,0 +1,5 @@
+error: @tilt must be a number of degrees from 0 to 85
+  schema:1:81
+  schema { type Country { name: String iso: String<iso2> } display { globe(@tilt: 90) } }
+                                                                                  ^^
+  help: 0 looks straight down; `@tilt: 20` leans toward the horizon

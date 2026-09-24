@@ -1,0 +1,5 @@
+error: unknown string unit iso3
+  schema:1:37
+  schema { type Country { iso: String<iso3> } }
+                                      ^^^^
+  help: a String unit is `url` or `iso2`, as in `String<iso2>`

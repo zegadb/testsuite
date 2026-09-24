@@ -1,0 +1,6 @@
+{
+  "title": "Globe: zoom range",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "@zoom is a number from 0 to 22, diagnosed at the value."
+}

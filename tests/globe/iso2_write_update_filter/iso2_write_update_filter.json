@@ -1,0 +1,6 @@
+{
+  "title": "Globe: iso2 write update filter",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "Assigned ISO 3166-1 alpha-2 codes write, update and filter as strings."
+}

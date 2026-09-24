@@ -1,0 +1,2 @@
+schema { type City { at: Point } display { map(@zoom: 2) { City } } }
+query { City { at } }

@@ -1,0 +1,5 @@
+execution error: error: Country.iso must be String<iso2>
+  schema:9:29
+    Country(name: "Kosovo" && iso: "XK")
+                              ^^^
+  help: write an assigned ISO 3166-1 alpha-2 country code in capitals, e.g. `CA`, `GB` or `JP`

@@ -1,0 +1,22 @@
+schema {
+  type Country {
+    name: String
+    iso: String<iso2>
+  }
+}
+
+mutation {
+  Country(name: "Japan" && iso: "JP")
+}
+
+mutation {
+  Country(name: "Canada" && iso: "GB")
+}
+
+mutation {
+  Country(name: "Canada") set iso: "CA" { iso }
+}
+
+query {
+  Country(iso startsWith "C") { name iso }
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Globe: iso2 user assigned",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "XK is user-assigned, not an ISO 3166-1 assignment, and is rejected."
+}

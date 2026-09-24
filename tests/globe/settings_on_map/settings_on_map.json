@@ -1,0 +1,6 @@
+{
+  "title": "Globe: settings on map",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "Only globe takes view settings."
+}

@@ -1,0 +1,10 @@
+schema {
+  type Country {
+    name: String
+    iso: String<iso2>
+  }
+}
+
+mutation csv ["countries.csv"] {
+  Country(name: $name && iso: $iso)
+}

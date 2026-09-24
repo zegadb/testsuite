@@ -1,0 +1,6 @@
+{
+  "title": "Globe: iso2 import invalid",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "One unassigned code rejects the whole import."
+}

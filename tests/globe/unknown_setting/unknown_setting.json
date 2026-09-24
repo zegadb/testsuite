@@ -1,0 +1,6 @@
+{
+  "title": "Globe: unknown setting",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "Unknown globe settings are rejected at their name."
+}

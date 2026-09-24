@@ -1,0 +1,5 @@
+error: @center must be a @point(latitude, longitude)
+  schema:1:83
+  schema { type Country { name: String iso: String<iso2> } display { globe(@center: 51) } }
+                                                                                    ^^
+  help: write `@center: @point(51.05, -114.07)`

@@ -1,0 +1,4 @@
+error: `point` is built in: write `@point`
+  schema:1:83
+  schema { type Country { name: String iso: String<iso2> } display { globe(@center: point(51.05, -114.07)) } }
+                                                                                    ^^^^^

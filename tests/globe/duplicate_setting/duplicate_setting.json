@@ -1,0 +1,6 @@
+{
+  "title": "Globe: duplicate setting",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "Each globe setting is set once."
+}

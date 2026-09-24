@@ -1,0 +1,6 @@
+{
+  "title": "Globe: iso2 alpha3",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "A three-letter code is not alpha-2."
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Globe: center number",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "@center must be a @point(...)."
+}

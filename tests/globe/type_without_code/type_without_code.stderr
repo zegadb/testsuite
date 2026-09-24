@@ -1,0 +1,5 @@
+error: display `globe` needs a country code or coordinates on type Country
+  schema:1:70
+  schema { type Country { name: String iso: String } display { globe { Country } } }
+                                                                       ^^^^^^^
+  help: add `iso: String<iso2>` or `at: Point` to Country, or remove Country from this view

@@ -1,0 +1,5 @@
+error: display view map takes no settings
+  schema:1:47
+  schema { type City { at: Point } display { map(@zoom: 2) { City } } }
+                                                ^^^^^^^^^^
+  help: only `globe(@zoom: …, @tilt: …, @center: @point(…))` has settings

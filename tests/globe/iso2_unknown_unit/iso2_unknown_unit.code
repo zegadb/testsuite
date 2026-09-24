@@ -1,0 +1,2 @@
+schema { type Country { iso: String<iso3> } }
+query { Country { iso } }

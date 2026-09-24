@@ -1,0 +1,6 @@
+{
+  "title": "Globe: center bare point",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "point is built in and is written @point (APS 6)."
+}

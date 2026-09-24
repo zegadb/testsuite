@@ -1,0 +1,5 @@
+error: display attribute zoom needs @zoom
+  schema:1:74
+  schema { type Country { name: String iso: String<iso2> } display { globe(zoom: 2) } }
+                                                                           ^^^^
+  help: write `@zoom: …`; `@` names language attributes
