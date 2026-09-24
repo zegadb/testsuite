@@ -1,9 +1,6 @@
 {
   "title": "Expected close paren",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A predicate must close before the selection block."
 }

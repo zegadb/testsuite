@@ -1,11 +1,40 @@
-schema { type Player { name: String salary: Int rating?: Float active?: Bool team -> Team } type Team { name: String } }
+schema {
+  type Player {
+    name: String
+    salary: Int
+    rating?: Float
+    active?: Bool
+    team -> Team
+  }
+
+  type Team { name: String }
+}
+
 index {
   range Player { salary rating }
   text Player { name }
 }
-mutation { Player(name: "Ada" && salary: 1 && rating: -0.0) }
-mutation { Player(name: "Ben" && salary: 2 && rating: 0.5) }
-mutation { Player(name: "Cora" && salary: 3 && rating: 1.5) }
-mutation { Player(name: "Dan" && salary: 4) }
-mutation { Player(name: "Eve" && salary: 5 && rating: 2.5) }
-query { Player(salary > 2 && salary <= 4) { name salary } }
+
+mutation {
+  Player(name: "Ada" && salary: 1 && rating: -0.0)
+}
+
+mutation {
+  Player(name: "Ben" && salary: 2 && rating: 0.5)
+}
+
+mutation {
+  Player(name: "Cora" && salary: 3 && rating: 1.5)
+}
+
+mutation {
+  Player(name: "Dan" && salary: 4)
+}
+
+mutation {
+  Player(name: "Eve" && salary: 5 && rating: 2.5)
+}
+
+query {
+  Player(salary > 2 && salary <= 4) { name salary }
+}

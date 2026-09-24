@@ -1,9 +1,6 @@
 {
   "title": "Old id",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Rejects the removed id spelling with an exact source span and directs the user to @id."
 }

@@ -1,9 +1,6 @@
 {
   "title": "Incoming create",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "An incoming mutation creates the edge in its stored direction, visible from the inverse side."
 }

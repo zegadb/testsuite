@@ -1,9 +1,6 @@
 {
   "title": "Index duplicate block",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A file has one index block."
 }

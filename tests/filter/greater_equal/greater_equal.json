@@ -1,9 +1,6 @@
 {
   "title": "Greater equal",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Greater-or-equal includes the boundary."
 }

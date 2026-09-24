@@ -1,2 +1,12 @@
-schema { type Person { name: String age: Int active?: Bool score?: Float friends -> Person[] } }
-query { }
+schema {
+  type Person {
+    name: String
+    age: Int
+    active?: Bool
+    score?: Float
+    friends -> Person[]
+  }
+}
+
+query {
+}

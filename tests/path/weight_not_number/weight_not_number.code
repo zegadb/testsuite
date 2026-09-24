@@ -1,2 +1,12 @@
-schema { type Junction { name: String road -> Junction[] { label: String } } }
-query { Junction { road *path by &label -> Junction { name } } }
+schema {
+  type Junction {
+    name: String
+    road -> Junction[] { label: String }
+  }
+}
+
+query {
+  Junction {
+    road *path by &label -> Junction { name }
+  }
+}

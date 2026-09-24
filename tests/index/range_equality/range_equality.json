@@ -1,9 +1,6 @@
 {
   "title": "Index range equality",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "An equality read on a range-indexed field still returns one object."
 }

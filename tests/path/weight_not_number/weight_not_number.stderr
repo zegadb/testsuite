@@ -1,5 +1,5 @@
 execution error: error: a path weight is a number; road.label is String
-  schema:2:34
-  query { Junction { road *path by &label -> Junction { name } } }
-                                   ^^^^^^
+  schema:10:19
+      road *path by &label -> Junction { name }
+                    ^^^^^^
   help: weigh a path by an Int or Float field of the relationship

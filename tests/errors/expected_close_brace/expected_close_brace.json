@@ -1,9 +1,6 @@
 {
   "title": "Expected close brace",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A query must close its outer block."
 }

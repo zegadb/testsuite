@@ -1,9 +1,6 @@
 {
   "title": "Contains",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "findWith selects a substring, excluding nonmatching names."
 }

@@ -1,9 +1,6 @@
 {
   "title": "Node shapes: url update and filter",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "URLs retain string storage, updates, string filters and text indexes."
 }

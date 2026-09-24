@@ -1,9 +1,6 @@
 {
   "title": "Unique insert",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Each unique field is independent; a different email cannot excuse a duplicate name."
 }

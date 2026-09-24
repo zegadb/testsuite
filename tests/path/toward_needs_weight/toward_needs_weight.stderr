@@ -1,5 +1,5 @@
 execution error: error: toward needs a weight measured in a distance
-  schema:14:49
-  query { Junction(name: "A") { road *path toward at -> Junction(name: "C") { name } } }
-                                                  ^^
+  schema:71:23
+      road *path toward at -> Junction(name: "C") { name }
+                        ^^
   help: A* guesses the rest of the route as a distance; write `by &km toward at` with `km: Float<km>`

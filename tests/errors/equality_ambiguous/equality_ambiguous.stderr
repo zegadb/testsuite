@@ -1,5 +1,5 @@
 execution error: error: Person matched 2 rows
-  schema:4:9
-  query { Person(name: "Ada") { name } }
-          ^^^^^^
+  schema:20:3
+    Person(name: "Ada") { name }
+    ^^^^^^
   help: an equality filter has to match one row

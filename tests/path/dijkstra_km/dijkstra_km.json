@@ -1,9 +1,6 @@
 {
   "title": "Path dijkstra km",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "by &km sums the Float field: A-B-C costs 1.6, cheaper than A-C (2.5) and A-D-C (2.8). edges[i] joins nodes[i] and nodes[i+1]."
 }

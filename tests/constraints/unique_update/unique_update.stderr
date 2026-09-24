@@ -1,5 +1,5 @@
 execution error: error: unique Person { name } is already used
-  schema:5:36
-  mutation { Person(name: "Ben") set name: "Ada" }
-                                     ^^^^
+  schema:21:27
+    Person(name: "Ben") set name: "Ada"
+                            ^^^^
   help: another Person already has this name

@@ -1,9 +1,6 @@
 {
   "title": "Empty array",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "An empty JSON import performs no writes."
 }

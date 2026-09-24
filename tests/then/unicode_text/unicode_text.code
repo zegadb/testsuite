@@ -1,5 +1,23 @@
-schema { type T { name: String } }
-mutation { T(name: "Émile 油") }
-mutation { T(name: "Emile") }
-query { T } display { skip } then { findWith { "油" } && regex { "^É" } }
+schema {
+  type T { name: String }
+}
 
+mutation {
+  T(name: "Émile 油")
+}
+
+mutation {
+  T(name: "Emile")
+}
+
+query {
+  T
+}
+
+display {
+  skip
+}
+
+then {
+  findWith { "油" } && regex { "^É" }
+}

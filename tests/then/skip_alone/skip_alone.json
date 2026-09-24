@@ -1,9 +1,6 @@
 {
   "title": "Then skip alone",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A skipped single query computes but returns null."
 }

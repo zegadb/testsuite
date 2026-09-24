@@ -1,3 +1,11 @@
-schema { type Link { url: String<url> } }
-mutation json ["rows.json"] { Link(url: $url) }
-query { Link { url } }
+schema {
+  type Link { url: String<url> }
+}
+
+mutation json ["rows.json"] {
+  Link(url: $url)
+}
+
+query {
+  Link { url }
+}

@@ -1,9 +1,6 @@
 {
   "title": "Then no outside pairs",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Bob is a perfect match but outside the query result; no primitive may discover him."
 }

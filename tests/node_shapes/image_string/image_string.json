@@ -1,9 +1,6 @@
 {
   "title": "Node shapes: image string",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Rejects invalid display syntax with the complete diagnostic and exact span."
 }

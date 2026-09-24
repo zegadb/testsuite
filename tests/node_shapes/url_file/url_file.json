@@ -1,9 +1,6 @@
 {
   "title": "URL fields reject file",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "String<url> requires an absolute HTTP(S) URL with a host and no userinfo. Reject this value before writing a node."
 }

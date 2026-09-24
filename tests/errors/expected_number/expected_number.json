@@ -1,9 +1,6 @@
 {
   "title": "Expected number",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Unquoted nonliteral values cannot be parsed as numbers."
 }

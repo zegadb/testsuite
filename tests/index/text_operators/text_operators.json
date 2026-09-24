@@ -1,9 +1,6 @@
 {
   "title": "Index text operators",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "findWith, startsWith and endsWith answer from the text index exactly like a scan."
 }

@@ -1,9 +1,6 @@
 {
   "title": "Path cost bound inclusive",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A cost bound of <= admits a route that costs exactly the bound."
 }

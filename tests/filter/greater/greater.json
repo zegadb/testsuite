@@ -1,9 +1,6 @@
 {
   "title": "Greater",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Strict greater-than excludes the equal boundary."
 }

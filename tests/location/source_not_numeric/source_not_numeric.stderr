@@ -1,4 +1,4 @@
 execution error: error: Point source column lat must be numeric
-  schema:2:31
-  mutation csv ["points.csv"] { Place(n: $n) { at } }
-                                ^^^^^
+  schema:9:3
+    Place(n: $n) { at }
+    ^^^^^

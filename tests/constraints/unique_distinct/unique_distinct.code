@@ -1,5 +1,19 @@
-schema { type Person { name: String } }
-unique { Person { name } }
-mutation { Person(name: "Ada") }
-mutation { Person(name: "Ben") }
-query { Person { name } }
+schema {
+  type Person { name: String }
+}
+
+unique {
+  Person { name }
+}
+
+mutation {
+  Person(name: "Ada")
+}
+
+mutation {
+  Person(name: "Ben")
+}
+
+query {
+  Person { name }
+}

@@ -1,9 +1,6 @@
 {
   "title": "Empty schema",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "An empty schema is rejected with guidance for declaring a type."
 }

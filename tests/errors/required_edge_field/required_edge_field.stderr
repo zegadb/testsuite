@@ -1,5 +1,5 @@
 execution error: error: knows requires &since
-  schema:4:34
-  mutation { Person(name: "Ada") { knows -> Person(name: "Ben") } }
-                                   ^^^^^
+  schema:14:5
+      knows -> Person(name: "Ben")
+      ^^^^^
   help: write `&since: …` inside Person

@@ -1,9 +1,6 @@
 {
   "title": "Json array",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Explicit JSON array binding stores a float32 vector and automatically indexes it."
 }

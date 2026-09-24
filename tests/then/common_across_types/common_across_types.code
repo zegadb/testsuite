@@ -1,5 +1,33 @@
-schema { type Player { name: String country: String team -> Team } type Team { name: String country: String } }
-mutation { Player(name: "Alice" && country: "CA") { team -> Team(name: "Oilers" && country: "CA") } }
-query { Player { name team -> Team { name } } } display { skip }
-then { common { Player { country } Team { country } } }
+schema {
+  type Player {
+    name: String
+    country: String
+    team -> Team
+  }
 
+  type Team {
+    name: String
+    country: String
+  }
+}
+
+mutation {
+  Player(name: "Alice" && country: "CA") {
+    team -> Team(name: "Oilers" && country: "CA")
+  }
+}
+
+query {
+  Player {
+    name
+    team -> Team { name }
+  }
+}
+
+display {
+  skip
+}
+
+then {
+  common { Player { country } Team { country } }
+}

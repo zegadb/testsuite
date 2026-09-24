@@ -1,9 +1,6 @@
 {
   "title": "Then unknown field",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Rejects no field absent; complete diagnostic is reviewed and pinned."
 }

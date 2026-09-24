@@ -1,3 +1,14 @@
-schema { type Ticket { n: Int embedding: Vector<3> } }
-mutation json ["rows.json"] { Ticket(n: $n && embedding: $embedding) { n } }
-query { Ticket @near(embedding, @vector[1, 0, 0], 1) { n @score } }
+schema {
+  type Ticket {
+    n: Int
+    embedding: Vector<3>
+  }
+}
+
+mutation json ["rows.json"] {
+  Ticket(n: $n && embedding: $embedding) { n }
+}
+
+query {
+  Ticket @near(embedding, @vector[1, 0, 0], 1) { n @score }
+}

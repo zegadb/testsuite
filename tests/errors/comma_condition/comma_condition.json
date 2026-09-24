@@ -1,9 +1,6 @@
 {
   "title": "Comma condition",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Comma-separated mutation predicates are rejected with set-specific guidance."
 }

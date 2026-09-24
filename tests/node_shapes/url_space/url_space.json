@@ -1,9 +1,6 @@
 {
   "title": "Node shapes: url space",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Invalid URL write must fail before storing a node."
 }

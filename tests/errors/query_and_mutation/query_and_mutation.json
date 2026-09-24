@@ -1,9 +1,6 @@
 {
   "title": "Query and mutation",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "The two statement introducers are mutually exclusive."
 }

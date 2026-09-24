@@ -1,9 +1,6 @@
 {
   "title": "Empty scan",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "An unconstrained scan of a fresh database returns an empty array."
 }

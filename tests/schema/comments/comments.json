@@ -1,9 +1,6 @@
 {
   "title": "Comments",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Line comments between and inside blocks do not change the stored value."
 }

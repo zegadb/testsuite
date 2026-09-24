@@ -1,9 +1,6 @@
 {
   "title": "Views",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Both explicit vector views accept a Vector-bearing type."
 }

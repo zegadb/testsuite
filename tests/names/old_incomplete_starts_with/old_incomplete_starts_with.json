@@ -1,9 +1,6 @@
 {
   "title": "Old incomplete starts-with filter",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Even an incomplete retired filter spelling directs the user to startsWith, underlining exactly STARTS."
 }

@@ -1,5 +1,5 @@
 execution error: error: a weighted path is bounded by cost
-  schema:14:42
-  query { Junction(name: "A") { road *path(@hops <= 2) by &km -> Junction(name: "C") { name } } }
-                                           ^^^^^^^^^^
+  schema:71:16
+      road *path(@hops <= 2) by &km -> Junction(name: "C") { name }
+                 ^^^^^^^^^^
   help: write `*path(@cost <= 50) by &km`; hops bound a path without a weight

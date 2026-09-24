@@ -1,9 +1,6 @@
 {
   "title": "Unique unknown field",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Unique declarations must name an existing scalar field."
 }

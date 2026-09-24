@@ -1,5 +1,22 @@
-schema { type Person { name: String age: Int } }
-unique { Person { name } }
-mutation { Person(name: "Ada" && age: 30) }
-mutation { Person(name: "Ada") set name: "Ada", age: 31 }
-query { Person { name age } }
+schema {
+  type Person {
+    name: String
+    age: Int
+  }
+}
+
+unique {
+  Person { name }
+}
+
+mutation {
+  Person(name: "Ada" && age: 30)
+}
+
+mutation {
+  Person(name: "Ada") set name: "Ada", age: 31
+}
+
+query {
+  Person { name age }
+}

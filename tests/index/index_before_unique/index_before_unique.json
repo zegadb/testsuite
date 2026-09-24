@@ -1,9 +1,6 @@
 {
   "title": "Index index before unique",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "index and unique may appear in either order; the unique name field is range-indexed through unique."
 }

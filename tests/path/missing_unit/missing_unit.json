@@ -1,9 +1,6 @@
 {
   "title": "Path missing unit",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "toward reads the distance unit from the weight type; a plain Float weight has none, so A* is refused."
 }

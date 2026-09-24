@@ -1,9 +1,6 @@
 {
   "title": "Primitive fields",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "String, signed Int, Bool and Float values round-trip together."
 }

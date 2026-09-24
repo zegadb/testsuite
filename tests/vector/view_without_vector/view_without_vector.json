@@ -1,9 +1,6 @@
 {
   "title": "View without vector",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "The view claim is checked at the listed type name, before the UI sees it."
 }

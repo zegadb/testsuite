@@ -1,5 +1,5 @@
 execution error: error: a mutation cannot use a hop range
-  schema:2:21
-  mutation { Person { friends *1..2 -> Person } }
-                      ^^^^^^^^^^^^^
+  schema:13:5
+      friends *1..2 -> Person
+      ^^^^^^^^^^^^^
   help: a range walks rows that are already stored

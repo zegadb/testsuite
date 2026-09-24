@@ -1,2 +1,7 @@
-schema { type Item { name: String } }
-mutation { Item(name: "a\n\t\"b\\c") { name } }
+schema {
+  type Item { name: String }
+}
+
+mutation {
+  Item(name: "a\n\t\"b\\c") { name }
+}

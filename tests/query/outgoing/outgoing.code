@@ -1,7 +1,32 @@
 schema {
-  type Author { name: String wrote: WROTE -> Book[] }
-  type Book { title: String year: Int author: WROTE <- Author }
+  type Author {
+    name: String
+    wrote: WROTE -> Book[]
+  }
+
+  type Book {
+    title: String
+    year: Int
+    author: WROTE <- Author
+  }
 }
-mutation { Author(name: "Ursula") { wrote -> Book(title: "Earthsea" && year: 1968) wrote -> Book(title: "Dispossessed" && year: 1974) } }
-mutation { Author(name: "Octavia") { wrote -> Book(title: "Kindred" && year: 1979) } }
-query { Author(name: "Ursula") { name wrote -> Book { title } } }
+
+mutation {
+  Author(name: "Ursula") {
+    wrote -> Book(title: "Earthsea" && year: 1968)
+    wrote -> Book(title: "Dispossessed" && year: 1974)
+  }
+}
+
+mutation {
+  Author(name: "Octavia") {
+    wrote -> Book(title: "Kindred" && year: 1979)
+  }
+}
+
+query {
+  Author(name: "Ursula") {
+    name
+    wrote -> Book { title }
+  }
+}

@@ -1,9 +1,6 @@
 {
   "title": "Set in query",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A read query cannot contain a set write."
 }

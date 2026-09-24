@@ -1,2 +1,12 @@
-schema { type Person { name: String age: Int active?: Bool score?: Float } }
-mutation csv ["./empty.csv"] { Person(name: $name) }
+schema {
+  type Person {
+    name: String
+    age: Int
+    active?: Bool
+    score?: Float
+  }
+}
+
+mutation csv ["./empty.csv"] {
+  Person(name: $name)
+}

@@ -1,9 +1,6 @@
 {
   "title": "Expected string",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "String predicates cannot take numeric search text."
 }

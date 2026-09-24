@@ -1,9 +1,6 @@
 {
   "title": "Bad json",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "The embedded location list uses JSON syntax and pins the serde parser diagnostic."
 }

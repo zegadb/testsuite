@@ -1,9 +1,6 @@
 {
   "title": "Expected arrow",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A non-scalar field must specify its relationship direction."
 }

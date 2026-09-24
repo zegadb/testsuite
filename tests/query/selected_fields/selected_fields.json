@@ -1,9 +1,6 @@
 {
   "title": "Selected fields",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Selection excludes unrequested fields and equality lookup returns an object."
 }

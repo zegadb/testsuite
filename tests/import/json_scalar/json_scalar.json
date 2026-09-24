@@ -1,9 +1,6 @@
 {
   "title": "Json scalar",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A JSON scalar cannot supply import rows."
 }

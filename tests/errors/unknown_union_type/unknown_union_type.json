@@ -1,9 +1,6 @@
 {
   "title": "Unknown union type",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Every member of a union selection must be declared."
 }

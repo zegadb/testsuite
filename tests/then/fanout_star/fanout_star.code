@@ -1,8 +1,42 @@
-schema { type T { name: String value: Int } }
-mutation { T(name: "1" && value: 1) }
-mutation { T(name: "2" && value: 1) }
-mutation { T(name: "3" && value: 1) }
-mutation { T(name: "4" && value: 1) }
-mutation { T(name: "5" && value: 1) }
-mutation { T(name: "6" && value: 1) }
-query { T } display { skip } then { common { T { value } } }
+schema {
+  type T {
+    name: String
+    value: Int
+  }
+}
+
+mutation {
+  T(name: "1" && value: 1)
+}
+
+mutation {
+  T(name: "2" && value: 1)
+}
+
+mutation {
+  T(name: "3" && value: 1)
+}
+
+mutation {
+  T(name: "4" && value: 1)
+}
+
+mutation {
+  T(name: "5" && value: 1)
+}
+
+mutation {
+  T(name: "6" && value: 1)
+}
+
+query {
+  T
+}
+
+display {
+  skip
+}
+
+then {
+  common { T { value } }
+}

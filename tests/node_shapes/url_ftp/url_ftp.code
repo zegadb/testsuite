@@ -1,2 +1,7 @@
-schema { type Link { url: String<url> } }
-mutation { Link(url: "ftp://example.org/image.png") { url } }
+schema {
+  type Link { url: String<url> }
+}
+
+mutation {
+  Link(url: "ftp://example.org/image.png") { url }
+}

@@ -1,9 +1,6 @@
 {
   "title": "Index text short needle",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A needle shorter than a trigram still returns every match; the match is case-sensitive (Ada matches on its final a)."
 }

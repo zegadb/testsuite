@@ -1,9 +1,6 @@
 {
   "title": "HTTP(S) URLs are accepted case-insensitively",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Accept HTTP and HTTPS, mixed-case schemes, IPv6 hosts and @ outside userinfo. Store the original URL bytes."
 }

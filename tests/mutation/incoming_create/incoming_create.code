@@ -1,3 +1,23 @@
-schema { type Author { name: String books: WROTE -> Book[] } type Book { title: String author: WROTE <- Author } }
-mutation { Book(title: "Earthsea") { author <- Author(name: "Ursula") } }
-query { Author(name: "Ursula") { books -> Book { title } } }
+schema {
+  type Author {
+    name: String
+    books: WROTE -> Book[]
+  }
+
+  type Book {
+    title: String
+    author: WROTE <- Author
+  }
+}
+
+mutation {
+  Book(title: "Earthsea") {
+    author <- Author(name: "Ursula")
+  }
+}
+
+query {
+  Author(name: "Ursula") {
+    books -> Book { title }
+  }
+}

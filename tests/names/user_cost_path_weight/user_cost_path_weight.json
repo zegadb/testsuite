@@ -1,9 +1,6 @@
 {
   "title": "User cost path weight",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "The @cost route bound and stored &cost weight are distinct; the stored &hops field is not route depth."
 }

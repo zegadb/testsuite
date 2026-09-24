@@ -1,9 +1,6 @@
 {
   "title": "Path toward needs weight",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A* needs a weight whose type declares a distance unit; counting edges is not one."
 }

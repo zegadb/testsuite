@@ -1,9 +1,6 @@
 {
   "title": "Nested filter",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A predicate on the nested selection filters adjacency, not the root scan."
 }

@@ -1,9 +1,6 @@
 {
   "title": "Unknown filter field",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Filter fields are validated even before there are rows to scan."
 }

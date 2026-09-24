@@ -1,9 +1,6 @@
 {
   "title": "Load empty locations",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "An empty file list is rejected."
 }

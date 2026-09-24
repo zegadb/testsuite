@@ -1,9 +1,6 @@
 {
   "title": "Create",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Creation persists both assigned fields for a subsequent query."
 }

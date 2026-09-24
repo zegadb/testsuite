@@ -1,9 +1,6 @@
 {
   "title": "Dot",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "dot metric is stored with the value and controls automatic index ranking."
 }

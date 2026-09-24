@@ -1,9 +1,6 @@
 {
   "title": "Unknown edge target",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A relationship cannot target an undeclared type."
 }

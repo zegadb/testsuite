@@ -1,9 +1,6 @@
 {
   "title": "Then precedence",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Independently specified stage IDs, stored properties and evidence; precedence."
 }

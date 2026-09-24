@@ -1,5 +1,5 @@
 execution error: error: road#1 from Junction#1 to Junction#2 has km -1.5, and a path weight cannot be negative
-  schema:5:31
-  query { Junction(name: "A") { road *path by &km -> Junction(name: "B") { name } } }
-                                ^^^^
+  schema:24:5
+      road *path by &km -> Junction(name: "B") { name }
+      ^^^^
   help: the cheapest route is only defined for weights of 0 or more

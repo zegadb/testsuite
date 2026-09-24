@@ -1,9 +1,6 @@
 {
   "title": "Point value",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A Point literal preserves inclusive WGS84 boundary coordinates as a JSON object."
 }

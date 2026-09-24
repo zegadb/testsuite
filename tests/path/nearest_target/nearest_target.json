@@ -1,9 +1,6 @@
 {
   "title": "Path nearest target",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A target condition matching several nodes routes to the cheapest: D at 1.4 beats C at 1.6."
 }

@@ -1,9 +1,6 @@
 {
   "title": "Unknown edge field",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Edge field lookups validate names and suggest the declared spelling."
 }

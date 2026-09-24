@@ -1,3 +1,40 @@
-schema { type Queue { items -> Item[] } type Item { embedding: Vector<2> linked -> Linked[] linked3 -> Linked3[] } type Linked { embedding: Vector<3,dot> } type Linked3 { embedding: Vector<2,dot> } display { vector2d { Item, Linked, Linked3 }: Default } }
-mutation { Queue { items -> Item(embedding: @vector[1,0]) { linked -> Linked(embedding: @vector[1,0,0]) { @id } linked3 -> Linked3(embedding: @vector[0,1]) { @id } } } }
-query { Queue { items -> Item { @id linked -> Linked { @id } linked3 -> Linked3 { @id } } } }
+schema {
+  type Queue { items -> Item[] }
+
+  type Item {
+    embedding: Vector<2>
+    linked -> Linked[]
+    linked3 -> Linked3[]
+  }
+
+  type Linked { embedding: Vector<3, dot> }
+
+  type Linked3 { embedding: Vector<2, dot> }
+
+  display {
+    vector2d {
+      Item,
+      Linked,
+      Linked3
+    } : Default
+  }
+}
+
+mutation {
+  Queue {
+    items -> Item(embedding: @vector[1, 0]) {
+      linked -> Linked(embedding: @vector[1, 0, 0]) { @id }
+      linked3 -> Linked3(embedding: @vector[0, 1]) { @id }
+    }
+  }
+}
+
+query {
+  Queue {
+    items -> Item {
+      @id
+      linked -> Linked { @id }
+      linked3 -> Linked3 { @id }
+    }
+  }
+}

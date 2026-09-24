@@ -1,9 +1,6 @@
 {
   "title": "Range without arrow",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A range must decorate a traversal with an arrow."
 }

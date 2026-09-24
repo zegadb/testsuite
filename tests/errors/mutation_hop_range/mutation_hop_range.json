@@ -1,9 +1,6 @@
 {
   "title": "Mutation hop range",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Hop ranges walk stored rows and are invalid in writes."
 }

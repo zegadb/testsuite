@@ -1,9 +1,6 @@
 {
   "title": "Then skip chain",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Skipped stages are entirely absent, but Alice is the only input to the final stage; Bob cannot re-enter."
 }

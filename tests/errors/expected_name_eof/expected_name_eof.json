@@ -1,9 +1,6 @@
 {
   "title": "Expected name eof",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "EOF where a type name is required receives a visible one-column span."
 }

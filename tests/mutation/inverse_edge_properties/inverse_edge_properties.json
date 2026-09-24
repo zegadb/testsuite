@@ -1,9 +1,6 @@
 {
   "title": "Inverse edge properties",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "The inverse edge inherits the declared fields; an omitted optional edge property is null."
 }

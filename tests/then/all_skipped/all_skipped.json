@@ -1,9 +1,6 @@
 {
   "title": "Then all skipped",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "No skipped stage data is serialized."
 }

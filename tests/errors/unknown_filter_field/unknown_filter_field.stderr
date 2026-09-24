@@ -1,5 +1,5 @@
 execution error: error: Person has no field email
-  schema:2:16
-  query { Person(email = "x") { name } }
-                 ^^^^^
+  schema:12:10
+    Person(email = "x") { name }
+           ^^^^^
   help: Person has name, age, active, score, friends

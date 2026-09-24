@@ -1,9 +1,6 @@
 {
   "title": "Bare not",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A bare exclamation mark is not a comparison."
 }

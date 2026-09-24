@@ -1,9 +1,6 @@
 {
   "title": "Path astar km",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A* with the straight-line guess in km returns the same cheapest route as Dijkstra."
 }

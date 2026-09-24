@@ -1,9 +1,6 @@
 {
   "title": "Json object",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A single object and a single path string are valid JSON import forms."
 }

@@ -1,3 +1,14 @@
-schema { type Place { n: Int at: Point } }
-mutation json ["points.json"] { Place(n: $n && at: $at) { n at } }
-query { Place { n at } }
+schema {
+  type Place {
+    n: Int
+    at: Point
+  }
+}
+
+mutation json ["points.json"] {
+  Place(n: $n && at: $at) { n at }
+}
+
+query {
+  Place { n at }
+}

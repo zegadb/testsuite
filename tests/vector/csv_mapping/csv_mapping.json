@@ -1,9 +1,6 @@
 {
   "title": "Csv mapping",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "CSV vectors require an explicit N-column mapping."
 }

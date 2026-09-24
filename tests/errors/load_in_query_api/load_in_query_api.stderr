@@ -1,5 +1,5 @@
 error: a load runs as its own mutation
   schema:1:1
-  mutation json ["./people.json"] { Person(name: $name) }
+  mutation json ["./people.json"] {
   ^^^^^^^^
   help: `mutation csv` and `mutation json` are one statement

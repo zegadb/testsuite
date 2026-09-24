@@ -1,9 +1,6 @@
 {
   "title": "Missing many",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "A many relationship with no edges produces an empty list."
 }

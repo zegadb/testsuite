@@ -1,9 +1,6 @@
 {
   "title": "Number overflow",
   "stage": "parse",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "An integer beyond i64 maximum is rejected rather than silently rounded."
 }

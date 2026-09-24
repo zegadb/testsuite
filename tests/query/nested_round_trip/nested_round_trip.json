@@ -1,9 +1,6 @@
 {
   "title": "Nested round trip",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Two levels traverse out and back into the same author."
 }

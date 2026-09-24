@@ -1,9 +1,6 @@
 {
   "title": "String escapes",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Escaped newline, tab, quote and backslash decode to their actual characters."
 }

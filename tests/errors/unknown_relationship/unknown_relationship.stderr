@@ -1,5 +1,5 @@
 execution error: error: Person has no relationship parent
-  schema:2:18
-  query { Person { parent -> Person } }
-                   ^^^^^^
+  schema:13:5
+      parent -> Person
+      ^^^^^^
   help: Person has name, age, active, score, friends

@@ -1,9 +1,6 @@
 {
   "title": "Boolean",
   "stage": "run",
-  "hosts": [
-    "native",
-    "browser"
-  ],
+  "hosts": ["native", "browser"],
   "notes": "Boolean inequality filters on stored Bool values."
 }

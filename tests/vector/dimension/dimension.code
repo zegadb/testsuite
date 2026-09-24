@@ -1,2 +1,7 @@
-schema { type Ticket { embedding: Vector<3> } }
-mutation { Ticket(embedding: @vector[1,2]) { embedding } }
+schema {
+  type Ticket { embedding: Vector<3> }
+}
+
+mutation {
+  Ticket(embedding: @vector[1, 2]) { embedding }
+}
