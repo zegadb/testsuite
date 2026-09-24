@@ -1,0 +1,5 @@
+schema { type Link { name: String url: String<url> } }
+index { text Link { url } }
+mutation { Link(name: "A" && url: "https://example.com/a") }
+mutation { Link(name: "A") set url: "https://example.com/b" { url } }
+query { Link(url startsWith "https://") { name url } }

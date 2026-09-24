@@ -1,0 +1,5 @@
+error: @image needs Log.scan to be String<url>
+  schema:2:31
+  display { graph { Log(@image: &scan) } } }
+                                ^^^^^
+  help: declare `scan: String<url>` on Log

@@ -1,0 +1,5 @@
+error: @size must be 1, 2 or 3
+  schema:2:30
+  display { graph { Log(@size: "2") } } }
+                               ^^^
+  help: write `@size: 1`, `@size: 2` or `@size: 3`

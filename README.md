@@ -130,6 +130,17 @@ checks an edge field named `cost` as a path weight alongside an `@cost` bound.
 The engine and browser package are pinned to the same engine revision in
 `engine.json`; see [APS 6](https://github.com/zegadb/aps/issues/6).
 
+## Node appearance and URL fields (APS 8)
+
+`tests/node_shapes/` covers per-type `@shape`, `@image`, and `@size` display
+attributes, defaults, whitespace-separated type entries, URL writes and
+updates, optional URLs, JSON imports, and String filters/indexes. Rejections
+pin the complete diagnostic, including the attribute/value span and the
+`String<url>` fix for image fields. Both hosts use the same engine and URL
+parser. URLs require HTTP(S), a host and no userinfo; scheme matching is
+case-insensitive. Renderer geometry, image loading, keyboard preview, focus, zoom and
+screenshots are tested with Playwright in the engine repository.
+
 ## Discovery stages (APS 7)
 
 `tests/then/` specifies text discovery (including infix compatibility), regex,

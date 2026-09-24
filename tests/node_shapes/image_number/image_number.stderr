@@ -1,0 +1,5 @@
+error: @image needs Log.photo to be String<url>
+  schema:2:31
+  display { graph { Log(@image: &photo) } } }
+                                ^^^^^^
+  help: declare `photo: String<url>` on Log

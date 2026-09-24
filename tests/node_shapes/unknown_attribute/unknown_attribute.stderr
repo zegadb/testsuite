@@ -1,0 +1,5 @@
+error: unknown display attribute @colour
+  schema:2:23
+  display { graph { Log(@colour: blue) } } }
+                        ^^^^^^^
+  help: use `@shape`, `@image` or `@size`

@@ -1,0 +1,8 @@
+schema { type Link { url: String<url> } }
+mutation { Link(url: "http://example.org/image.png") }
+mutation { Link(url: "https://example.org/image.png") }
+mutation { Link(url: "HTTP://example.org/image.png") }
+mutation { Link(url: "HtTpS://example.org/image.png") }
+mutation { Link(url: "https://example.org/@image.png?email=user@example.org") }
+mutation { Link(url: "http://[::1]:8080/image.png") }
+query { Link { url } }
