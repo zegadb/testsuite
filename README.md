@@ -92,3 +92,15 @@ reviewed diagnostic and source span.
 The engine pin in this branch is `zegadb/zega`'s `codex/vector` revision recorded
 in `engine.json`. Engine recall/PCA and headless explorer checks live with that
 implementation; this corpus exercises the shared ZQL contract on both hosts.
+
+## Index coverage
+
+`tests/index/` covers the `index { range … text … }` block: two bounds on one
+range-indexed field, equality, `||`, Float `-0.0`, String ordering, number and
+string bounds together, all three text operators, a needle shorter than a
+trigram, index maintenance through `set`, and `index` before `unique`. Every
+success case has the same answer a scan gives; the corpus checks answers, and
+the engine's own tests show the index is used (`Zega::rows_examined`).
+Rejecting cases pin the checker's diagnostics: unknown type or field,
+relationship, `text` on a non-String field, `range` on a Bool, a field named
+twice, `range` on a unique field, an unknown kind and a second block.

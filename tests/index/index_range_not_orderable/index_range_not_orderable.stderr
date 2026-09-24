@@ -1,0 +1,5 @@
+error: range index needs an Int, Float or String field; Player.active is Bool
+  schema:2:24
+  index { range Player { active } }
+                         ^^^^^^
+  help: `range` orders values; Point and Vector fields are indexed already

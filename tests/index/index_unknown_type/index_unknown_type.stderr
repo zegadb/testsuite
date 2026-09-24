@@ -1,0 +1,5 @@
+error: unknown type Playr
+  schema:2:15
+  index { range Playr { salary } }
+                ^^^^^
+  help: did you mean `Player`?

@@ -1,0 +1,9 @@
+{
+  "title": "Index range on unique",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A unique field already has a range index; naming it under range is an error."
+}

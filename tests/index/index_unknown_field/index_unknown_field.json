@@ -1,0 +1,9 @@
+{
+  "title": "Index unknown field",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "An index names a declared field of that type."
+}

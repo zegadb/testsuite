@@ -1,0 +1,5 @@
+error: Player.name is already indexed by unique
+  schema:3:24
+  index { range Player { name } }
+                         ^^^^
+  help: a unique field already has a range index; remove it from `range`

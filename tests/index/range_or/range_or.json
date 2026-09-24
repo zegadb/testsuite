@@ -1,0 +1,9 @@
+{
+  "title": "Index range or",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Both sides of || use the index; the union is returned in node order."
+}

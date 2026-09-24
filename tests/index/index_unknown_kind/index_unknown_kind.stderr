@@ -1,0 +1,5 @@
+error: unknown index kind btree
+  schema:2:9
+  index { btree Player { salary } }
+          ^^^^^
+  help: write `range Type { field }` or `text Type { field }`

@@ -1,0 +1,5 @@
+error: Player.salary already has a range index
+  schema:2:55
+  index { range Player { salary } range Player { rating salary } }
+                                                        ^^^^^^
+  help: name each field once per index kind
