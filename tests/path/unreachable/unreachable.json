@@ -1,0 +1,9 @@
+{
+  "title": "Path unreachable",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Roads are directed; no route from E back to A is null, not an error."
+}

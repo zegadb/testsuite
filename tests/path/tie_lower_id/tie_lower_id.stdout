@@ -1,0 +1,1 @@
+{"next":{"cost":2000,"edges":[{"from":1,"id":1,"props":{"m":1000},"to":2,"type":"next"},{"from":2,"id":3,"props":{"m":1000},"to":4,"type":"next"}],"hops":2,"nodes":[{"m":null,"n":0},{"m":1000,"n":2},{"m":1000,"n":3}]}}

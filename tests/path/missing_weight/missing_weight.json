@@ -1,0 +1,9 @@
+{
+  "title": "Path missing weight",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A road without the weight is an error naming it, never a silent 0 or 1."
+}

@@ -1,0 +1,5 @@
+error: unknown distance unit feet
+  schema:14:62
+  query { Junction(name: "A") { road *path by &km toward at in feet -> Junction(name: "C") { name } } }
+                                                               ^^^^
+  help: the weight is in `m`, `km` or `mi`

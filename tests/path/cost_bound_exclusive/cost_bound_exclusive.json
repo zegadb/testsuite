@@ -1,0 +1,9 @@
+{
+  "title": "Path cost bound exclusive",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A cost bound of < excludes the only route at 1.6; outside the bound is null."
+}

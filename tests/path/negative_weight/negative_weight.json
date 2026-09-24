@@ -1,0 +1,9 @@
+{
+  "title": "Path negative weight",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A negative weight is an error naming the edge; the cheapest route is undefined with it."
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Path toward needs weight",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A* needs a weight in a distance unit; counting edges is not one."
+}

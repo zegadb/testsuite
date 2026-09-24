@@ -1,0 +1,9 @@
+{
+  "title": "Path astar unit",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Kilometres read as metres: a 0.8 km road is shorter than its 700 m straight line, so A* refuses rather than return a wrong route."
+}

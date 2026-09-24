@@ -1,0 +1,9 @@
+{
+  "title": "Path hops bound weighted",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A weighted path is bounded by cost, not hops."
+}
