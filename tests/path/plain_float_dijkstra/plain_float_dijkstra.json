@@ -1,0 +1,9 @@
+{
+  "title": "Path plain float dijkstra",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A weight without a unit is an ordinary number: Dijkstra by &km works on plain Float and gives the same route as with Float<km>."
+}

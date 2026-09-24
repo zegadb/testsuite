@@ -1,5 +1,5 @@
 execution error: error: road#1 from Junction#1 to Junction#2 has km 0.8, shorter than the 699.773 m straight line between its ends
-  schema:14:62
-  query { Junction(name: "A") { road *path by &km toward at in m -> Junction(name: "C") { name } } }
-                                                               ^
-  help: `toward` needs every km to be at least the straight-line distance in m; check the unit, or drop `toward`
+  schema:14:56
+  query { Junction(name: "A") { road *path by &km toward at -> Junction(name: "C") { name } } }
+                                                         ^^
+  help: `toward` needs every km to be at least the straight-line distance; km is declared in m, so check that unit, or drop `toward`

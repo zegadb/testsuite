@@ -5,5 +5,5 @@
     "native",
     "browser"
   ],
-  "notes": "A* needs a weight in a distance unit; counting edges is not one."
+  "notes": "A* needs a weight whose type declares a distance unit; counting edges is not one."
 }

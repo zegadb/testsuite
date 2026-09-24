@@ -1,0 +1,1 @@
+schema { type Junction { name: String<km> } }

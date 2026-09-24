@@ -1,4 +1,4 @@
-schema { type Junction { name: String at: Point road -> Junction[] { km: Float } } }
+schema { type Junction { name: String at: Point road -> Junction[] { km: Float<m> } } }
 unique { Junction { name } }
 mutation { Junction(name: "A" && at: point(51.0, -114.0)) }
 mutation { Junction(name: "B" && at: point(51.0, -113.99)) }
@@ -11,4 +11,4 @@ mutation { Junction(name: "A") { road -> link Junction(name: "D") { &km: 1.4 } }
 mutation { Junction(name: "D") { road -> link Junction(name: "C") { &km: 1.4 } } }
 mutation { Junction(name: "A") { road -> link Junction(name: "C") { &km: 2.5 } } }
 mutation { Junction(name: "C") { road -> link Junction(name: "E") { &km: 0.9 } } }
-query { Junction(name: "A") { road *path by &km toward at in m -> Junction(name: "C") { name } } }
+query { Junction(name: "A") { road *path by &km toward at -> Junction(name: "C") { name } } }

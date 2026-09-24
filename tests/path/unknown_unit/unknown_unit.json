@@ -5,5 +5,5 @@
     "native",
     "browser"
   ],
-  "notes": "The A* unit is m, km or mi."
+  "notes": "The distance unit in a type is m, km or mi."
 }

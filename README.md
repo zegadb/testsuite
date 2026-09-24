@@ -108,14 +108,17 @@ twice, `range` on a unique field, an unknown kind and a second block.
 ## Path coverage
 
 `tests/path/` covers `*path` route queries: fewest edges, `by &km` (Dijkstra)
-and `by &km toward at in km` (A*) on one road net, where the cheapest route
-has more edges than the direct one. It also covers an unreachable target
-(null), inclusive and exclusive cost bounds, a hop bound, a target condition
-matching several nodes, a start that is its own target, and a tie broken by
-node id with an Int weight. Success expectations were written by hand from the
-road lengths, not taken from the engine. Rejecting cases pin the diagnostics
-for a missing weight, a negative weight, a weight in the wrong unit for A*,
-`toward` without a weight, a start type without the `toward` Point, a weight that is not a number, a hop bound on a
-weighted path and an unknown unit. The engine's own tests compare all three
+and `by &km toward at` (A*, with the weight's unit declared in the schema as
+`km: Float<km>`) on one road net, where the cheapest route has more edges than
+the direct one. It also covers Dijkstra on a plain `Float` weight, an
+unreachable target (null), inclusive and exclusive cost bounds, a hop bound, a
+target condition matching several nodes, a start that is its own target, and a
+tie broken by node id with an Int weight. Success expectations were written by
+hand from the road lengths, not taken from the engine. Rejecting cases pin the
+diagnostics for a missing weight, a negative weight, kilometres stored in a
+`Float<m>` field under A*, `toward` without a weight, `toward` on a weight
+with no unit, a start type without the `toward` Point, a weight that is not a
+number, a hop bound on a weighted path, an unknown unit, a unit on a `String`,
+and a unit written in the query. The engine's own tests compare all three
 searches with brute force on random graphs and show A* expands fewer nodes
 (`Zega::nodes_expanded`).

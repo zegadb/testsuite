@@ -11,4 +11,4 @@ mutation { Junction(name: "A") { road -> link Junction(name: "D") { &km: 1.4 } }
 mutation { Junction(name: "D") { road -> link Junction(name: "C") { &km: 1.4 } } }
 mutation { Junction(name: "A") { road -> link Junction(name: "C") { &km: 2.5 } } }
 mutation { Junction(name: "C") { road -> link Junction(name: "E") { &km: 0.9 } } }
-query { Junction(name: "A") { road *path(cost < 1.6) by &km toward at -> Junction(name: "C") { name } } }
+query { Junction(name: "A") { road *path by &km toward at in km -> Junction(name: "C") { name &km } } }

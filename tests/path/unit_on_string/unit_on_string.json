@@ -1,0 +1,9 @@
+{
+  "title": "Path unit on string",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Only Int and Float take a distance unit."
+}
