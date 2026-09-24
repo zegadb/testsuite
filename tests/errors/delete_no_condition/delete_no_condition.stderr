@@ -1,0 +1,5 @@
+execution error: error: delete needs a condition: which Player rows?
+  schema:31:10
+    delete Player()
+           ^^^^^^
+  help: e.g. `delete Player(name = "…")`

@@ -1,0 +1,15 @@
+{
+  "title": "Delete every match, returning ids and fields",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`delete Player(salary = 300)` deletes both matches and returns their count, with `@id` and `name` read before the delete (zega#73).",
+  "knownFailure": {
+    "reason": "zegadb/zega#73: the pinned engine has no order by a field and no delete",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: expected }\n  schema:31:10\n    delete Player(salary = 300) { @id name }\n           ^^^^^^\n"
+    }
+  }
+}

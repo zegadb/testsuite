@@ -1,0 +1,5 @@
+execution error: error: City.at is a Point; order it by distance
+  schema:13:17
+    City order by at { name }
+                  ^^^
+  help: write `order by @distance(at, @point(lat, lon))`
