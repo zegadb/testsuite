@@ -1,7 +1,7 @@
 schema {
   type Person {
     name: String
-    age: Int
+    age?: Int
     active?: Bool
     score?: Float
     friends -> Person[]
