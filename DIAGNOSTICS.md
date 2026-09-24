@@ -23,7 +23,7 @@ Every externally reachable parser message family has a rejecting case. Parameter
 | [errors/expected_colon](tests/errors/expected_colon) | expected : |
 | [errors/expected_close_paren](tests/errors/expected_close_paren) | expected ) |
 | [errors/expected_range_separator](tests/errors/expected_range_separator) | expected .. |
-| [errors/expected_with](tests/errors/expected_with) | expected WITH |
+| [names/old_incomplete_starts_with](tests/names/old_incomplete_starts_with) | retired starts-with operator; use startsWith |
 | [errors/expected_name](tests/errors/expected_name) | expected a name |
 | [errors/expected_name_eof](tests/errors/expected_name_eof) | expected a name |
 | [errors/query_and_mutation](tests/errors/query_and_mutation) | a statement is a query or a mutation |
@@ -33,7 +33,7 @@ Every externally reachable parser message family has a rejecting case. Parameter
 | [errors/load_empty_path](tests/errors/load_empty_path) | a load reads a file |
 | [errors/load_non_string](tests/errors/load_non_string) | a load reads a file |
 | [errors/bad_json](tests/errors/bad_json) | bad json: trailing comma at line 1 column 6 |
-| [errors/hops_write](tests/errors/hops_write) | &hops is measured, not stored |
+| [errors/hops_write](tests/errors/hops_write) | @hops is measured, not stored |
 | [errors/zero_hop_range](tests/errors/zero_hop_range) | bad range *0..2 |
 | [errors/reversed_hop_range](tests/errors/reversed_hop_range) | bad range *3..1 |
 | [errors/range_without_arrow](tests/errors/range_without_arrow) | friends has a range but no arrow |
@@ -104,3 +104,20 @@ These additional cases cover semantic checks, uniqueness, import validation and 
 ## Scope
 
 This suite targets the schema/mutation/query ZQL language in `zega-lang`, not the older Cypher-like grammar in `zega-parser`. It covers every reachable parser message family plus the semantic diagnostic families in `Check`. It does not claim exhaustive operating-system I/O errors, network failures, internal graph corruption, policy/JWT errors, or every possible schema invariant. Remote unavailability is a visible skip rather than an unstable diagnostic expectation.
+
+## APS 6 namespace migration
+
+The namespace additions were audited in `zega/src/lang/mod.rs` at engine
+`aad94b06efe004695e59bbce0ea8cc14ddf9bfd9`. The original audit above predates
+the repository's module consolidation. `tests/names/` now pins 16 rejection
+cases (including the relocated incomplete starts-with case) and four success
+cases. Removed bounds, string filters, built-in values and helper names all
+name their replacement and underline the old token. Declared user fields win
+for the former implicit values; no compatibility interpretation remains.
+
+The successes cover stored node/edge hops, cost and shape, a stored cost path
+weight, user id/score alongside aliases for built-ins, and all audited helper,
+keyword, literal, enum and prospective display-parameter names as properties.
+Every expected JSON result was specified from fixture values. Existing golden
+diagnostics retain their intended errors with source excerpts and spans adjusted
+to the new syntax; no bulk engine-output regeneration was used.

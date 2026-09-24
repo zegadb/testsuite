@@ -1,0 +1,4 @@
+error: `point` is built in: write `@point`
+  schema:2:20
+  query { Sample(at: point(0,0)) }
+                     ^^^^^

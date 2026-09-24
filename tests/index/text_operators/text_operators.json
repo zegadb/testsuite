@@ -5,5 +5,5 @@
     "native",
     "browser"
   ],
-  "notes": "CONTAINS, STARTS WITH and ENDS WITH answer from the text index exactly like a scan."
+  "notes": "findWith, startsWith and endsWith answer from the text index exactly like a scan."
 }

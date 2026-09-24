@@ -1,5 +1,5 @@
-error: &hops is measured, not stored
+error: @hops is measured, not stored
   schema:2:21
-  mutation { Person { &hops: 2 } }
+  mutation { Person { @hops: 2 } }
                       ^^^^^
-  help: `&hops` counts edges from the start of the query
+  help: `@hops` counts edges from the start of the query

@@ -1,4 +1,4 @@
 error: Vector components must be finite float32 numbers
-  schema:2:39
-  mutation { Ticket(embedding: vector[1,"bad",3]) { embedding } }
-                                        ^^^^^
+  schema:2:40
+  mutation { Ticket(embedding: @vector[1,"bad",3]) { embedding } }
+                                         ^^^^^

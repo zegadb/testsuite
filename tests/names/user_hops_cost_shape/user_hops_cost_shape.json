@@ -1,0 +1,9 @@
+{
+  "title": "User hops cost shape",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Stored node and edge hops/cost/shape values remain independent of measured traversal depth; edge hops can be written and projected beside an aliased built-in."
+}

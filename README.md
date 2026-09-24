@@ -89,8 +89,7 @@ selection, the `near`/`order` diagnostic, `near` with `limit`, and nested
 results containing incompatible vector dimensions and metrics. Success
 expectations are independently specified; rejecting cases pin the complete
 reviewed diagnostic and source span.
-The engine pin in this branch is `zegadb/zega`'s `codex/vector` revision recorded
-in `engine.json`. Engine recall/PCA and headless explorer checks live with that
+The engine revision is recorded in `engine.json`. Engine recall/PCA and headless explorer checks live with that
 implementation; this corpus exercises the shared ZQL contract on both hosts.
 
 ## Index coverage
@@ -122,3 +121,11 @@ number, a hop bound on a weighted path, an unknown unit, a unit on a `String`, t
 and a unit written in the query. The engine's own tests compare all three
 searches with brute force on random graphs and show A* expands fewer nodes
 (`Zega::nodes_expanded`).
+
+## Names (APS 6)
+
+`tests/names/` rejects every removed spelling and verifies stored `hops`, `cost`,
+`shape`, `id`, and `score` independently of language-owned `@` names. It also
+checks an edge field named `cost` as a path weight alongside an `@cost` bound.
+The engine and browser package are pinned to the same engine revision in
+`engine.json`; see [APS 6](https://github.com/zegadb/aps/issues/6).

@@ -1,5 +1,5 @@
 schema { type Place { n: Int at: Point } }
-mutation { Place(n: 0 && at: point(0, 179.5)) { n } }
-mutation { Place(n: 1 && at: point(0, -179.5)) { n } }
-mutation { Place(n: 2 && at: point(0, 0)) { n } }
-query { Place(within_box(at, point(-1, 179), point(1, -179))) { n } }
+mutation { Place(n: 0 && at: @point(0, 179.5)) { n } }
+mutation { Place(n: 1 && at: @point(0, -179.5)) { n } }
+mutation { Place(n: 2 && at: @point(0, 0)) { n } }
+query { Place(@within_box(at, @point(-1, 179), @point(1, -179))) { n } }

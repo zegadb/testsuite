@@ -1,0 +1,9 @@
+{
+  "title": "Old score",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Rejects the removed score spelling with an exact source span and directs the user to @score."
+}

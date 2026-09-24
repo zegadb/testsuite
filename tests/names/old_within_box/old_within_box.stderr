@@ -1,0 +1,4 @@
+error: `within_box` is built in: write `@within_box`
+  schema:2:16
+  query { Sample(within_box(at, @point(0,0), @point(1,1))) }
+                 ^^^^^^^^^^

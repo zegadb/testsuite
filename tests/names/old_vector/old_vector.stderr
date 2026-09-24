@@ -1,0 +1,4 @@
+error: `vector` is built in: write `@vector`
+  schema:2:27
+  query { Sample(embedding: vector[1,0]) }
+                            ^^^^^^

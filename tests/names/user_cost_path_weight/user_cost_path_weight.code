@@ -1,0 +1,3 @@
+schema { type Stop { name: String hops: Int cost: Int shape: String road -> Stop[] { hops: Int cost: Int shape: String } } }
+mutation { Stop(name: "A" && hops: 11 && cost: 12 && shape: "circle") { road -> Stop(name: "B" && hops: 21 && cost: 22 && shape: "document") { &hops: 7 &cost: 8 &shape: "map" } } }
+query { Stop(name: "A") { road *path(@cost <= 8) by &cost -> Stop(name: "B") { &hops &cost } } }

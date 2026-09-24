@@ -1,4 +1,0 @@
-error: expected WITH
-  schema:2:28
-  query { Person(name STARTS "A") { name } }
-                             ^

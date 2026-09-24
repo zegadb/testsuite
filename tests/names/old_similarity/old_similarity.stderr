@@ -1,0 +1,4 @@
+error: `similarity` is built in: write `@similarity`
+  schema:2:16
+  query { Sample(similarity(embedding, @vector[1,0]) > 0) }
+                 ^^^^^^^^^^

@@ -1,0 +1,4 @@
+error: `CONTAINS` was renamed: write `findWith`
+  schema:2:21
+  query { Sample(name CONTAINS "A") }
+                      ^^^^^^^^

@@ -1,5 +1,5 @@
 execution error: error: Vector<3> needs exactly 3 numbers, got 2
   schema:2:19
-  mutation { Ticket(embedding: vector[1,2]) { embedding } }
+  mutation { Ticket(embedding: @vector[1,2]) { embedding } }
                     ^^^^^^^^^
-  help: write `vector[0.1, 0.2, ...]` with the declared dimension
+  help: write `@vector[0.1, 0.2, ...]` with the declared dimension

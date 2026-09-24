@@ -5,5 +5,5 @@
     "native",
     "browser"
   ],
-  "notes": "STARTS WITH matches the prefix."
+  "notes": "startsWith matches the prefix."
 }
