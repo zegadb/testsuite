@@ -1,6 +1,6 @@
 # ZQL conformance
 
-A readable contract for [Zega](https://github.com/zegadb/zega): one corpus, exactly two engine hosts, **native** and **browser**. The native host calls the Rust crate directly. `zega start` serves that same engine over HTTP; HTTP is not another host.
+A readable contract for [Zega](https://github.com/zegadb/zega): one corpus, three hosts. **native** calls the Rust crate directly, **browser** runs the same adapter as WASM in Chromium, and **server** sends each case over HTTP to `zega start` (the `zega-server` routes) built from the same pinned revision. Case metadata still names the two engine adapters; the server host runs every executable document.
 
 ## Reproduce
 
@@ -69,6 +69,30 @@ node scripts/compare-hosts.mjs
 
 Pass `--bindgen /path/to/wasm-bindgen` to use an existing matching tool. Missing Chromium, WASM or tooling is a blocking error, never an implicit native fallback. Parity compares complete native/browser outcomes and requires fresh full-corpus reports; skipped remote cases do not count as parity evidence.
 
+## Server host
+
+The server host proves the HTTP server that ships to deployments returns exactly what the engine returns. It uses the pinned revision's `zega` CLI, installed with a receipt so the runner can refuse a binary from any other revision:
+
+```sh
+cargo install --locked --git https://github.com/zegadb/zega.git --rev "$(node -p 'require("./engine.json").revision')" zega-cli --bin zega --root "$PWD/.tmp/tools"
+npm test -- --host server          # or --zega /path/to/bin/zega (same --root receipt required)
+node scripts/compare-hosts.mjs     # native/browser, native/server, browser/server
+```
+
+Each case gets its own `zega start --port 0` process, an empty persistent data directory, a generated bearer token and the case directory as working directory (so relative imports resolve like native). The runner checks that a request without the token is refused, then sends `POST /zql {"query": <source>, "document": true}`, which is `apply_zql` behind HTTP. A success body's `result` bytes are sliced out verbatim (never re-serialized by JavaScript) and compared byte-for-byte. The HTTP error body carries the engine's `ZegaError` text and no stage, so a failure takes the stage its case declares, and a parse-stage message must be exactly `execution error: ` followed by the native diagnostic. The two parser-only API cases (`api: query` / `statement`) have no HTTP entry point; they are reported as unsupported on the server and listed by `compare-hosts`, never counted as parity. Any unsupported *document* is a divergence.
+
+### Stress
+
+`node scripts/server-stress.mjs` runs the same release `zega` against six checks and writes one JSON line per result to stdout and `.cache/server-stress.jsonl`:
+
+- **concurrency**: 16 clients, 2 minutes (`--duration`). The checks are no torn or stale reads, and final nodes equal acknowledged writes.
+- **durability**: 3× kill -9 during write load. Each write is one statement: a parent plus 3 linked children. Every acknowledged write must be whole after restart, and in-flight ones must be whole or absent.
+- **growth / timings**: 100k nodes (`--nodes`) with 300k relationships, RSS at 10k/50k/100k, `GET /graph` time and peak RSS, restart time to the first answered query, and p50/p99 for reads, writes and a 2-hop traversal.
+- **bad-input**: malformed JSON or ZQL, wrong types, a missing token, an oversized body. Good clients must see zero errors, and their latency is compared with a baseline.
+- **nesting**: recursion depth that a client controls.
+
+Exit 1 on any failed check. `--only <names>` selects a subset. The stress run is local evidence, not a CI step: it takes minutes and its timings depend on the machine.
+
 ## Browse the corpus
 
 ```sh
@@ -82,7 +106,7 @@ Next.js statically exports every case, source, local fixture, exact expectation,
 
 The site uses Next.js [`output: 'export'`](https://nextjs.org/docs/app/guides/static-exports). `wrangler.jsonc` configures [Cloudflare Worker static assets](https://developers.cloudflare.com/workers/static-assets/) from `out/`. No deploy command or workflow runs automatically. Ava attaches `testsuite.zega.dev` later.
 
-CI on push and pull request uses `environment: public-ci`, public dependencies, no repository secrets, and required sccache. It runs native conformance, runner fault injection, reverse order, Chromium/WASM conformance, direct host parity, static build and Chromium site checks, then uploads the site and both host reports. The remote import is explicitly skipped offline in CI.
+CI on push and pull request uses `environment: public-ci`, public dependencies, no repository secrets, and required sccache. It runs native conformance, HTTP server conformance, runner fault injection, reverse order, Chromium/WASM conformance, pairwise parity across all three hosts, static build and Chromium site checks, then uploads the site and every host report. The remote import is explicitly skipped offline in CI.
 
 ## Add or update a case
 

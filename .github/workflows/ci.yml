@@ -36,7 +36,7 @@ jobs:
       - run: cargo fmt --all -- --check
       - run: cargo check --locked --workspace --all-targets
       - run: cargo clippy --locked --workspace --all-targets --all-features -- -D warnings
-      - name: Build the canonical formatter from the pinned engine
+      - name: Build the canonical formatter and server from the pinned engine
         run: |
           revision=$(node -p 'JSON.parse(require("fs").readFileSync("engine.json")).revision')
           cargo install --locked --git https://github.com/zegadb/zega.git --rev "$revision" zega-cli --bin zega --root "$PWD/.tmp/tools"
@@ -45,6 +45,8 @@ jobs:
       - run: cargo build --locked --bin zql-native
       - name: Execute native corpus (offline, deterministic)
         run: npm test -- --host native
+      - name: Execute the corpus over HTTP (zega start from the pinned engine, one server per case)
+        run: npm test -- --host server
       - name: Verify runner detects false expectations and infrastructure failures
         run: npm run test:runner
       - name: Re-run in reverse order
@@ -55,7 +57,8 @@ jobs:
           node scripts/build-browser.mjs --bindgen "$PWD/.tmp/tools/bin/wasm-bindgen"
       - run: npx playwright install --with-deps chromium
       - run: npm test -- --host browser
-      - run: node scripts/compare-hosts.mjs
+      - name: Compare native, browser and server pairwise
+        run: node scripts/compare-hosts.mjs
       - run: npm run build
       - run: npm run check:site
       - uses: actions/upload-artifact@v4
@@ -66,4 +69,5 @@ jobs:
             .cache/native.json
             .cache/native-reverse.json
             .cache/browser.json
+            .cache/server.json
           include-hidden-files: true
