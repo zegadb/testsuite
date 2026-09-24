@@ -1,0 +1,5 @@
+error: @image needs Log.missing to be String<url>
+  schema:2:31
+  display { graph { Log(@image: &missing) } } }
+                                ^^^^^^^^
+  help: declare `missing: String<url>` on Log

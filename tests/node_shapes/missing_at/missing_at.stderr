@@ -1,0 +1,5 @@
+error: display attribute shape needs @shape
+  schema:2:23
+  display { graph { Log(shape: document) } } }
+                        ^^^^^
+  help: write `@shape: …`; `@` names language attributes

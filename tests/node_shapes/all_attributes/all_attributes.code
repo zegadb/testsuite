@@ -1,0 +1,10 @@
+schema {
+ type Log { name: String }
+ type Contract { scan: String<url> }
+ type Player { photo?: String<url> }
+ display { graph { Log(@shape: document) Contract(@shape: document, @image: &scan, @size: 3) Player(@shape: circle, @image: &photo, @size: 2) } table { Log(@size: 1) } }
+}
+mutation { Log(name: "Notes") }
+mutation { Contract(scan: "https://example.com/scan.png") }
+mutation { Player(photo: null) }
+query { Contract { scan } }

@@ -1,0 +1,5 @@
+error: @image needs Log.related to be String<url>
+  schema:2:31
+  display { graph { Log(@image: &related) } } }
+                                ^^^^^^^^
+  help: declare `related: String<url>` on Log

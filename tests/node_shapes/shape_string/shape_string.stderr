@@ -1,0 +1,5 @@
+error: @shape must be circle or document
+  schema:2:31
+  display { graph { Log(@shape: "document") } } }
+                                ^^^^^^^^^^
+  help: write `@shape: circle` or `@shape: document`

@@ -1,0 +1,5 @@
+error: @image needs a field reference
+  schema:2:31
+  display { graph { Log(@image: scan) } } }
+                                ^^^^
+  help: write `@image: &scan` and declare `scan: String<url>`
