@@ -1,0 +1,9 @@
+{
+  "title": "Then scoped text",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Independently specified stage IDs, stored properties and evidence; scoped text."
+}

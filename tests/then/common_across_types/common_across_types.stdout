@@ -1,0 +1,1 @@
+{"stages":[{"couldBeEdges":[{"from":1,"to":2,"via":{"fields":["Player.country","Team.country"],"primitive":"common","value":"CA"}}],"edges":[{"from":1,"id":1,"props":{},"to":2,"type":"team"}],"index":1,"kind":"then","nodes":[{"id":1,"labels":["Player"],"props":{"country":"CA","name":"Alice"}},{"id":2,"labels":["Team"],"props":{"country":"CA","name":"Oilers"}}]}]}

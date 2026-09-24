@@ -1,0 +1,9 @@
+{
+  "title": "Then wrong vector type",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Rejects must be Vector; complete diagnostic is reviewed and pinned."
+}

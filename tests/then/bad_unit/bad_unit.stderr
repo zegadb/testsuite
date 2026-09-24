@@ -1,0 +1,4 @@
+error: near unit must be m, km, or mi
+  schema:2:40
+  query { Person } then { near { &at < 1 feet } }
+                                         ^^^^

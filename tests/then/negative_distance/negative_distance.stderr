@@ -1,0 +1,4 @@
+error: near distance must be finite and non-negative
+  schema:2:33
+  query { Person } then { near { &at < -1 m } }
+                                  ^^

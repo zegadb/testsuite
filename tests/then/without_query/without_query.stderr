@@ -1,0 +1,4 @@
+error: then requires a preceding query stage
+  schema:2:1
+  then { findWith { "a" } }
+  ^^^^
