@@ -1,0 +1,14 @@
+schema {
+  type City {
+    name: String
+    at: Point
+  }
+}
+
+mutation {
+  City(name: "Calgary" && at: @point(51.05, -114.07))
+}
+
+query {
+  City order by at { name }
+}

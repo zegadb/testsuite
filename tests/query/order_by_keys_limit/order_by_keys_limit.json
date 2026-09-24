@@ -1,0 +1,15 @@
+{
+  "title": "Order by two keys, after a filter, then limit",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "The filter runs first, a second key breaks ties on the first, and `limit` keeps the first rows of the sorted result (zega#73).",
+  "knownFailure": {
+    "reason": "zegadb/zega#73: the pinned engine has no order by a field and no delete",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: expected @distance\n  schema:31:34\n    Player(name != \"Ben\") order by salary desc, name desc limit 2 { name }\n                                   ^^^^^^\n"
+    }
+  }
+}

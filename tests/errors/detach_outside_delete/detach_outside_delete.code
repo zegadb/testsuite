@@ -1,0 +1,32 @@
+schema {
+  type Team {
+    name: String
+    players -> Player[]
+  }
+
+  type Player {
+    name: String
+    salary?: Int
+    players <- Team
+  }
+}
+
+mutation {
+  Player(name: "Ada" && salary: 300)
+}
+
+mutation {
+  Player(name: "Ben" && salary: 100)
+}
+
+mutation {
+  Player(name: "Cy")
+}
+
+mutation {
+  Player(name: "Dee" && salary: 300)
+}
+
+query {
+  Player { name @detach }
+}
