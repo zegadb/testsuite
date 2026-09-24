@@ -7,6 +7,7 @@
 //   node scripts/server-stress.mjs [--zega PATH] [--duration 120] [--only concurrency,durability,growth,bad-input,nesting]
 import fs from 'node:fs';
 import path from 'node:path';
+import http from 'node:http';
 import { execFileSync } from 'node:child_process';
 import { randomBytes } from 'node:crypto';
 import { parseArgs } from 'node:util';
@@ -334,13 +335,21 @@ async function badInput() {
         } catch (error) { goodErrors.push({ transport: String(error) }); }
       }
     };
-    const raw = async (name, body, headers = { ...server.auth, 'content-type': 'application/json' }) => {
-      try {
-        const response = await fetch(server.url + '/zql', { method: 'POST', headers, body, signal: AbortSignal.timeout(60000) });
-        await response.arrayBuffer();
-        return response.status;
-      } catch (error) { return `transport: ${error.cause?.code ?? error.message}`; }
-    };
+    // Each bad request gets its own connection (no keep-alive pool): when the
+    // server answers before reading a body and closes the socket, that must
+    // not surface as a reset on whichever request reused the socket next.
+    const raw = (name, body, headers = { ...server.auth, 'content-type': 'application/json' }) => new Promise(resolve => {
+      const request = http.request(server.url + '/zql', { method: 'POST', headers, agent: false, timeout: 60000 }, response => {
+        response.resume();
+        response.on('end', () => resolve(response.statusCode));
+        response.on('error', error => resolve(`transport: ${error.code ?? error.message}`));
+      });
+      request.on('error', error => resolve(`transport: ${error.code ?? error.message}`));
+      request.end(body);
+    });
+    // Built once: re-serializing 17 MB per request would stall this process's
+    // event loop and show up as latency on the good clients it also drives.
+    const oversized = Buffer.from(str({ query: 'x'.repeat(17_000_000), document: true }));
     const bad = [
       ['malformed_json', () => raw('malformed_json', '{"query": "schema {')],
       ['not_json', () => raw('not_json', 'query { Item { key } }')],
@@ -353,7 +362,7 @@ async function badInput() {
       ['unknown_type', () => raw('unknown_type', str(doc('query {\n  Nope { key }\n}\n')))],
       ['deep_json_nesting', () => raw('deep_json_nesting', '['.repeat(100000))],
       ['no_token', () => raw('no_token', str(doc('query {\n  Item { key }\n}\n')), { 'content-type': 'application/json' })],
-      ['oversized_body', () => raw('oversized_body', str({ query: 'x'.repeat(17_000_000), document: true }))],
+      ['oversized_body', () => raw('oversized_body', oversized)],
     ];
     const badClient = async id => {
       for (let i = id; Date.now() < deadline; i++) {

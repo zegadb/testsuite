@@ -81,6 +81,18 @@ node scripts/compare-hosts.mjs     # native/browser, native/server, browser/serv
 
 Each case gets its own `zega start --port 0` process, an empty persistent data directory, a generated bearer token and the case directory as working directory (so relative imports resolve like native). The runner checks that a request without the token is refused, then sends `POST /zql {"query": <source>, "document": true}`, which is `apply_zql` behind HTTP. A success body's `result` bytes are sliced out verbatim (never re-serialized by JavaScript) and compared byte-for-byte. The HTTP error body carries the engine's `ZegaError` text and no stage, so a failure takes the stage its case declares, and a parse-stage message must be exactly `execution error: ` followed by the native diagnostic. The two parser-only API cases (`api: query` / `statement`) have no HTTP entry point; they are reported as unsupported on the server and listed by `compare-hosts`, never counted as parity. Any unsupported *document* is a divergence.
 
+### Stress
+
+`node scripts/server-stress.mjs` runs the same release `zega` against six checks and writes one JSON line per result to stdout and `.cache/server-stress.jsonl`:
+
+- **concurrency**: 16 clients, 2 minutes (`--duration`). The checks are no torn or stale reads, and final nodes equal acknowledged writes.
+- **durability**: 3× kill -9 during write load. Each write is one statement: a parent plus 3 linked children. Every acknowledged write must be whole after restart, and in-flight ones must be whole or absent.
+- **growth / timings**: 100k nodes (`--nodes`) with 300k relationships, RSS at 10k/50k/100k, `GET /graph` time and peak RSS, restart time to the first answered query, and p50/p99 for reads, writes and a 2-hop traversal.
+- **bad-input**: malformed JSON or ZQL, wrong types, a missing token, an oversized body. Good clients must see zero errors, and their latency is compared with a baseline.
+- **nesting**: recursion depth that a client controls.
+
+Exit 1 on any failed check. `--only <names>` selects a subset. The stress run is local evidence, not a CI step: it takes minutes and its timings depend on the machine.
+
 ## Browse the corpus
 
 ```sh
