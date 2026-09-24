@@ -1,2 +1,13 @@
-schema { type Person { name: String age: Int active?: Bool score?: Float friends -> Person[] } }
-mutation { Person(age > 30) }
+schema {
+  type Person {
+    name: String
+    age: Int
+    active?: Bool
+    score?: Float
+    friends -> Person[]
+  }
+}
+
+mutation {
+  Person(age > 30)
+}

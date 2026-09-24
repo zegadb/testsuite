@@ -1,2 +1,12 @@
-schema { type Sample { name: String at?: Point embedding?: Vector<2> road -> Sample[] } }
-query { Sample { &hops } }
+schema {
+  type Sample {
+    name: String
+    at?: Point
+    embedding?: Vector<2>
+    road -> Sample[]
+  }
+}
+
+query {
+  Sample { &hops }
+}

@@ -1,1 +1,3 @@
-mutation json ["./people.json"] { Person(name: $name) }
+mutation json ["./people.json"] {
+  Person(name: $name)
+}

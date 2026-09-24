@@ -1,6 +1,26 @@
 schema {
-  type Depot { name: String road -> Junction[] { km: Float<km> } }
-  type Junction { name: String at: Point road -> Junction[] { km: Float<km> } }
+  type Depot {
+    name: String
+    road -> Junction[] { km: Float<km> }
+  }
+  type Junction {
+    name: String
+    at: Point
+    road -> Junction[] { km: Float<km> }
+  }
 }
-mutation { Depot(name: "D") { road -> Junction(name: "J" && at: @point(51.0, -114.0)) { name &km: 0.001 } } }
-query { Depot { road *path by &km toward at -> Junction { name } } }
+
+mutation {
+  Depot(name: "D") {
+    road -> Junction(name: "J" && at: @point(51.0, -114.0)) {
+      name
+      &km: 0.001
+    }
+  }
+}
+
+query {
+  Depot {
+    road *path by &km toward at -> Junction { name }
+  }
+}

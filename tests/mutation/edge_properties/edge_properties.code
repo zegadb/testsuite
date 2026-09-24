@@ -1,5 +1,29 @@
 schema {
- type Person { name: String knows: KNOWS -> Person[] { since: Int close?: Bool } known: KNOWS <- Person[] }
+  type Person {
+    name: String
+    knows: KNOWS -> Person[] {
+      since: Int
+      close?: Bool
+    }
+    known: KNOWS <- Person[]
+  }
 }
-mutation { Person(name: "Ada") { knows -> Person(name: "Ben") { &since: 2020 &close: true } } }
-query { Person(name: "Ada") { knows -> Person { name &since &close } } }
+
+mutation {
+  Person(name: "Ada") {
+    knows -> Person(name: "Ben") {
+      &since: 2020
+      &close: true
+    }
+  }
+}
+
+query {
+  Person(name: "Ada") {
+    knows -> Person {
+      name
+      &since
+      &close
+    }
+  }
+}

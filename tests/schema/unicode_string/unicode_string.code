@@ -1,3 +1,11 @@
-schema { type Item { name: String } }
-mutation { Item(name: "Étoile 🚀") }
-query { Item { name } }
+schema {
+  type Item { name: String }
+}
+
+mutation {
+  Item(name: "Étoile 🚀")
+}
+
+query {
+  Item { name }
+}

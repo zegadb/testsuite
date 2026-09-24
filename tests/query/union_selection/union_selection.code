@@ -1,4 +1,26 @@
-schema { type Book { name: String pages: Int } type Movie { name: String minutes: Int } }
-mutation { Book(name: "Dune" && pages: 400) }
-mutation { Movie(name: "Arrival" && minutes: 116) }
-query { (Book | Movie) { name pages minutes } }
+schema {
+  type Book {
+    name: String
+    pages: Int
+  }
+  type Movie {
+    name: String
+    minutes: Int
+  }
+}
+
+mutation {
+  Book(name: "Dune" && pages: 400)
+}
+
+mutation {
+  Movie(name: "Arrival" && minutes: 116)
+}
+
+query {
+  (Book | Movie) {
+    name
+    pages
+    minutes
+  }
+}

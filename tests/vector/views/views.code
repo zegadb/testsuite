@@ -1,3 +1,15 @@
-schema { type Ticket { embedding: Vector<3> } display { vector2d { Ticket }: Default vector3d { Ticket } } }
-mutation { Ticket(embedding: @vector[1,0,0]) { embedding } }
-query { Ticket { embedding } }
+schema {
+  type Ticket { embedding: Vector<3> }
+  display {
+    vector2d { Ticket }: Default
+    vector3d { Ticket }
+  }
+}
+
+mutation {
+  Ticket(embedding: @vector[1, 0, 0]) { embedding }
+}
+
+query {
+  Ticket { embedding }
+}

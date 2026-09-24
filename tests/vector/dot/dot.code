@@ -1,4 +1,21 @@
-schema { type Ticket { n: Int embedding: Vector<1, dot> } }
-mutation { Ticket(n: 0 && embedding: @vector[1]) { n } }
-mutation { Ticket(n: 1 && embedding: @vector[2]) { n } }
-query { Ticket @near(embedding, @vector[1], 2) { n @score } }
+schema {
+  type Ticket {
+    n: Int
+    embedding: Vector<1, dot>
+  }
+}
+
+mutation {
+  Ticket(n: 0 && embedding: @vector[1]) { n }
+}
+
+mutation {
+  Ticket(n: 1 && embedding: @vector[2]) { n }
+}
+
+query {
+  Ticket @near(embedding, @vector[1], 2) {
+    n
+    @score
+  }
+}

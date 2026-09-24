@@ -1,5 +1,28 @@
-schema { type Person { name: String age: Int active?: Bool score?: Float friends -> Person[] } }
-mutation { Person(name: "Ada") }
-mutation { Person(name: "Ben") }
-mutation { Person(name: "Ada") { friends -> link Person(name: "Ben") } }
-query { Person { name friends -> Person { name } } }
+schema {
+  type Person {
+    name: String
+    age: Int
+    active?: Bool
+    score?: Float
+    friends -> Person[]
+  }
+}
+
+mutation {
+  Person(name: "Ada")
+}
+
+mutation {
+  Person(name: "Ben")
+}
+
+mutation {
+  Person(name: "Ada") { friends -> link Person(name: "Ben") }
+}
+
+query {
+  Person {
+    name
+    friends -> Person { name }
+  }
+}

@@ -1,3 +1,19 @@
-schema { type Artifact { repository: String commit: String } }
-mutation json ["https://raw.githubusercontent.com/zegadb/zega/718349d94673552f848d1abd7046a98496a5747a/browser/wasm-source.json"] { Artifact(repository: $repository && commit: $commit) }
-query { Artifact { repository commit } }
+schema {
+  type Artifact {
+    repository: String
+    commit: String
+  }
+}
+
+mutation json [
+  "https://raw.githubusercontent.com/zegadb/zega/718349d94673552f848d1abd7046a98496a5747a/browser/wasm-source.json"
+] {
+  Artifact(repository: $repository && commit: $commit)
+}
+
+query {
+  Artifact {
+    repository
+    commit
+  }
+}

@@ -1,2 +1,7 @@
-schema { type Empty { } }
-query { Empty { @id } }
+schema {
+  type Empty {}
+}
+
+query {
+  Empty { @id }
+}

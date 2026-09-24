@@ -1,3 +1,20 @@
-schema { type Sample { id: Int score: Int embedding: Vector<2> } }
-mutation { Sample(id: 99 && score: 42 && embedding: @vector[1,0]) }
-query { Sample(id: 99 && @id: 1) @near(embedding, @vector[1,0], 1) { id score node: @id measured: @score } }
+schema {
+  type Sample {
+    id: Int
+    score: Int
+    embedding: Vector<2>
+  }
+}
+
+mutation {
+  Sample(id: 99 && score: 42 && embedding: @vector[1, 0])
+}
+
+query {
+  Sample(id: 99 && @id: 1) @near(embedding, @vector[1, 0], 1) {
+    id
+    score
+    node: @id
+    measured: @score
+  }
+}

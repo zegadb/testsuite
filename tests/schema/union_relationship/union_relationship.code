@@ -1,3 +1,21 @@
-schema { type Shelf { name: String items -> (Book | Movie)[] } type Book { name: String } type Movie { name: String } }
-mutation { Shelf(name: "Favorites") { items -> Book(name: "Dune") items -> Movie(name: "Arrival") } }
-query { Shelf(name: "Favorites") { items -> (Book | Movie) { name } } }
+schema {
+  type Shelf {
+    name: String
+    items -> (Book | Movie)[]
+  }
+  type Book { name: String }
+  type Movie { name: String }
+}
+
+mutation {
+  Shelf(name: "Favorites") {
+    items -> Book(name: "Dune")
+    items -> Movie(name: "Arrival")
+  }
+}
+
+query {
+  Shelf(name: "Favorites") {
+    items -> (Book | Movie) { name }
+  }
+}

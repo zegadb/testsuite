@@ -1,5 +1,26 @@
-schema { type Junction { name: String road -> Junction[] { km: Float } } }
-mutation { Junction(name: "A") }
-mutation { Junction(name: "B") }
-mutation { Junction(name: "A") { road -> link Junction(name: "B") { &km: -1.5 } } }
-query { Junction(name: "A") { road *path by &km -> Junction(name: "B") { name } } }
+schema {
+  type Junction {
+    name: String
+    road -> Junction[] { km: Float }
+  }
+}
+
+mutation {
+  Junction(name: "A")
+}
+
+mutation {
+  Junction(name: "B")
+}
+
+mutation {
+  Junction(name: "A") {
+    road -> link Junction(name: "B") { &km: -1.5 }
+  }
+}
+
+query {
+  Junction(name: "A") {
+    road *path by &km -> Junction(name: "B") { name }
+  }
+}
