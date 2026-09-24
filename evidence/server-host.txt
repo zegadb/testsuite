@@ -1,0 +1,57 @@
+$ npm test -- --host native
+native: 293 passed, 0 failed, 0 known failures, 0 unexpected passes, 1 skipped; 294 total
+$ npm test -- --host server
+ZQL conformance | host=server | engine=0e8aad6075f3 | offline
+SKIP  errors/load_in_query_api — unsupported: the server host has no query parser API
+SKIP  errors/unexpected_input — unsupported: the server host has no statement parser API
+SKIP  import/remote_url — remote import requires --online
+
+server: 291 passed, 0 failed, 0 known failures, 0 unexpected passes, 3 skipped; 294 total
+$ npm test -- --host server --reverse
+server: 291 passed, 0 failed, 0 known failures, 0 unexpected passes, 3 skipped; 294 total
+$ npm test -- --host server --filter remote_url --online
+server: 1 passed, 0 failed, 0 known failures, 0 unexpected passes, 0 skipped; 1 total
+$ npm test -- --host browser
+browser: 293 passed, 0 failed, 0 known failures, 0 unexpected passes, 1 skipped; 294 total
+$ node scripts/compare-hosts.mjs  (exit 0)
+Parity native/browser: 293 identical outcomes, 0 divergences, 1 skipped on both hosts, 0 unsupported on one host
+N/A      native/server errors/load_in_query_api — server: unsupported: the server host has no query parser API
+N/A      native/server errors/unexpected_input — server: unsupported: the server host has no statement parser API
+Parity native/server: 291 identical outcomes, 0 divergences, 1 skipped on both hosts, 2 unsupported on one host
+N/A      browser/server errors/load_in_query_api — server: unsupported: the server host has no query parser API
+N/A      browser/server errors/unexpected_input — server: unsupported: the server host has no statement parser API
+Parity browser/server: 291 identical outcomes, 0 divergences, 1 skipped on both hosts, 2 unsupported on one host
+
+=== revert proof
+$ git diff scripts/server.mjs (deliberate corruption)
+69c69
+<     return { ok: true, stage: 'run', stdout: `${result}\n`, stderr: '' };
+---
+>     return { ok: true, stage: 'run', stdout: test.id === 'query/selected_fields' ? `${result.replace('Ada', 'Adb')}\n` : `${result}\n`, stderr: '' };
+$ npm test -- --host server
+ZQL conformance | host=server | engine=0e8aad6075f3 | offline
+SKIP  errors/load_in_query_api — unsupported: the server host has no query parser API
+SKIP  errors/unexpected_input — unsupported: the server host has no statement parser API
+SKIP  import/remote_url — remote import requires --online
+FAIL  query/selected_fields
+  stdout expected: "{\"name\":\"Ada\"}\n"
+  stdout actual:   "{\"name\":\"Adb\"}\n"
+
+server: 290 passed, 1 failed, 0 known failures, 0 unexpected passes, 3 skipped; 294 total
+exit=1
+$ node scripts/compare-hosts.mjs
+Parity native/browser: 293 identical outcomes, 0 divergences, 1 skipped on both hosts, 0 unsupported on one host
+DIVERGED native/server query/selected_fields: {"id":"query/selected_fields","fields":["stdout"],"statuses":["PASS","FAIL"],"native":{"ok":true,"stage":"run","stdout":"{\"name\":\"Ada\"}\n","stderr":""},"server":{"ok":true,"stage":"run","stdout":"{\"name\":\"Adb\"}\n","stderr":""}}
+Parity native/server: 290 identical outcomes, 1 divergences, 1 skipped on both hosts, 2 unsupported on one host
+DIVERGED browser/server query/selected_fields: {"id":"query/selected_fields","fields":["stdout"],"statuses":["PASS","FAIL"],"browser":{"ok":true,"stage":"run","stdout":"{\"name\":\"Ada\"}\n","stderr":""},"server":{"ok":true,"stage":"run","stdout":"{\"name\":\"Adb\"}\n","stderr":""}}
+Parity browser/server: 290 identical outcomes, 1 divergences, 1 skipped on both hosts, 2 unsupported on one host
+exit=1
+--- restored adapter
+$ npm test -- --host server
+exit=0
+server: 291 passed, 0 failed, 0 known failures, 0 unexpected passes, 3 skipped; 294 total
+$ node scripts/compare-hosts.mjs
+exit=0
+Parity native/browser: 293 identical outcomes, 0 divergences, 1 skipped on both hosts, 0 unsupported on one host
+Parity native/server: 291 identical outcomes, 0 divergences, 1 skipped on both hosts, 2 unsupported on one host
+Parity browser/server: 291 identical outcomes, 0 divergences, 1 skipped on both hosts, 2 unsupported on one host
