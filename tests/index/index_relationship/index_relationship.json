@@ -1,0 +1,9 @@
+{
+  "title": "Index relationship",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A relationship cannot be indexed."
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Index range bounds",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "Two bounds on one indexed field return exactly the rows a scan returns: the widened lower bound (2) and rows outside are dropped."
+}

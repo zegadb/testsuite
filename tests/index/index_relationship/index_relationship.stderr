@@ -1,0 +1,5 @@
+error: Player.team is a relationship
+  schema:2:24
+  index { range Player { team } }
+                         ^^^^
+  help: an index applies to a field, such as `name`

@@ -1,0 +1,3 @@
+schema { type Player { name: String salary: Int rating?: Float active?: Bool team -> Team } type Team { name: String } }
+unique { Player { name } }
+index { range Player { name } }

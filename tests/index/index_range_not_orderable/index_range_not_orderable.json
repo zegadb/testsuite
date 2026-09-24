@@ -1,0 +1,9 @@
+{
+  "title": "Index range not orderable",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A range index needs an Int, Float or String field."
+}

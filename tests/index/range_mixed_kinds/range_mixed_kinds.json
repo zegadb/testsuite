@@ -1,0 +1,9 @@
+{
+  "title": "Index range mixed kinds",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A number bound and a string bound on one field match nothing, with or without an index."
+}

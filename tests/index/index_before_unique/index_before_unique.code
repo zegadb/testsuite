@@ -1,0 +1,6 @@
+schema { type Player { name: String salary: Int } }
+index { range Player { salary } }
+unique { Player { name } }
+mutation { Player(name: "Ada" && salary: 1) }
+mutation { Player(name: "Ben" && salary: 2) }
+query { Player(name > "A" && salary >= 2) { name } }

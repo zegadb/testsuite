@@ -1,0 +1,5 @@
+error: Player has no field salry
+  schema:2:24
+  index { range Player { salry } }
+                         ^^^^^
+  help: did you mean `salary`?

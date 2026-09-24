@@ -1,0 +1,9 @@
+{
+  "title": "Index text operators",
+  "stage": "run",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "CONTAINS, STARTS WITH and ENDS WITH answer from the text index exactly like a scan."
+}

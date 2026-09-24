@@ -1,0 +1,9 @@
+{
+  "title": "Index duplicate field",
+  "stage": "parse",
+  "hosts": [
+    "native",
+    "browser"
+  ],
+  "notes": "A field is named once per index kind."
+}
