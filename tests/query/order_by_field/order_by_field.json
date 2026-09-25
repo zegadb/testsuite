@@ -2,14 +2,5 @@
   "title": "Order by a field, descending",
   "stage": "run",
   "hosts": ["native", "browser"],
-  "notes": "`order by salary desc` puts the highest first; equal salaries keep creation order, and a player with no salary comes last (zega#73).",
-  "knownFailure": {
-    "reason": "zegadb/zega#73: the pinned engine has no order by a field and no delete",
-    "observed": {
-      "ok": false,
-      "stage": "parse",
-      "stdout": "",
-      "stderr": "error: expected @distance\n  schema:31:19\n    Player order by salary desc { name salary }\n                    ^^^^^^\n"
-    }
-  }
+  "notes": "`order by salary desc` puts the highest first; equal salaries keep creation order, and a player with no salary comes last (zega#73)."
 }

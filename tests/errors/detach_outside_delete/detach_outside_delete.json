@@ -2,14 +2,5 @@
   "title": "@detach outside a delete",
   "stage": "run",
   "hosts": ["native", "browser"],
-  "notes": "`@detach` has a meaning only in a delete; anywhere else the checker refuses it (zega#73).",
-  "knownFailure": {
-    "reason": "zegadb/zega#73: the pinned engine has no order by a field and no delete",
-    "observed": {
-      "ok": false,
-      "stage": "parse",
-      "stdout": "",
-      "stderr": "error: unknown built-in @detach\n  schema:31:17\n    Player { name @detach }\n                  ^^^^^^^\n"
-    }
-  }
+  "notes": "`@detach` has a meaning only in a delete; anywhere else the checker refuses it (zega#73)."
 }

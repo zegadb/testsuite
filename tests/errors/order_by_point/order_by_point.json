@@ -2,14 +2,5 @@
   "title": "A Point is ordered by distance",
   "stage": "run",
   "hosts": ["native", "browser"],
-  "notes": "Ordering by a Point field is refused, with `@distance` as the help (zega#73).",
-  "knownFailure": {
-    "reason": "zegadb/zega#73: the pinned engine has no order by a field and no delete",
-    "observed": {
-      "ok": false,
-      "stage": "parse",
-      "stdout": "",
-      "stderr": "error: expected @distance\n  schema:13:17\n    City order by at { name }\n                  ^^\n"
-    }
-  }
+  "notes": "Ordering by a Point field is refused, with `@distance` as the help (zega#73)."
 }

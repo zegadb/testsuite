@@ -2,14 +2,5 @@
   "title": "Delete refused while relationships remain",
   "stage": "run",
   "hosts": ["native", "browser"],
-  "notes": "A matched node that still has a relationship refuses the delete, which names it and suggests `@detach` (zega#73).",
-  "knownFailure": {
-    "reason": "zegadb/zega#73: the pinned engine has no order by a field and no delete",
-    "observed": {
-      "ok": false,
-      "stage": "parse",
-      "stdout": "",
-      "stderr": "error: expected }\n  schema:41:10\n    delete Player(salary = 300)\n           ^^^^^^\n"
-    }
-  }
+  "notes": "A matched node that still has a relationship refuses the delete, which names it and suggests `@detach` (zega#73)."
 }

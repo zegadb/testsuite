@@ -2,14 +2,5 @@
   "title": "Delete needs a condition",
   "stage": "run",
   "hosts": ["native", "browser"],
-  "notes": "An empty condition would delete every row of the type, so the checker refuses it (zega#73).",
-  "knownFailure": {
-    "reason": "zegadb/zega#73: the pinned engine has no order by a field and no delete",
-    "observed": {
-      "ok": false,
-      "stage": "parse",
-      "stdout": "",
-      "stderr": "error: expected }\n  schema:31:10\n    delete Player()\n           ^^^^^^\n"
-    }
-  }
+  "notes": "An empty condition would delete every row of the type, so the checker refuses it (zega#73)."
 }
