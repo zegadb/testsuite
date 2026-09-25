@@ -1,0 +1,5 @@
+error: `endsWith` was renamed `endsExact`
+  schema:2:21
+  query { Sample(name endsWith "A") }
+                      ^^^^^^^^
+  help: use `endsExact` for byte-exact matching, or `endsLike` to ignore case and accents

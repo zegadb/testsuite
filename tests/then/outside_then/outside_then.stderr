@@ -1,5 +1,5 @@
 error: discovery sub-blocks are only allowed inside then
   schema:2:9
-  query { findWith { "a" } }
-          ^^^^^^^^
-  help: write `query { ... } then { findWith { "text" } }`; a filter uses `field findWith "text"`
+  query { findExact { "a" } }
+          ^^^^^^^^^
+  help: write `query { ... } then { findExact { "text" } }`; a filter uses `field findExact "text"`

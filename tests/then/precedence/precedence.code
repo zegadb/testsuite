@@ -40,5 +40,5 @@ query {
 }
 
 then {
-  findWith { "Carol" } || findWith { "Alice" } && findWith { "Bob" }
+  findExact { "Carol" } || findExact { "Alice" } && findExact { "Bob" }
 }

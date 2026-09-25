@@ -2,5 +2,14 @@
   "title": "Index text short needle",
   "stage": "run",
   "hosts": ["native", "browser"],
-  "notes": "A needle shorter than a trigram still returns every match; the match is case-sensitive (Ada matches on its final a)."
+  "notes": "A needle shorter than a trigram still returns every match; the match is case-sensitive (Ada matches on its final a).",
+  "knownFailure": {
+    "reason": "zegadb/zega#98: the pinned engine (a0dd28e) has no findExact/startsExact/endsExact or findLike/startsLike/endsLike; the old findWith/startsWith/endsWith spelling still parses as before.",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: expected a comparison after name\n  schema:39:15\n    Player(name findExact \"a\") { name }\n                ^^^^^^^^^\n  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findWith`, `startsWith`, or `endsWith`\n"
+    }
+  }
 }

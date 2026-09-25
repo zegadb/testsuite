@@ -1,0 +1,15 @@
+{
+  "title": "Find like, Greek and Cyrillic case fold",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "findLike (zegadb/zega#98) case-folds non-Latin scripts too: lowercase Greek finds the accented word, and Cyrillic upper finds the stored lower.",
+  "knownFailure": {
+    "reason": "zegadb/zega#98: the pinned engine (a0dd28e) has no findExact/startsExact/endsExact or findLike/startsLike/endsLike; the old findWith/startsWith/endsWith spelling still parses as before.",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: expected a comparison after text\n  schema:18:13\n    Word(text findLike \"οδυσσεας\" || text findLike \"ПРИВЕТ\") { text }\n              ^^^^^^^^\n  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findWith`, `startsWith`, or `endsWith`\n"
+    }
+  }
+}

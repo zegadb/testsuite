@@ -44,5 +44,5 @@ mutation {
 }
 
 query {
-  Player(salary > 4 || name endsWith "ed") { name salary }
+  Player(salary > 4 || name endsExact "ed") { name salary }
 }

@@ -1,4 +1,4 @@
 error: then has one condition; join sub-blocks with && or ||
-  schema:2:42
-  query { Person } then { findWith { "a" } findWith { "b" } }
-                                           ^^^^^^^^
+  schema:2:43
+  query { Person } then { findExact { "a" } findExact { "b" } }
+                                            ^^^^^^^^^

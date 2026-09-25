@@ -2,5 +2,14 @@
   "title": "Then infix without field",
   "stage": "parse",
   "hosts": ["native", "browser"],
-  "notes": "Rejects infix filters need a field; complete diagnostic is reviewed and pinned."
+  "notes": "Rejects infix filters need a field; complete diagnostic is reviewed and pinned.",
+  "knownFailure": {
+    "reason": "zegadb/zega#98: the pinned engine (a0dd28e) has no findExact/startsExact/endsExact or findLike/startsLike/endsLike; the old findWith/startsWith/endsWith spelling still parses as before.",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: then requires discovery sub-blocks, such as `findWith { \"text\" }`\n  schema:2:25\n  query { Person } then { findExact \"a\" }\n                          ^^^^^^^^^\n  help: infix filters need a field and belong in query, e.g. `Player(name findWith \"text\")`\n"
+    }
+  }
 }

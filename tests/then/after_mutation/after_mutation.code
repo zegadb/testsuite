@@ -1,2 +1,2 @@
 schema { type Person { name: String bio?: String country?: String v?: Vector<2> at?: Point } }
-mutation { Person(name: "A") } then { findWith { "A" } }
+mutation { Person(name: "A") } then { findExact { "A" } }

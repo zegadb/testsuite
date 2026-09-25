@@ -1,0 +1,15 @@
+schema {
+  type Deal { label: String }
+}
+
+mutation {
+  Deal(label: "50% off")
+}
+
+mutation {
+  Deal(label: "50 off")
+}
+
+query {
+  Deal(label findLike "50%") { label }
+}

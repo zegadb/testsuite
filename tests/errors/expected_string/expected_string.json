@@ -2,5 +2,14 @@
   "title": "Expected string",
   "stage": "parse",
   "hosts": ["native", "browser"],
-  "notes": "String predicates cannot take numeric search text."
+  "notes": "String predicates cannot take numeric search text.",
+  "knownFailure": {
+    "reason": "zegadb/zega#98: the pinned engine (a0dd28e) has no findExact/startsExact/endsExact or findLike/startsLike/endsLike; the old findWith/startsWith/endsWith spelling still parses as before.",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: expected a comparison after name\n  schema:2:21\n  query { Person(name findExact 3) }\n                      ^^^^^^^^^\n  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findWith`, `startsWith`, or `endsWith`\n"
+    }
+  }
 }

@@ -36,7 +36,7 @@ mutation {
 }
 
 query {
-  Player(name findWith "or" || name startsWith "Be" || name endsWith "ve") {
+  Player(name findExact "or" || name startsExact "Be" || name endsExact "ve") {
     name
   }
 }

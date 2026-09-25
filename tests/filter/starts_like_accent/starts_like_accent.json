@@ -1,0 +1,15 @@
+{
+  "title": "Starts like, accent fold",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "startsLike (zegadb/zega#98) folds accents, so the plain-ASCII sao is a prefix of São Paulo.",
+  "knownFailure": {
+    "reason": "zegadb/zega#98: the pinned engine (a0dd28e) has no findExact/startsExact/endsExact or findLike/startsLike/endsLike; the old findWith/startsWith/endsWith spelling still parses as before.",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: expected a comparison after name\n  schema:14:14\n    Place(name startsLike \"sao\") { name }\n               ^^^^^^^^^^\n  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findWith`, `startsWith`, or `endsWith`\n"
+    }
+  }
+}

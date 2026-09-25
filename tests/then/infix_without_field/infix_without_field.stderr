@@ -1,5 +1,5 @@
-error: then requires discovery sub-blocks, such as `findWith { "text" }`
+error: then requires discovery sub-blocks, such as `findExact { "text" }`
   schema:2:25
-  query { Person } then { findWith "a" }
-                          ^^^^^^^^
-  help: infix filters need a field and belong in query, e.g. `Player(name findWith "text")`
+  query { Person } then { findExact "a" }
+                          ^^^^^^^^^
+  help: infix filters need a field and belong in query, e.g. `Player(name findExact "text")`

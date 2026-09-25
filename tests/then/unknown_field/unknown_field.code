@@ -13,5 +13,5 @@ query {
 }
 
 then {
-  endsWith { "a" in { absent } }
+  endsExact { "a" in { absent } }
 }

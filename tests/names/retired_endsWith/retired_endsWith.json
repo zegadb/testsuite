@@ -1,0 +1,15 @@
+{
+  "title": "Retired endsWith spelling",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "zegadb/zega#98: the pre-1.0 endsWith spelling is retired with no alias; the fix-it names both endsExact and endsLike.",
+  "knownFailure": {
+    "reason": "zegadb/zega#98: the pinned engine (a0dd28e) has not yet retired findWith/startsWith/endsWith, so they still parse as working operators instead of giving the findExact/findLike fix-it.",
+    "observed": {
+      "ok": true,
+      "stage": "run",
+      "stdout": "[]\n",
+      "stderr": ""
+    }
+  }
+}

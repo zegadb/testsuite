@@ -19,5 +19,5 @@ display {
 }
 
 then {
-  findWith { "油" } && regex { "^É" }
+  findExact { "油" } && regex { "^É" }
 }

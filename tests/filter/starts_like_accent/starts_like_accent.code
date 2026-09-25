@@ -1,0 +1,15 @@
+schema {
+  type Place { name: String }
+}
+
+mutation {
+  Place(name: "São Paulo")
+}
+
+mutation {
+  Place(name: "Rio de Janeiro")
+}
+
+query {
+  Place(name startsLike "sao") { name }
+}

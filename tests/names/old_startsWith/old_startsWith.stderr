@@ -1,4 +1,4 @@
-error: `STARTS WITH` was renamed: write `startsWith`
+error: `STARTS WITH` was renamed: write `startsExact`
   schema:2:21
   query { Sample(name STARTS WITH "A") }
                       ^^^^^^^^^^^

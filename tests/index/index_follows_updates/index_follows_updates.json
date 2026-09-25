@@ -2,5 +2,14 @@
   "title": "Index index follows updates",
   "stage": "run",
   "hosts": ["native", "browser"],
-  "notes": "set keeps both indexes current: the new salary and the new name are found, the old ones are not."
+  "notes": "set keeps both indexes current: the new salary and the new name are found, the old ones are not.",
+  "knownFailure": {
+    "reason": "zegadb/zega#98: the pinned engine (a0dd28e) has no findExact/startsExact/endsExact or findLike/startsLike/endsLike; the old findWith/startsWith/endsWith spelling still parses as before.",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: expected a comparison after name\n  schema:47:29\n    Player(salary > 4 || name endsExact \"ed\") { name salary }\n                              ^^^^^^^^^\n  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findWith`, `startsWith`, or `endsWith`\n"
+    }
+  }
 }

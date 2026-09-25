@@ -40,5 +40,5 @@ query {
 }
 
 then {
-  startsWith { "Al" }
+  startsExact { "Al" }
 }

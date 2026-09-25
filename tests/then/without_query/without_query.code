@@ -1,2 +1,2 @@
 schema { type Person { name: String bio?: String country?: String v?: Vector<2> at?: Point } }
-then { findWith { "a" } }
+then { findExact { "a" } }
