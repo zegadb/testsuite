@@ -2,14 +2,5 @@
   "title": "Index text not string",
   "stage": "parse",
   "hosts": ["native", "browser"],
-  "notes": "A text index needs a String field.",
-  "knownFailure": {
-    "reason": "zegadb/zega#98: the pinned engine (a0dd28e) has no findExact/startsExact/endsExact or findLike/startsLike/endsLike; the old findWith/startsWith/endsWith spelling still parses as before.",
-    "observed": {
-      "ok": false,
-      "stage": "parse",
-      "stdout": "",
-      "stderr": "error: text index needs a String field; Player.salary is Int\n  schema:2:23\n  index { text Player { salary } }\n                        ^^^^^^\n  help: `text` speeds findWith, startsWith and endsWith on a String\n"
-    }
-  }
+  "notes": "A text index needs a String field."
 }

@@ -2,14 +2,5 @@
   "title": "Like treats % as a literal character",
   "stage": "run",
   "hosts": ["native", "browser"],
-  "notes": "findLike (zegadb/zega#98) takes plain text, not a SQL wildcard: 50% matches only the literal percent sign, not 50 followed by anything.",
-  "knownFailure": {
-    "reason": "zegadb/zega#98: the pinned engine (a0dd28e) has no findExact/startsExact/endsExact or findLike/startsLike/endsLike; the old findWith/startsWith/endsWith spelling still parses as before.",
-    "observed": {
-      "ok": false,
-      "stage": "parse",
-      "stdout": "",
-      "stderr": "error: expected a comparison after label\n  schema:14:14\n    Deal(label findLike \"50%\") { label }\n               ^^^^^^^^\n  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findWith`, `startsWith`, or `endsWith`\n"
-    }
-  }
+  "notes": "findLike (zegadb/zega#98) takes plain text, not a SQL wildcard: 50% matches only the literal percent sign, not 50 followed by anything."
 }

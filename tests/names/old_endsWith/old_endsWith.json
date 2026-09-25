@@ -2,14 +2,5 @@
   "title": "Old endswith",
   "stage": "parse",
   "hosts": ["native", "browser"],
-  "notes": "Rejects the removed ENDS WITH spelling with an exact source span and directs the user to endsExact.",
-  "knownFailure": {
-    "reason": "zegadb/zega#98: the pinned engine (a0dd28e) has no findExact/startsExact/endsExact or findLike/startsLike/endsLike; the old findWith/startsWith/endsWith spelling still parses as before.",
-    "observed": {
-      "ok": false,
-      "stage": "parse",
-      "stdout": "",
-      "stderr": "error: `ENDS WITH` was renamed: write `endsWith`\n  schema:2:21\n  query { Sample(name ENDS WITH \"A\") }\n                      ^^^^^^^^^\n"
-    }
-  }
+  "notes": "Rejects the removed ENDS WITH spelling with an exact source span and directs the user to endsExact."
 }

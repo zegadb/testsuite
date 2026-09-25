@@ -2,14 +2,5 @@
   "title": "Then indexed text",
   "stage": "run",
   "hosts": ["native", "browser"],
-  "notes": "Indexed and unindexed eligible String fields combine safely.",
-  "knownFailure": {
-    "reason": "zegadb/zega#98: the pinned engine (a0dd28e) has no findExact/startsExact/endsExact or findLike/startsLike/endsLike; the old findWith/startsWith/endsWith spelling still parses as before.",
-    "observed": {
-      "ok": false,
-      "stage": "parse",
-      "stdout": "",
-      "stderr": "error: then requires discovery sub-blocks, such as `findWith { \"text\" }`\n  schema:51:3\n    findExact { \"Oilers\" } || startsExact { \"Bob\" }\n    ^^^^^^^^^\n  help: infix filters need a field and belong in query, e.g. `Player(name findWith \"text\")`\n"
-    }
-  }
+  "notes": "Indexed and unindexed eligible String fields combine safely."
 }
