@@ -1,0 +1,15 @@
+{
+  "title": "A walk against the arrow",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`airports <- Airport(…)` follows the schema's `<-` field from a country to its airports (zega#86).",
+  "knownFailure": {
+    "reason": "zegadb/zega#86: the pinned engine (2b5ebd2) has no walk in a condition and no @count; this case records its outcome until the pin moves.",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: expected a number\n  schema:130:22\n    Country(airports <- Airport(code = \"HND\")) { name }\n                       ^\n"
+    }
+  }
+}

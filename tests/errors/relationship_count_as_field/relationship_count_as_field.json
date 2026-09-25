@@ -1,0 +1,15 @@
+{
+  "title": "A relationship compared with a number",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "Comparing a relationship with a number is refused, and the help writes the `@count` form (zega#86).",
+  "knownFailure": {
+    "reason": "zegadb/zega#86: the pinned engine (2b5ebd2) has no walk in a condition and no @count; this case records its outcome until the pin moves.",
+    "observed": {
+      "ok": false,
+      "stage": "run",
+      "stdout": "",
+      "stderr": "execution error: error: Airport has no field route\n  schema:130:11\n    Airport(route > 1) { code }\n            ^^^^^\n  help: `route` is a relationship: `route -> Airport[]`\n"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+execution error: error: @count counts a relationship; Airport.code is a field
+  schema:130:11
+    Airport(@count(code) > 1) { code }
+            ^^^^^^^^^^^^
+  help: filter the field itself, e.g. `code = …`

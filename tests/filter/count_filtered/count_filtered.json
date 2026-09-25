@@ -1,0 +1,15 @@
+{
+  "title": "Count only matching relationships",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`@count(route -> Airport(…)) = 0` finds the airports with no route to Japan, including those with no routes at all (zega#86).",
+  "knownFailure": {
+    "reason": "zegadb/zega#86: the pinned engine (2b5ebd2) has no walk in a condition and no @count; this case records its outcome until the pin moves.",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: unknown filter built-in @count\n  schema:130:11\n    Airport(@count(route -> Airport(country -> Country(iso = \"JP\"))) = 0) { code }\n            ^^^^^^\n"
+    }
+  }
+}

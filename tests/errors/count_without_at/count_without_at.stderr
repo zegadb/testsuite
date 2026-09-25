@@ -1,0 +1,4 @@
+error: `count` is built in: write `@count`
+  schema:130:11
+    Airport(count(route) > 1) { code }
+            ^^^^^

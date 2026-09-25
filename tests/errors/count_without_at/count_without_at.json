@@ -1,0 +1,15 @@
+{
+  "title": "count is built in",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "`count(route)` without `@` is refused with the built-in spelling (APS 6, zega#86).",
+  "knownFailure": {
+    "reason": "zegadb/zega#86: the pinned engine (2b5ebd2) has no walk in a condition and no @count; this case records its outcome until the pin moves.",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: expected a comparison after count\n  schema:130:16\n    Airport(count(route) > 1) { code }\n                 ^\n  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findExact`, `findLike`, `startsExact`, `startsLike`, `endsExact`, or `endsLike`\n"
+    }
+  }
+}

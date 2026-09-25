@@ -1,0 +1,15 @@
+{
+  "title": "A node without the relationship counts zero",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "HND and XXX have no routes: `@count(route) = 0` finds them, and an unnamed count's key is `count` (zega#86).",
+  "knownFailure": {
+    "reason": "zegadb/zega#86: the pinned engine (2b5ebd2) has no walk in a condition and no @count; this case records its outcome until the pin moves.",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: unknown filter built-in @count\n  schema:130:11\n    Airport(@count(route) = 0) { code @count(inbound) }\n            ^^^^^^\n"
+    }
+  }
+}

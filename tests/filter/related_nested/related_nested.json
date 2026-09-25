@@ -1,0 +1,15 @@
+{
+  "title": "Routes from Canada to Japan",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "The issue's query: a related-node filter on the root and on a walk target. The walk's filter narrows only its list, so YYZ stays with an empty one (zega#86).",
+  "knownFailure": {
+    "reason": "zegadb/zega#86: the pinned engine (2b5ebd2) has no walk in a condition and no @count; this case records its outcome until the pin moves.",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: expected a comparison after country\n  schema:130:19\n    Airport(country -> Country(iso = \"CA\")) {\n                    ^^\n  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findExact`, `findLike`, `startsExact`, `startsLike`, `endsExact`, or `endsLike`\n"
+    }
+  }
+}

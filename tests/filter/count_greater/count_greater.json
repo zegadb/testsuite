@@ -1,0 +1,15 @@
+{
+  "title": "Filter and order by a relationship count",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`@count(route)` compares, orders and selects how many routes an airport has; ties keep creation order (zega#86).",
+  "knownFailure": {
+    "reason": "zegadb/zega#86: the pinned engine (2b5ebd2) has no walk in a condition and no @count; this case records its outcome until the pin moves.",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: unknown filter built-in @count\n  schema:130:11\n    Airport(@count(route) >= 2) order by @count(route) desc {\n            ^^^^^^\n"
+    }
+  }
+}

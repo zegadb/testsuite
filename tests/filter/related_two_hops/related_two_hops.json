@@ -1,0 +1,15 @@
+{
+  "title": "A walk inside a walk's condition",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "Airports with a route to an airport in Japan: the target's condition walks again, and `&&` joins it with a test on the root's own country (zega#86).",
+  "knownFailure": {
+    "reason": "zegadb/zega#86: the pinned engine (2b5ebd2) has no walk in a condition and no @count; this case records its outcome until the pin moves.",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: expected a comparison after route\n  schema:131:11\n      route -> Airport(country -> Country(iso = \"JP\")) &&\n            ^^\n  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findExact`, `findLike`, `startsExact`, `startsLike`, `endsExact`, or `endsLike`\n"
+    }
+  }
+}
