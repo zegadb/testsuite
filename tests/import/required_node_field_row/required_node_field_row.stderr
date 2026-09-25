@@ -1,0 +1,5 @@
+execution error: error: Team requires founded
+  schema:9:3
+    Team(name: $name && founded: $founded) { name }
+    ^^^^
+  help: write `founded: …` when creating a Team, or declare it `founded?: Int`

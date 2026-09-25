@@ -1,0 +1,19 @@
+schema {
+  type Team {
+    name: String
+    founded: Int
+    city?: String
+  }
+}
+
+mutation {
+  Team(name: "Flames" && founded: 1980) { name }
+}
+
+query {
+  Team(name: "Flames") {
+    name
+    founded
+    city
+  }
+}
