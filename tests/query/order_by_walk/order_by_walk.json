@@ -1,0 +1,6 @@
+{
+  "title": "Order and limit on a walk target",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`order by` and `limit` apply to the nodes a relationship reaches, not only to the root (zega#73)."
+}

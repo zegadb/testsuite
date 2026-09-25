@@ -1,0 +1,6 @@
+{
+  "title": "Order by two keys, after a filter, then limit",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "The filter runs first, a second key breaks ties on the first, and `limit` keeps the first rows of the sorted result (zega#73)."
+}

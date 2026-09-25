@@ -1,0 +1,5 @@
+execution error: error: @detach belongs in a delete
+  schema:31:17
+    Player { name @detach }
+                  ^^^^^^^
+  help: write `mutation { delete Type(…) { @detach } }`

@@ -1,0 +1,6 @@
+{
+  "title": "Delete with @detach",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`@detach` removes a deleted node's relationships with it; the team is left with no players (zega#73)."
+}

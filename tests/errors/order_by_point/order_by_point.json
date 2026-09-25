@@ -1,0 +1,6 @@
+{
+  "title": "A Point is ordered by distance",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "Ordering by a Point field is refused, with `@distance` as the help (zega#73)."
+}

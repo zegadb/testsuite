@@ -1,0 +1,6 @@
+{
+  "title": "@detach outside a delete",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`@detach` has a meaning only in a delete; anywhere else the checker refuses it (zega#73)."
+}

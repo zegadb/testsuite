@@ -1,0 +1,5 @@
+execution error: error: Player 1 has 1 relationship
+  schema:41:10
+    delete Player(salary = 300)
+           ^^^^^^
+  help: add `@detach` to remove them with it; nothing was deleted

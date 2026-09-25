@@ -1,0 +1,6 @@
+{
+  "title": "Delete refused while relationships remain",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "A matched node that still has a relationship refuses the delete, which names it and suggests `@detach` (zega#73)."
+}

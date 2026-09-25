@@ -1,0 +1,6 @@
+{
+  "title": "Order by a field, descending",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`order by salary desc` puts the highest first; equal salaries keep creation order, and a player with no salary comes last (zega#73)."
+}
