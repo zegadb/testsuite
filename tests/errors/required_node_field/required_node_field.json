@@ -1,0 +1,6 @@
+{
+  "title": "Required node field",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "A create that leaves out a field declared without `?` is refused, naming the field and pointing at the type, as a required relationship field is (zega#72)."
+}

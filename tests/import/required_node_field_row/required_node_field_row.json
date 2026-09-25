@@ -1,0 +1,6 @@
+{
+  "title": "Load row without a required field",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "A CSV row whose required column is empty is refused, naming the field (zega#72)."
+}

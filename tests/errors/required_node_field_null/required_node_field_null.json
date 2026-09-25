@@ -1,0 +1,6 @@
+{
+  "title": "Required node field written as null",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "Writing null for a required field is leaving it out: the create is refused, and the help says the field cannot be null (zega#72)."
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Required field on a nested create",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "A node created inside another create must have its required fields too; the diagnostic points at the nested type (zega#72)."
+}
