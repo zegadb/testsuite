@@ -2,5 +2,5 @@
   "title": "Index text operators",
   "stage": "run",
   "hosts": ["native", "browser"],
-  "notes": "findWith, startsWith and endsWith answer from the text index exactly like a scan."
+  "notes": "findExact, startsExact and endsExact answer from the text index exactly like a scan."
 }

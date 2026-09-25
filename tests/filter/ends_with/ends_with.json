@@ -2,5 +2,5 @@
   "title": "Ends with",
   "stage": "run",
   "hosts": ["native", "browser"],
-  "notes": "endsWith matches the suffix."
+  "notes": "endsExact matches the suffix."
 }

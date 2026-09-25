@@ -2,5 +2,5 @@
   "title": "Contains",
   "stage": "run",
   "hosts": ["native", "browser"],
-  "notes": "findWith selects a substring, excluding nonmatching names."
+  "notes": "findExact selects a substring, excluding nonmatching names."
 }

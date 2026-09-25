@@ -1,0 +1,6 @@
+{
+  "title": "Find like, special casing expands ß",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "findLike (zegadb/zega#98) case-folds ß to ss, so straße finds STRASSE; ASCII lowercasing alone would not."
+}

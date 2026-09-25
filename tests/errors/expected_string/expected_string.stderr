@@ -1,4 +1,4 @@
 error: expected a string
-  schema:2:30
-  query { Person(name findWith 3) }
-                               ^
+  schema:2:31
+  query { Person(name findExact 3) }
+                                ^

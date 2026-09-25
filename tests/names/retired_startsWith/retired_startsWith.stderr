@@ -1,0 +1,5 @@
+error: `startsWith` was renamed `startsExact`
+  schema:2:21
+  query { Sample(name startsWith "A") }
+                      ^^^^^^^^^^
+  help: use `startsExact` for byte-exact matching, or `startsLike` to ignore case and accents

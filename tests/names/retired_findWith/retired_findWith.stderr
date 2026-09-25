@@ -1,0 +1,5 @@
+error: `findWith` was renamed `findExact`
+  schema:2:21
+  query { Sample(name findWith "A") }
+                      ^^^^^^^^
+  help: use `findExact` for byte-exact matching, or `findLike` to ignore case and accents

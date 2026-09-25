@@ -6,9 +6,9 @@ schema {
     similarity: Int
     within_box: Int
     near: Int
-    findWith: Int
-    startsWith: Int
-    endsWith: Int
+    findExact: Int
+    startsExact: Int
+    endsExact: Int
     query: Int
     mutation: Int
     schema: Int
@@ -59,9 +59,9 @@ mutation {
     similarity: 4 &&
     within_box: 5 &&
     near: 6 &&
-    findWith: 7 &&
-    startsWith: 8 &&
-    endsWith: 9 &&
+    findExact: 7 &&
+    startsExact: 8 &&
+    endsExact: 9 &&
     query: 10 &&
     mutation: 11 &&
     schema: 12 &&
@@ -112,9 +112,9 @@ query {
     similarity
     within_box
     near
-    findWith
-    startsWith
-    endsWith
+    findExact
+    startsExact
+    endsExact
     query
     mutation
     schema

@@ -2,4 +2,4 @@ error: expected a comparison after age
   schema:2:19
   query { Person(age) }
                     ^
-  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findWith`, `startsWith`, or `endsWith`
+  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findExact`, `findLike`, `startsExact`, `startsLike`, `endsExact`, or `endsLike`

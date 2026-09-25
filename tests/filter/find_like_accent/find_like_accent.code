@@ -1,0 +1,15 @@
+schema {
+  type Place { name: String }
+}
+
+mutation {
+  Place(name: "Café Society")
+}
+
+mutation {
+  Place(name: "Plain Diner")
+}
+
+query {
+  Place(name findLike "cafe") { name }
+}

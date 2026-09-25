@@ -48,5 +48,5 @@ display {
 }
 
 then {
-  findWith { "Oilers" } || startsWith { "Bob" }
+  findExact { "Oilers" } || startsExact { "Bob" }
 }

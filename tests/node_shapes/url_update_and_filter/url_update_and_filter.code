@@ -18,5 +18,5 @@ mutation {
 }
 
 query {
-  Link(url startsWith "https://") { name url }
+  Link(url startsExact "https://") { name url }
 }

@@ -40,5 +40,5 @@ query {
 }
 
 then {
-  endsWith { "ob" }
+  endsExact { "ob" }
 }

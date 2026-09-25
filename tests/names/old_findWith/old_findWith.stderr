@@ -1,4 +1,4 @@
-error: `CONTAINS` was renamed: write `findWith`
+error: `CONTAINS` was renamed: write `findExact`
   schema:2:21
   query { Sample(name CONTAINS "A") }
                       ^^^^^^^^

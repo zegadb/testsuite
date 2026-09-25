@@ -40,5 +40,5 @@ query {
 }
 
 then {
-  common { Person { country } } && findWith { "Alice" }
+  common { Person { country } } && findExact { "Alice" }
 }

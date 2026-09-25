@@ -18,5 +18,5 @@ mutation {
 }
 
 query {
-  Country(iso startsWith "C") { name iso }
+  Country(iso startsExact "C") { name iso }
 }

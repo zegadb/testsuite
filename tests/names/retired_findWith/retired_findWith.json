@@ -1,0 +1,6 @@
+{
+  "title": "Retired findWith spelling",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "zegadb/zega#98: the pre-1.0 findWith spelling (itself already a replacement for CONTAINS) is retired with no alias; the fix-it names both findExact and findLike."
+}

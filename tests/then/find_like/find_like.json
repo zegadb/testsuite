@@ -1,0 +1,6 @@
+{
+  "title": "Then find like",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "findLike (zegadb/zega#98) is available as a then discovery primitive too, and folds case there as well: lowercase oilers finds Alice's Oilers bio."
+}

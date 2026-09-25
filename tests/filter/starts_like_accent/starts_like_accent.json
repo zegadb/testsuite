@@ -1,0 +1,6 @@
+{
+  "title": "Starts like, accent fold",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "startsLike (zegadb/zega#98) folds accents, so the plain-ASCII sao is a prefix of São Paulo."
+}

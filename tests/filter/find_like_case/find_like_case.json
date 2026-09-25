@@ -1,0 +1,6 @@
+{
+  "title": "Find like, case fold",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "findLike (zegadb/zega#98) folds case, so ADA finds Ada; findExact would not."
+}

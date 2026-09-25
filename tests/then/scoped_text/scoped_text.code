@@ -40,5 +40,5 @@ query {
 }
 
 then {
-  findWith { "Oilers" in { name } }
+  findExact { "Oilers" in { name } }
 }

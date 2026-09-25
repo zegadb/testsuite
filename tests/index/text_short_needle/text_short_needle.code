@@ -36,5 +36,5 @@ mutation {
 }
 
 query {
-  Player(name findWith "a") { name }
+  Player(name findExact "a") { name }
 }

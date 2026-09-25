@@ -13,5 +13,5 @@ query {
 }
 
 then {
-  findWith { "a" in { v } }
+  findExact { "a" in { v } }
 }

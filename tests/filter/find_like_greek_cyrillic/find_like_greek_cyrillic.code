@@ -1,0 +1,19 @@
+schema {
+  type Word { text: String }
+}
+
+mutation {
+  Word(text: "Οδυσσέας")
+}
+
+mutation {
+  Word(text: "Привет")
+}
+
+mutation {
+  Word(text: "unrelated")
+}
+
+query {
+  Word(text findLike "οδυσσεας" || text findLike "ПРИВЕТ") { text }
+}

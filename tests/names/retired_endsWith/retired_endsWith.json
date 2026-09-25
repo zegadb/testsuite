@@ -1,0 +1,6 @@
+{
+  "title": "Retired endsWith spelling",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "zegadb/zega#98: the pre-1.0 endsWith spelling is retired with no alias; the fix-it names both endsExact and endsLike."
+}

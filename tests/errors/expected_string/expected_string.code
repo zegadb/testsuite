@@ -1,2 +1,2 @@
 schema { type Person { name: String age: Int active?: Bool score?: Float friends -> Person[] } }
-query { Person(name findWith 3) }
+query { Person(name findExact 3) }

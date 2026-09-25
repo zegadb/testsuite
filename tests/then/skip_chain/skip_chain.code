@@ -44,7 +44,7 @@ display {
 }
 
 then {
-  findWith { "Alice" }
+  findExact { "Alice" }
 }
 
 display {
@@ -52,5 +52,5 @@ display {
 }
 
 then {
-  findWith { "Bob" }
+  findExact { "Bob" }
 }

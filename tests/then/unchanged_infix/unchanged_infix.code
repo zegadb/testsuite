@@ -36,7 +36,7 @@ mutation {
 }
 
 query {
-  Person(name startsWith "Al" && name endsWith "ce" && name findWith "lic") {
+  Person(name startsExact "Al" && name endsExact "ce" && name findExact "lic") {
     name
   }
 }

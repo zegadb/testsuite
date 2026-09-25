@@ -1,0 +1,6 @@
+{
+  "title": "Like treats % as a literal character",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "findLike (zegadb/zega#98) takes plain text, not a SQL wildcard: 50% matches only the literal percent sign, not 50 followed by anything."
+}

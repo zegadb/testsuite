@@ -1,4 +1,4 @@
-error: `ENDS WITH` was renamed: write `endsWith`
+error: `ENDS WITH` was renamed: write `endsExact`
   schema:2:21
   query { Sample(name ENDS WITH "A") }
                       ^^^^^^^^^

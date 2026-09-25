@@ -1,0 +1,6 @@
+{
+  "title": "Find like, Greek and Cyrillic case fold",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "findLike (zegadb/zega#98) case-folds non-Latin scripts too: lowercase Greek finds the accented word, and Cyrillic upper finds the stored lower."
+}
