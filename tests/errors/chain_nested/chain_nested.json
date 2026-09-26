@@ -1,0 +1,6 @@
+{
+  "title": "Chains never nest",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "A test in a hop's parentheses checks that node's own fields; a chain there is refused (zega#86)."
+}

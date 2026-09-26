@@ -1,0 +1,5 @@
+error: a related node's field is reached with `has`
+  schema:142:11
+    Airport(country.iso = "CA") { code }
+            ^^^^^^^^^^^
+  help: write `has country(iso = "CA")`

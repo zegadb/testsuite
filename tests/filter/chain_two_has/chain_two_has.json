@@ -1,0 +1,6 @@
+{
+  "title": "Two has chains are independent",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "Without `same`, each chain may use a different route, so YYC passes too; the contrast to `chain_same` (zega#86)."
+}

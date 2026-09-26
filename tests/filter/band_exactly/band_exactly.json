@@ -1,0 +1,6 @@
+{
+  "title": "exactly N hops: the shortest distance is N",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "YYC reaches NRT directly and through YVR; at a shortest distance of exactly 2 it reaches only KIX. `code` is unique, so the far end is pinned and searched from both ends (zega#86)."
+}

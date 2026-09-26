@@ -1,0 +1,6 @@
+{
+  "title": "A dotted path",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "`country.iso` is a parse error whose help writes `has country(iso = \"CA\")` (zega#86)."
+}

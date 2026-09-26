@@ -1,0 +1,6 @@
+{
+  "title": "min N hops: shortest distance at least N",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`min 2 hops` reaches KIX only: NRT is one hop from YYC, however else it is reached (zega#86)."
+}

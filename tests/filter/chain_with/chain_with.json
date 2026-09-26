@@ -1,0 +1,6 @@
+{
+  "title": "with is in",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`with` takes a hop exactly as `in` does, here from a country to its airports and on to their routes (zega#86)."
+}

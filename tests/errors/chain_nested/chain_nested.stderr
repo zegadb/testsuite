@@ -1,0 +1,5 @@
+error: a test in (…) checks this node's own fields
+  schema:142:21
+    Airport(has route(has country)) { code }
+                      ^^^
+  help: walks never nest: keep walking after the parentheses with `in`, e.g. `has team(name = "A") in league`

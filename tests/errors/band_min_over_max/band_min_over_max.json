@@ -1,0 +1,6 @@
+{
+  "title": "min above max",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "`min 3 max 2 hops` is refused (zega#86)."
+}

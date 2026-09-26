@@ -1,0 +1,6 @@
+{
+  "title": "same: one node for both tests",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`same route` continues from the route the earlier chain reached: NRT and AMS each fly to HND, a Japanese airport that is not NRT; YYC's only Japanese route is NRT (zega#86)."
+}

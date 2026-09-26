@@ -1,0 +1,6 @@
+{
+  "title": "A band in a selection",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`route max 2 hops ->` is `route *1..2 ->`, with `@hops` the shortest distance (zega#86)."
+}

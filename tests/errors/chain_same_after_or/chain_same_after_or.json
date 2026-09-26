@@ -1,0 +1,6 @@
+{
+  "title": "same after ||",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`same` continues a chain joined by `&&`; after `||` it is refused (zega#86)."
+}

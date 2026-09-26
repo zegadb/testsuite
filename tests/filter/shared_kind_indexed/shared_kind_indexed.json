@@ -1,0 +1,6 @@
+{
+  "title": "A walk keeps to its own field with an index",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`knows`, `fan` and `scout` share the LINK kind; a -fan-> t -scout-> b is not a `knows` walk. `a` is found by its own index and its walk searched from both ends, and still reaches nothing (zega#86)."
+}

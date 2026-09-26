@@ -1,0 +1,6 @@
+{
+  "title": "has: a related node's field",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`has country(iso = \"CA\")` keeps the airports whose country passes the test; XXX has no country (zega#86)."
+}

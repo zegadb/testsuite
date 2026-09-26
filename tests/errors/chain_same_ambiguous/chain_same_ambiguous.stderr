@@ -1,0 +1,5 @@
+execution error: error: `same route` is ambiguous: `route` is reached 2 times earlier
+  schema:142:53
+    Airport(has route && has route in country && same route(code = "NRT")) {
+                                                      ^^^^^
+  help: keep one `route` before `same route`

@@ -1,0 +1,6 @@
+{
+  "title": "At most 6 hops",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "A repeated hop is capped at 6 (zega#86)."
+}

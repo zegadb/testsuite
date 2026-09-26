@@ -1,0 +1,6 @@
+{
+  "title": "!has is not a word",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "`!has` is refused, and the help writes `!have` (zega#86)."
+}

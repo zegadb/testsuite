@@ -1,0 +1,6 @@
+{
+  "title": "min N max M hops",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`min 1 max 2 hops` is the band 1..2 (zega#86)."
+}

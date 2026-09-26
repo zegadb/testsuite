@@ -1,0 +1,6 @@
+{
+  "title": "A count of hops repeats one type's relationship",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`nx` leads X to Y to Z, three relationships; a count of hops over it is refused, with the hops written out as the help (zega#86)."
+}

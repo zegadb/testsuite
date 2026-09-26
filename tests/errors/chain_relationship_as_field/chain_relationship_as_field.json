@@ -1,0 +1,6 @@
+{
+  "title": "A relationship tested like a field",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "Comparing a relationship with a value is refused; the help writes the chain (zega#86)."
+}

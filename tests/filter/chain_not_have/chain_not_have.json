@@ -1,0 +1,6 @@
+{
+  "title": "!have: none",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`!have route in country(iso = \"JP\")` keeps the airports with no route to Japan, including those with no routes at all (zega#86)."
+}

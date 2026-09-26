@@ -1,0 +1,5 @@
+execution error: error: country is a relationship
+  schema:142:11
+    Airport(country = "CA") { code }
+            ^^^^^^^
+  help: test a field of the related node: `has country(name = "CA")`; Country has name, iso

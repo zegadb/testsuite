@@ -1,0 +1,6 @@
+{
+  "title": "N hops in a selection",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`route 2 hops ->` is `route *2..2 ->`: the airports at exactly two routes, with `@hops` (zega#86)."
+}

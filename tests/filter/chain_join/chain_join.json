@@ -1,0 +1,6 @@
+{
+  "title": "in same: a join on the node",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`has route in same country` has to arrive at the country the earlier chain reached: airports with a domestic route (zega#86)."
+}

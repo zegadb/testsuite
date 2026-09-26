@@ -1,0 +1,6 @@
+{
+  "title": "max N hops: shortest distance 1 to N",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`max 2 hops` (`within 2 hops`) reaches NRT, YVR and KIX (zega#86)."
+}

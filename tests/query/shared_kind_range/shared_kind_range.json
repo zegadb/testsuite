@@ -1,0 +1,6 @@
+{
+  "title": "A selection range keeps to its own field",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`knows *1..2` from `a` follows `knows` only, not the other fields that share its kind, as a filter's walk does (zega#86)."
+}

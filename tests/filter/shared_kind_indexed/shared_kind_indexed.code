@@ -1,0 +1,45 @@
+schema {
+  type P {
+    name: String
+    v?: Int
+    knows: LINK -> P[]
+    fan: LINK -> T[]
+  }
+
+  type T {
+    name: String
+    scout: LINK -> P[]
+  }
+}
+
+index {
+  range P { v name }
+}
+
+mutation {
+  P(name: "a")
+}
+
+mutation {
+  P(name: "b" && v: 9)
+}
+
+mutation {
+  T(name: "t")
+}
+
+mutation {
+  P(name: "a") {
+    fan -> link T(name: "t")
+  }
+}
+
+mutation {
+  T(name: "t") {
+    scout -> link P(name: "b")
+  }
+}
+
+query {
+  P(name = "a" && has knows within 2 hops(v = 9)) { name }
+}

@@ -1,0 +1,6 @@
+{
+  "title": "A walk that names the type",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "The old `rel -> Type(…)` in a filter is refused; the help writes the chain, since the schema knows the type (zega#86)."
+}

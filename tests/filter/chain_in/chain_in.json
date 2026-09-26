@@ -1,0 +1,6 @@
+{
+  "title": "in: one more hop",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`has route in country(iso = \"JP\")` walks a route, then that airport's country; joined with `&&` to a test on the airport's own country (zega#86)."
+}

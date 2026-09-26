@@ -1,0 +1,143 @@
+schema {
+  type Country {
+    name: String
+    iso: String
+    airports: BASE <- Airport[]
+  }
+
+  type Airport {
+    code: String
+    country: BASE -> Country
+    route: ROUTE -> Airport[]
+    inbound: ROUTE <- Airport[]
+  }
+}
+
+unique {
+  Country { iso }
+  Airport { code }
+}
+
+mutation {
+  Country(name: "Canada" && iso: "CA")
+}
+
+mutation {
+  Country(name: "Japan" && iso: "JP")
+}
+
+mutation {
+  Country(name: "Netherlands" && iso: "NL")
+}
+
+mutation {
+  Airport(code: "YYC")
+}
+
+mutation {
+  Airport(code: "YYZ")
+}
+
+mutation {
+  Airport(code: "NRT")
+}
+
+mutation {
+  Airport(code: "HND")
+}
+
+mutation {
+  Airport(code: "AMS")
+}
+
+mutation {
+  Airport(code: "XXX")
+}
+
+mutation {
+  Airport(code: "YYC") {
+    country -> link Country(iso: "CA")
+  }
+}
+
+mutation {
+  Airport(code: "YYZ") {
+    country -> link Country(iso: "CA")
+  }
+}
+
+mutation {
+  Airport(code: "NRT") {
+    country -> link Country(iso: "JP")
+  }
+}
+
+mutation {
+  Airport(code: "HND") {
+    country -> link Country(iso: "JP")
+  }
+}
+
+mutation {
+  Airport(code: "AMS") {
+    country -> link Country(iso: "NL")
+  }
+}
+
+mutation {
+  Airport(code: "YYC") {
+    route -> link Airport(code: "NRT")
+  }
+}
+
+mutation {
+  Airport(code: "YYC") {
+    route -> link Airport(code: "AMS")
+  }
+}
+
+mutation {
+  Airport(code: "YYZ") {
+    route -> link Airport(code: "AMS")
+  }
+}
+
+mutation {
+  Airport(code: "AMS") {
+    route -> link Airport(code: "NRT")
+  }
+}
+
+mutation {
+  Airport(code: "AMS") {
+    route -> link Airport(code: "HND")
+  }
+}
+
+mutation {
+  Airport(code: "AMS") {
+    route -> link Airport(code: "YYZ")
+  }
+}
+
+mutation {
+  Airport(code: "NRT") {
+    route -> link Airport(code: "YYC")
+  }
+}
+
+mutation {
+  Airport(code: "YYC") {
+    route -> link Airport(code: "YYZ")
+  }
+}
+
+mutation {
+  Airport(code: "NRT") {
+    route -> link Airport(code: "HND")
+  }
+}
+
+query {
+  Airport(has country(iso = "CA") && has route in country(iso = "JP")) { code }
+}

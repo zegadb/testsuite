@@ -1,0 +1,6 @@
+{
+  "title": "A chain with no test",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`has country` without parentheses means the relationship exists (zega#86)."
+}

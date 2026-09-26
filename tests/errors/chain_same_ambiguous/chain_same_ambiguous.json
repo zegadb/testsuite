@@ -1,0 +1,6 @@
+{
+  "title": "same with two candidates",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`same route` is refused when two earlier chains reach a route (zega#86)."
+}

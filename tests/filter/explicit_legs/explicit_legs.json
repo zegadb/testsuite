@@ -1,0 +1,6 @@
+{
+  "title": "Explicit hops follow any path",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`inbound in inbound` is any path of exactly two legs, so NRT counts through YVR; compare `band_exactly` (zega#86)."
+}

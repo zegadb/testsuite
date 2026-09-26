@@ -1,0 +1,6 @@
+{
+  "title": "within N hops: no round trips",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "YYZ is within two routes of YYC, NRT and AMS; YYZ -> AMS -> YYZ returns to the start, so YYZ is not (zega#86)."
+}

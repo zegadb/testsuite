@@ -1,0 +1,6 @@
+{
+  "title": "N hops: exactly N, at the shortest distance",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "HND is two routes from YYC and YYZ, and one from AMS and NRT, which are not in it (zega#86)."
+}
