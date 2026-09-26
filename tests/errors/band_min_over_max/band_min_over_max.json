@@ -1,0 +1,15 @@
+{
+  "title": "min above max",
+  "stage": "parse",
+  "hosts": ["native", "browser"],
+  "notes": "`min 3 max 2 hops` is refused (zega#86).",
+  "knownFailure": {
+    "reason": "zegadb/zega#86: the pinned engine (2b5ebd2) has no chains or hop bands; this case records its outcome until the pin moves.",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: expected a comparison after has\n  schema:54:15\n    Airport(has route min 3 max 2 hops) { code }\n                ^^^^^\n  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findExact`, `findLike`, `startsExact`, `startsLike`, `endsExact`, or `endsLike`\n"
+    }
+  }
+}

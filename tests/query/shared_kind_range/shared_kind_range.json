@@ -1,0 +1,15 @@
+{
+  "title": "A selection range keeps to its own field",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`knows *1..2` from `a` follows `knows` only, not the other fields that share its kind, as a filter's walk does (zega#86).",
+  "knownFailure": {
+    "reason": "zegadb/zega#86 review H1: the pinned engine (2b5ebd2) follows every relationship of a field's kind in a `*min..max` walk, so `knows` also reaches b through `fan` and `scout`; this case records its outcome until the pin moves.",
+    "observed": {
+      "ok": true,
+      "stage": "run",
+      "stdout": "{\"knows\":[{\"name\":\"b\"}]}\n",
+      "stderr": ""
+    }
+  }
+}

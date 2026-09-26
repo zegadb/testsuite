@@ -1,0 +1,25 @@
+schema {
+  type X {
+    v?: Int
+    nx: N1 -> Y[]
+  }
+
+  type Y {
+    v?: Int
+    nx: N2 -> Z[]
+  }
+
+  type Z {
+    v?: Int
+    nx: N3 -> X[]
+  }
+}
+
+index {
+  range Y { v }
+  range Z { v }
+}
+
+query {
+  X(has nx 2 hops(v = 5)) { v }
+}

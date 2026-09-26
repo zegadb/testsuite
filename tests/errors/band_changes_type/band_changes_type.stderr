@@ -1,0 +1,5 @@
+execution error: error: `nx` can't repeat: it leads from X to Y
+  schema:24:9
+    X(has nx 2 hops(v = 5)) { v }
+          ^^
+  help: a count of hops repeats a relationship between one type and itself; write the hops out: `nx in nx`

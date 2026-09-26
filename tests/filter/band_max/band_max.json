@@ -1,0 +1,15 @@
+{
+  "title": "max N hops: shortest distance 1 to N",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`max 2 hops` (`within 2 hops`) reaches NRT, YVR and KIX (zega#86).",
+  "knownFailure": {
+    "reason": "zegadb/zega#86: the pinned engine (2b5ebd2) has no chains or hop bands; this case records its outcome until the pin moves.",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: expected a comparison after has\n  schema:54:15\n    Airport(has inbound max 2 hops(code = \"YYC\")) { code }\n                ^^^^^^^\n  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findExact`, `findLike`, `startsExact`, `startsLike`, `endsExact`, or `endsLike`\n"
+    }
+  }
+}

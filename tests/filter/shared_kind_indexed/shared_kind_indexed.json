@@ -1,0 +1,15 @@
+{
+  "title": "A walk keeps to its own field with an index",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`knows`, `fan` and `scout` share the LINK kind; a -fan-> t -scout-> b is not a `knows` walk. `a` is found by its own index and its walk searched from both ends, and still reaches nothing (zega#86).",
+  "knownFailure": {
+    "reason": "zegadb/zega#86: the pinned engine (2b5ebd2) has no chains or hop bands; this case records its outcome until the pin moves.",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: expected a comparison after has\n  schema:44:23\n    P(name = \"a\" && has knows within 2 hops(v = 9)) { name }\n                        ^^^^^\n  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findExact`, `findLike`, `startsExact`, `startsLike`, `endsExact`, or `endsLike`\n"
+    }
+  }
+}

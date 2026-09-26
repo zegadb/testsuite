@@ -1,0 +1,58 @@
+schema {
+  type Airport {
+    code: String
+    route: ROUTE -> Airport[]
+    inbound: ROUTE <- Airport[]
+  }
+}
+
+unique {
+  Airport { code }
+}
+
+mutation {
+  Airport(code: "YYC")
+}
+
+mutation {
+  Airport(code: "NRT")
+}
+
+mutation {
+  Airport(code: "YVR")
+}
+
+mutation {
+  Airport(code: "KIX")
+}
+
+mutation {
+  Airport(code: "YYC") {
+    route -> link Airport(code: "NRT")
+  }
+}
+
+mutation {
+  Airport(code: "YYC") {
+    route -> link Airport(code: "YVR")
+  }
+}
+
+mutation {
+  Airport(code: "YVR") {
+    route -> link Airport(code: "NRT")
+  }
+}
+
+mutation {
+  Airport(code: "YVR") {
+    route -> link Airport(code: "KIX")
+  }
+}
+
+query {
+  Airport(code: "YYC") {
+    code
+    route max 2 hops -> Airport { code @hops }
+  }
+}
