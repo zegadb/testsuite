@@ -2,14 +2,5 @@
   "title": "Chains never nest",
   "stage": "parse",
   "hosts": ["native", "browser"],
-  "notes": "A test in a hop's parentheses checks that node's own fields; a chain there is refused (zega#86).",
-  "knownFailure": {
-    "reason": "zegadb/zega#86: the pinned engine (2b5ebd2) has no has/!have/in/with/same chains or N hops; this case records its outcome until the pin moves.",
-    "observed": {
-      "ok": false,
-      "stage": "parse",
-      "stdout": "",
-      "stderr": "error: expected a comparison after has\n  schema:142:15\n    Airport(has route(has country)) { code }\n                ^^^^^\n  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findExact`, `findLike`, `startsExact`, `startsLike`, `endsExact`, or `endsLike`\n"
-    }
-  }
+  "notes": "A test in a hop's parentheses checks that node's own fields; a chain there is refused (zega#86)."
 }

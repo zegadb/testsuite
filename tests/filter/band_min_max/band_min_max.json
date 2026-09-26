@@ -2,14 +2,5 @@
   "title": "min N max M hops",
   "stage": "run",
   "hosts": ["native", "browser"],
-  "notes": "`min 1 max 2 hops` is the band 1..2 (zega#86).",
-  "knownFailure": {
-    "reason": "zegadb/zega#86: the pinned engine (2b5ebd2) has no chains or hop bands; this case records its outcome until the pin moves.",
-    "observed": {
-      "ok": false,
-      "stage": "parse",
-      "stdout": "",
-      "stderr": "error: expected a comparison after has\n  schema:54:15\n    Airport(has inbound min 1 max 2 hops(code = \"YYC\")) { code }\n                ^^^^^^^\n  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findExact`, `findLike`, `startsExact`, `startsLike`, `endsExact`, or `endsLike`\n"
-    }
-  }
+  "notes": "`min 1 max 2 hops` is the band 1..2 (zega#86)."
 }

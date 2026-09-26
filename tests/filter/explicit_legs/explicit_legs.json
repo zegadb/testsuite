@@ -2,14 +2,5 @@
   "title": "Explicit hops follow any path",
   "stage": "run",
   "hosts": ["native", "browser"],
-  "notes": "`inbound in inbound` is any path of exactly two legs, so NRT counts through YVR; compare `band_exactly` (zega#86).",
-  "knownFailure": {
-    "reason": "zegadb/zega#86: the pinned engine (2b5ebd2) has no chains or hop bands; this case records its outcome until the pin moves.",
-    "observed": {
-      "ok": false,
-      "stage": "parse",
-      "stdout": "",
-      "stderr": "error: expected a comparison after has\n  schema:54:15\n    Airport(has inbound in inbound(code = \"YYC\")) { code }\n                ^^^^^^^\n  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findExact`, `findLike`, `startsExact`, `startsLike`, `endsExact`, or `endsLike`\n"
-    }
-  }
+  "notes": "`inbound in inbound` is any path of exactly two legs, so NRT counts through YVR; compare `band_exactly` (zega#86)."
 }

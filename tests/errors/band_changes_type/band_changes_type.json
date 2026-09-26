@@ -2,14 +2,5 @@
   "title": "A count of hops repeats one type's relationship",
   "stage": "run",
   "hosts": ["native", "browser"],
-  "notes": "`nx` leads X to Y to Z, three relationships; a count of hops over it is refused, with the hops written out as the help (zega#86).",
-  "knownFailure": {
-    "reason": "zegadb/zega#86: the pinned engine (2b5ebd2) has no chains or hop bands; this case records its outcome until the pin moves.",
-    "observed": {
-      "ok": false,
-      "stage": "parse",
-      "stdout": "",
-      "stderr": "error: expected a comparison after has\n  schema:24:9\n    X(has nx 2 hops(v = 5)) { v }\n          ^^\n  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findExact`, `findLike`, `startsExact`, `startsLike`, `endsExact`, or `endsLike`\n"
-    }
-  }
+  "notes": "`nx` leads X to Y to Z, three relationships; a count of hops over it is refused, with the hops written out as the help (zega#86)."
 }
