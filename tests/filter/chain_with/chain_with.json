@@ -1,0 +1,15 @@
+{
+  "title": "with is in",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "`with` takes a hop exactly as `in` does, here from a country to its airports and on to their routes (zega#86).",
+  "knownFailure": {
+    "reason": "zegadb/zega#86: the pinned engine (2b5ebd2) has no has/!have/in/with/same chains or N hops; this case records its outcome until the pin moves.",
+    "observed": {
+      "ok": false,
+      "stage": "parse",
+      "stdout": "",
+      "stderr": "error: expected a comparison after has\n  schema:142:15\n    Country(has airports with route(code = \"HND\")) { name }\n                ^^^^^^^^\n  help: use `=`, `!=`, `>`, `<`, `>=`, `<=`, `<>`, `findExact`, `findLike`, `startsExact`, `startsLike`, `endsExact`, or `endsLike`\n"
+    }
+  }
+}

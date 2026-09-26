@@ -1,0 +1,5 @@
+execution error: error: `same` can't follow `||`
+  schema:142:43
+    Airport(has route(code = "NRT") || same route in country) { code }
+                                            ^^^^^
+  help: `same route` continues an earlier chain joined by `&&`

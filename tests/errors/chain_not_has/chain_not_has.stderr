@@ -1,0 +1,5 @@
+error: `!has` is not ZQL: none is `!have`
+  schema:142:11
+    Airport(!has route) { code }
+            ^^^^
+  help: write `!have route`

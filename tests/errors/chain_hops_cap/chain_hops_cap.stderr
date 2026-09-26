@@ -1,0 +1,5 @@
+error: a relationship repeats 1 to 6 hops
+  schema:142:21
+    Airport(has route 7 hops) { code }
+                      ^^^^^^
+  help: the query time limit bounds a walk; more hops reach most of a graph

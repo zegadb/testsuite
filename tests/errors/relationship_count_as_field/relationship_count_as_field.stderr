@@ -1,5 +1,0 @@
-execution error: error: route is a relationship
-  schema:130:11
-    Airport(route > 1) { code }
-            ^^^^^
-  help: count it: `@count(route) > 1`

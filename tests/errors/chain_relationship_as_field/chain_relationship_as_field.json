@@ -1,0 +1,15 @@
+{
+  "title": "A relationship tested like a field",
+  "stage": "run",
+  "hosts": ["native", "browser"],
+  "notes": "Comparing a relationship with a value is refused; the help writes the chain (zega#86).",
+  "knownFailure": {
+    "reason": "zegadb/zega#86: the pinned engine (2b5ebd2) has no has/!have/in/with/same chains or N hops; this case records its outcome until the pin moves.",
+    "observed": {
+      "ok": false,
+      "stage": "run",
+      "stdout": "",
+      "stderr": "execution error: error: Airport has no field country\n  schema:142:11\n    Airport(country = \"CA\") { code }\n            ^^^^^^^\n  help: `country` is a relationship: `country -> Country`\n"
+    }
+  }
+}

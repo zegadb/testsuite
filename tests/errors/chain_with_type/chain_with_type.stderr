@@ -1,0 +1,5 @@
+error: a walk in a filter doesn't name the type: the schema knows it
+  schema:142:11
+    Airport(route -> Airport(country -> Country(iso = "JP"))) { code }
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  help: write `has route in country(iso = "JP")`
