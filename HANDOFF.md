@@ -17,7 +17,7 @@ This deliberately repeats small schemas instead of sharing a global or category 
 
 [`DIAGNOSTICS.md`](DIAGNOSTICS.md) maps the reachable parser message families to cases and explicitly explains defensive unreachable branches (`expected json`, guarded `expected <-`, and unreachable numeric fallback arms). It does not claim exhaustive OS/network or internal-corruption diagnostics. No observed engine bug is suppressed: zero XFAILs. Strict known-failure support is implemented and tested; an engine fix becomes XPASS and fails until reviewed.
 
-Metadata allows exactly `hosts: ["native", "browser"]`. Native invokes `Zega::apply_zql` directly; HTTP serving through `zega start` is not a third host. Both hosts compile the same small Rust adapter against the same locked engine and compare the same outcomes. JSON keys are deterministic, array order is preserved, and diagnostic matching includes source spans, underlines and help text.
+Metadata allows exactly `hosts: ["native", "browser"]`. Native invokes `Zega::apply_zql` directly; HTTP serving through the CLI's `start` (`zega-server start`; `zega start` before the rename) is not a third host. Both hosts compile the same small Rust adapter against the same locked engine and compare the same outcomes. JSON keys are deterministic, array order is preserved, and diagnostic matching includes source spans, underlines and help text.
 
 ## Real execution evidence
 
