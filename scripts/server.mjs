@@ -4,7 +4,18 @@ import { spawn } from 'node:child_process';
 import { randomBytes } from 'node:crypto';
 import { root, engine } from './corpus.mjs';
 
-export const defaultZega = path.join(root, '.tmp/tools/bin/zega');
+/// The CLI's executable name is the pinned revision's `[[bin]]`: `zega` before
+/// the rename to `zega-server`, `zega-server` since. `cargo install --root`
+/// records the names in the receipt beside `bin/`, so the runner reads it there
+/// and one runner works on either side of the engine pin moving past the rename.
+export function installedZega(tools = path.join(root, '.tmp/tools')) {
+  const receipt = path.join(tools, '.crates2.json');
+  const installs = fs.existsSync(receipt) ? JSON.parse(fs.readFileSync(receipt, 'utf8')).installs ?? {} : {};
+  const [, install] = Object.entries(installs).find(([key]) => key.startsWith('zega-cli ')) ?? [];
+  return path.join(tools, 'bin', install?.bins?.[0] ?? 'zega-server');
+}
+
+export const defaultZega = installedZega();
 
 // The server's success body is serde_json's `json!({"ok": true, "result": v})`,
 // whose keys are sorted, so the engine's own bytes for `v` sit between this
@@ -17,7 +28,7 @@ const SUCCESS_PREFIX = '{"ok":true,"result":';
 // rendered diagnostic native gets from `check_zql` arrives behind this prefix.
 const EXECUTION_PREFIX = 'execution error: ';
 
-/// Starts `zega start` on an ephemeral port with a fresh data directory and a
+/// Starts `<cli> start` on an ephemeral port with a fresh data directory and a
 /// generated bearer token, from `cwd` (relative imports resolve against it,
 /// exactly like native's case-local working directory).
 export async function startServer(zega, { cwd, data, token, extraArgs = [] }) {
@@ -29,14 +40,14 @@ export async function startServer(zega, { cwd, data, token, extraArgs = [] }) {
   const exited = new Promise(resolve => child.once('exit', (code, signal) => resolve({ code, signal })));
   const url = await new Promise((resolve, reject) => {
     let out = '';
-    const timer = setTimeout(() => reject(Error(`zega start printed no address: ${stderr}`)), 30000);
+    const timer = setTimeout(() => reject(Error(`${path.basename(zega)} start printed no address: ${stderr}`)), 30000);
     child.stdout.on('data', chunk => {
       out += chunk;
       const line = out.split('\n')[0];
-      if (out.includes('\n')) { clearTimeout(timer); line.startsWith('http://') ? resolve(line.trim()) : reject(Error(`unexpected zega start output: ${line}`)); }
+      if (out.includes('\n')) { clearTimeout(timer); line.startsWith('http://') ? resolve(line.trim()) : reject(Error(`unexpected ${path.basename(zega)} start output: ${line}`)); }
     });
     child.once('error', error => { clearTimeout(timer); reject(error); });
-    exited.then(({ code, signal }) => { clearTimeout(timer); reject(Error(`zega start exited (${code ?? signal}): ${stderr}`)); });
+    exited.then(({ code, signal }) => { clearTimeout(timer); reject(Error(`${path.basename(zega)} start exited (${code ?? signal}): ${stderr}`)); });
   });
   const auth = { authorization: `Bearer ${token}` };
   return {
@@ -78,7 +89,7 @@ export function serverOutcome(test, { status, text }) {
   return { ok: false, stage: test.stage, stdout: '', stderr: `${message}\n` };
 }
 
-/// `zega --version` names only the crate version, so the revision comes from
+/// `<cli> --version` names only the crate version, so the revision comes from
 /// the install receipt `cargo install --root <dir>` writes beside `bin/`.
 /// A binary built from any other engine revision is refused, never run.
 export function assertPinnedZega(zega) {

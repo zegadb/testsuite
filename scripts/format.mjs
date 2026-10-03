@@ -2,9 +2,11 @@
 import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import { loadCorpus } from './corpus.mjs';
+import { defaultZega } from './server.mjs';
 import path from 'node:path';
-const [binary, ...options] = process.argv.slice(2);
-if (!binary || options.some(option => option !== '--check')) throw Error('Usage: node scripts/format.mjs /path/to/zega [--check]');
+const args = process.argv.slice(2);
+const [binary, ...options] = args[0] === '--check' || args.length === 0 ? [defaultZega, ...args] : args;
+if (options.some(option => option !== '--check')) throw Error('Usage: node scripts/format.mjs [/path/to/zega-server] [--check]');
 const cases = loadCorpus();
 const sourceFiles = cases.map(test => path.join(test.dir, `${test.name}.code`));
 // Build output in public/ and out/ is generated, not corpus input.

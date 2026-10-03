@@ -1,6 +1,6 @@
 # ZQL conformance
 
-A readable contract for [Zega](https://github.com/zegadb/zega): one corpus, three hosts. **native** calls the Rust crate directly, **browser** runs the same adapter as WASM in Chromium, and **server** sends each case over HTTP to `zega start` (the `zega-server` routes) built from the same pinned revision. Case metadata still names the two engine adapters; the server host runs every executable document.
+A readable contract for [Zega](https://github.com/zegadb/zega): one corpus, three hosts. **native** calls the Rust crate directly, **browser** runs the same adapter as WASM in Chromium, and **server** sends each case over HTTP to the pinned CLI's `start` (the `zega-server` routes) built from the same pinned revision. Case metadata still names the two engine adapters; the server host runs every executable document.
 
 ## Reproduce
 
@@ -19,9 +19,9 @@ npm run test:runner
 ```
 
 The corpus uses the canonical [APS 12 formatter](https://github.com/zegadb/aps/issues/12).
-With the pinned engine's CLI available, run `node scripts/format.mjs /path/to/zega`
-to format cases and JSON fixtures or append `--check` to check them without writing. This invokes
-`zega fmt` on the empty `.zql` markers **and the executable `.code` files**.
+With the pinned engine's CLI available, run `node scripts/format.mjs`
+(or `node scripts/format.mjs /path/to/zega-server`) to format cases and JSON fixtures or append `--check` to check them without writing. This invokes
+the CLI's `fmt` on the empty `.zql` markers **and the executable `.code` files**.
 Parse-error fixtures remain byte-for-byte unchanged. After formatting inputs,
 `node scripts/check-diagnostic-locations.mjs <base-revision>` proves expected
 stdout, outcome markers, diagnostic messages and highlighted tokens are unchanged;
@@ -71,19 +71,19 @@ Pass `--bindgen /path/to/wasm-bindgen` to use an existing matching tool. Missing
 
 ## Server host
 
-The server host proves the HTTP server that ships to deployments returns exactly what the engine returns. It uses the pinned revision's `zega` CLI, installed with a receipt so the runner can refuse a binary from any other revision:
+The server host proves the HTTP server that ships to deployments returns exactly what the engine returns. It uses the pinned revision's CLI (`zega-server`, named `zega` before that rename; the runner reads the name from the install receipt), installed with a receipt so the runner can refuse a binary from any other revision:
 
 ```sh
-cargo install --locked --git https://github.com/zegadb/zega.git --rev "$(node -p 'require("./engine.json").revision')" zega-cli --bin zega --root "$PWD/.tmp/tools"
-npm test -- --host server          # or --zega /path/to/bin/zega (same --root receipt required)
+cargo install --locked --git https://github.com/zegadb/zega.git --rev "$(node -p 'require("./engine.json").revision')" zega-cli --root "$PWD/.tmp/tools"
+npm test -- --host server          # or --zega /path/to/bin/zega-server (same --root receipt required)
 node scripts/compare-hosts.mjs     # native/browser, native/server, browser/server
 ```
 
-Each case gets its own `zega start --port 0` process, an empty persistent data directory, a generated bearer token and the case directory as working directory (so relative imports resolve like native). The runner checks that a request without the token is refused, then sends `POST /zql {"query": <source>, "document": true}`, which is `apply_zql` behind HTTP. A success body's `result` bytes are sliced out verbatim (never re-serialized by JavaScript) and compared byte-for-byte. The HTTP error body carries the engine's `ZegaError` text and no stage, so a failure takes the stage its case declares, and a parse-stage message must be exactly `execution error: ` followed by the native diagnostic. The two parser-only API cases (`api: query` / `statement`) have no HTTP entry point; they are reported as unsupported on the server and listed by `compare-hosts`, never counted as parity. Any unsupported *document* is a divergence.
+Each case gets its own `start --port 0` process of that CLI, an empty persistent data directory, a generated bearer token and the case directory as working directory (so relative imports resolve like native). The runner checks that a request without the token is refused, then sends `POST /zql {"query": <source>, "document": true}`, which is `apply_zql` behind HTTP. A success body's `result` bytes are sliced out verbatim (never re-serialized by JavaScript) and compared byte-for-byte. The HTTP error body carries the engine's `ZegaError` text and no stage, so a failure takes the stage its case declares, and a parse-stage message must be exactly `execution error: ` followed by the native diagnostic. The two parser-only API cases (`api: query` / `statement`) have no HTTP entry point; they are reported as unsupported on the server and listed by `compare-hosts`, never counted as parity. Any unsupported *document* is a divergence.
 
 ### Stress
 
-`node scripts/server-stress.mjs` runs the same release `zega` against six checks and writes one JSON line per result to stdout and `.cache/server-stress.jsonl`:
+`node scripts/server-stress.mjs` runs the same release CLI against six checks and writes one JSON line per result to stdout and `.cache/server-stress.jsonl`:
 
 - **concurrency**: 16 clients, 2 minutes (`--duration`). The checks are no torn or stale reads, and final nodes equal acknowledged writes.
 - **durability**: 3× kill -9 during write load. Each write is one statement: a parent plus 3 linked children. Every acknowledged write must be whole after restart, and in-flight ones must be whole or absent.

@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { root, grade, loadCase } from './corpus.mjs';
+import { installedZega } from './server.mjs';
 
 function invoke(args) {
   const child = spawnSync(process.execPath, ['scripts/run.mjs', ...args], { cwd: root, encoding: 'utf8', timeout: 30000 });
@@ -100,4 +101,19 @@ test('host parity fails on any divergence and never counts a declined document a
   assert.equal(serverOutcome(parse, { status: 400, text: '{"error":"execution error: error: x","ok":false}' }).stderr, 'error: x\n');
   assert.notEqual(serverOutcome(parse, { status: 400, text: '{"error":"error: x","ok":false}' }).stderr, 'error: x\n');
   assert.throws(() => serverOutcome(parse, { status: 500, text: '{"error":"database worker failed","ok":false}' }));
+});
+
+test('the CLI binary is the name the install receipt records, before and after the zega -> zega-server rename', () => {
+  fs.mkdirSync(path.join(root, '.tmp'), { recursive: true });
+  const tools = fs.mkdtempSync(path.join(root, '.tmp/receipt-test-'));
+  try {
+    assert.equal(installedZega(tools), path.join(tools, 'bin', 'zega-server'), 'no receipt: the current name');
+    for (const bin of ['zega', 'zega-server']) {
+      fs.writeFileSync(path.join(tools, '.crates2.json'), JSON.stringify({ installs: {
+        'wasm-bindgen-cli 0.2.128 (registry+https://github.com/rust-lang/crates.io-index)': { bins: ['wasm-bindgen'] },
+        'zega-cli 0.2.0 (git+https://github.com/zegadb/zega.git?rev=abc#abc)': { bins: [bin] },
+      } }));
+      assert.equal(installedZega(tools), path.join(tools, 'bin', bin));
+    }
+  } finally { fs.rmSync(tools, { recursive: true, force: true }); }
 });
