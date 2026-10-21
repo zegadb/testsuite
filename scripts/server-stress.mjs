@@ -282,7 +282,8 @@ async function growth() {
   // operation a client can trigger is GET /graph. Measure it as the snapshot.
   const stopPeak = peakRss(pid);
   const dumpStarted = performance.now();
-  const dump = await server.request('GET', '/graph');
+  // `GET /graph` serves a .graph file unless JSON is asked for (zegadb/zega#104).
+  const dump = await server.request('GET', '/graph', undefined, { ...server.auth, accept: 'application/json' });
   const dumpMs = performance.now() - dumpStarted;
   const dumpPeak = stopPeak();
   if (dump.status !== 200) throw Error(`GET /graph failed: HTTP ${dump.status}`);
